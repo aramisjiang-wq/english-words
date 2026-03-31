@@ -1,0 +1,1666 @@
+[
+  {
+    "english": "break down",
+    "phonetic": "/breɪk daʊn/",
+    "chinese": "分解",
+    "example": "The car broke down.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "bring up",
+    "phonetic": "/brɪŋ ʌp/",
+    "chinese": "抚养",
+    "example": "She brought up three children.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "call off",
+    "phonetic": "/kɔːl ɒf/",
+    "chinese": "取消",
+    "example": "Call off the meeting.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "carry out",
+    "phonetic": "/ˈkæri aʊt/",
+    "chinese": "执行",
+    "example": "Carry out the plan.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "come across",
+    "phonetic": "/kʌm əˈkrɒs/",
+    "chinese": "偶然遇到",
+    "example": "I came across an old friend.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "cut down",
+    "phonetic": "/kʌt daʊn/",
+    "chinese": "削减",
+    "example": "Cut down on sugar.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "drop off",
+    "phonetic": "/drɒp ɒf/",
+    "chinese": "放下",
+    "example": "Drop off the package.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "figure out",
+    "phonetic": "/ˈfɪɡər aʊt/",
+    "chinese": "弄清楚",
+    "example": "Figure out the problem.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "fill in",
+    "phonetic": "/fɪl ɪn/",
+    "chinese": "填写",
+    "example": "Fill in the form.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "get along",
+    "phonetic": "/ɡet əˈlɒŋ/",
+    "chinese": "相处融洽",
+    "example": "We get along well.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "get over",
+    "phonetic": "/ɡet ˈəʊvər/",
+    "chinese": "克服",
+    "example": "Get over the flu.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "give up",
+    "phonetic": "/ɡɪv ʌp/",
+    "chinese": "放弃",
+    "example": "Don't give up.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "go on",
+    "phonetic": "/ɡəʊ ɒn/",
+    "chinese": "继续",
+    "example": "Go on with your story.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "grow up",
+    "phonetic": "/ɡrəʊ ʌp/",
+    "chinese": "长大",
+    "example": "Children grow up fast.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "hold on",
+    "phonetic": "/həʊld ɒn/",
+    "chinese": "稍等",
+    "example": "Hold on a moment.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "keep on",
+    "phonetic": "/kiːp ɒn/",
+    "chinese": "继续",
+    "example": "Keep on trying.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "look after",
+    "phonetic": "/lʊk ˈæftər/",
+    "chinese": "照顾",
+    "example": "Look after the baby.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "look for",
+    "phonetic": "/lʊk fɔːr/",
+    "chinese": "寻找",
+    "example": "Look for your keys.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "look forward to",
+    "phonetic": "/lʊk ˈfɔːwərd tuː/",
+    "chinese": "期待",
+    "example": "Look forward to seeing you.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "make up",
+    "phonetic": "/meɪk ʌp/",
+    "chinese": "编造",
+    "example": "Make up a story.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "pass out",
+    "phonetic": "/pæs aʊt/",
+    "chinese": "昏倒",
+    "example": "He passed out.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "pick up",
+    "phonetic": "/pɪk ʌp/",
+    "chinese": "接",
+    "example": "Pick me up at 5.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "put off",
+    "phonetic": "/pʊt ɒf/",
+    "chinese": "推迟",
+    "example": "Put off the meeting.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "run out of",
+    "phonetic": "/rʌn aʊt əv/",
+    "chinese": "用完",
+    "example": "Run out of milk.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "set up",
+    "phonetic": "/set ʌp/",
+    "chinese": "建立",
+    "example": "Set up a business.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "show up",
+    "phonetic": "/ʃəʊ ʌp/",
+    "chinese": "出现",
+    "example": "Show up on time.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "take after",
+    "phonetic": "/teɪk ˈæftər/",
+    "chinese": "像",
+    "example": "He takes after his father.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "take off",
+    "phonetic": "/teɪk ɒf/",
+    "chinese": "起飞",
+    "example": "The plane took off.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "turn down",
+    "phonetic": "/tɜːrn daʊn/",
+    "chinese": "拒绝",
+    "example": "Turn down the offer.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "turn up",
+    "phonetic": "/tɜːrn ʌp/",
+    "chinese": "出现",
+    "example": "He turned up late.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "work out",
+    "phonetic": "/wɜːrk aʊt/",
+    "chinese": "锻炼",
+    "example": "Work out regularly.",
+    "category": "动词",
+    "subcategory": "短语动词"
+  },
+  {
+    "english": "absurd",
+    "phonetic": "/əbˈsɜːrd/",
+    "chinese": "荒谬的",
+    "example": "That's absurd!",
+    "category": "形容词",
+    "subcategory": "性质描述"
+  },
+  {
+    "english": "aggressive",
+    "phonetic": "/əˈɡresɪv/",
+    "chinese": "好斗的",
+    "example": "Don't be aggressive.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "ambitious",
+    "phonetic": "/æmˈbɪʃəs/",
+    "chinese": "有野心的",
+    "example": "Be ambitious.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "ancient",
+    "phonetic": "/ˈeɪnʃənt/",
+    "chinese": "古老的",
+    "example": "Ancient history.",
+    "category": "形容词",
+    "subcategory": "时间描述"
+  },
+  {
+    "english": "arrogant",
+    "phonetic": "/ˈærəɡənt/",
+    "chinese": "傲慢的",
+    "example": "He is arrogant.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "attractive",
+    "phonetic": "/əˈtræktɪv/",
+    "chinese": "有吸引力的",
+    "example": "She is attractive.",
+    "category": "形容词",
+    "subcategory": "外观描述"
+  },
+  {
+    "english": "awkward",
+    "phonetic": "/ˈɔːkwərd/",
+    "chinese": "尴尬的",
+    "example": "An awkward situation.",
+    "category": "形容词",
+    "subcategory": "状态描述"
+  },
+  {
+    "english": "brilliant",
+    "phonetic": "/ˈbrɪliənt/",
+    "chinese": "杰出的",
+    "example": "A brilliant idea.",
+    "category": "形容词",
+    "subcategory": "质量描述"
+  },
+  {
+    "english": "capable",
+    "phonetic": "/ˈkeɪpəbl/",
+    "chinese": "有能力的",
+    "example": "She is capable.",
+    "category": "形容词",
+    "subcategory": "能力描述"
+  },
+  {
+    "english": "cautious",
+    "phonetic": "/ˈkɔːʃəs/",
+    "chinese": "谨慎的",
+    "example": "Be cautious.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "charming",
+    "phonetic": "/ˈtʃɑːrmɪŋ/",
+    "chinese": "迷人的",
+    "example": "A charming smile.",
+    "category": "形容词",
+    "subcategory": "外观描述"
+  },
+  {
+    "english": "cheerful",
+    "phonetic": "/ˈtʃɪrfl/",
+    "chinese": "快乐的",
+    "example": "A cheerful person.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "clumsy",
+    "phonetic": "/ˈklʌmzi/",
+    "chinese": "笨拙的",
+    "example": "Don't be clumsy.",
+    "category": "形容词",
+    "subcategory": "能力描述"
+  },
+  {
+    "english": "competent",
+    "phonetic": "/ˈkɒmpɪtənt/",
+    "chinese": "有能力的",
+    "example": "A competent worker.",
+    "category": "形容词",
+    "subcategory": "能力描述"
+  },
+  {
+    "english": "confident",
+    "phonetic": "/ˈkɒnfɪdənt/",
+    "chinese": "自信的",
+    "example": "Be confident.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "conscious",
+    "phonetic": "/ˈkɒnʃəs/",
+    "chinese": "有意识的",
+    "example": "Be conscious.",
+    "category": "形容词",
+    "subcategory": "状态描述"
+  },
+  {
+    "english": "considerate",
+    "phonetic": "/kənˈsɪdərət/",
+    "chinese": "体贴的",
+    "example": "Be considerate.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "courageous",
+    "phonetic": "/kəˈreɪdʒəs/",
+    "chinese": "勇敢的",
+    "example": "A courageous act.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "creative",
+    "phonetic": "/kriˈeɪtɪv/",
+    "chinese": "有创造力的",
+    "example": "Be creative.",
+    "category": "形容词",
+    "subcategory": "能力描述"
+  },
+  {
+    "english": "cruel",
+    "phonetic": "/ˈkruːəl/",
+    "chinese": "残忍的",
+    "example": "Don't be cruel.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "curious",
+    "phonetic": "/ˈkjʊriəs/",
+    "chinese": "好奇的",
+    "example": "Be curious.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "delicate",
+    "phonetic": "/ˈdelɪkət/",
+    "chinese": "精致的",
+    "example": "A delicate flower.",
+    "category": "形容词",
+    "subcategory": "外观描述"
+  },
+  {
+    "english": "delightful",
+    "phonetic": "/dɪˈlaɪtfl/",
+    "chinese": "令人愉快的",
+    "example": "A delightful meal.",
+    "category": "形容词",
+    "subcategory": "质量描述"
+  },
+  {
+    "english": "determined",
+    "phonetic": "/dɪˈtɜːrmɪnd/",
+    "chinese": "坚决的",
+    "example": "Be determined.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "diligent",
+    "phonetic": "/ˈdɪlɪdʒənt/",
+    "chinese": "勤奋的",
+    "example": "Be diligent.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "doubtful",
+    "phonetic": "/ˈdaʊtfl/",
+    "chinese": "怀疑的",
+    "example": "I am doubtful.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "eager",
+    "phonetic": "/ˈiːɡər/",
+    "chinese": "渴望的",
+    "example": "I am eager.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "efficient",
+    "phonetic": "/ɪˈfɪʃnt/",
+    "chinese": "高效的",
+    "example": "Be efficient.",
+    "category": "形容词",
+    "subcategory": "质量描述"
+  },
+  {
+    "english": "elegant",
+    "phonetic": "/ˈelɪɡənt/",
+    "chinese": "优雅的",
+    "example": "An elegant dress.",
+    "category": "形容词",
+    "subcategory": "外观描述"
+  },
+  {
+    "english": "embarrassed",
+    "phonetic": "/ɪmˈbærəst/",
+    "chinese": "尴尬的",
+    "example": "I feel embarrassed.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "energetic",
+    "phonetic": "/ˌenərˈdʒetɪk/",
+    "chinese": "精力充沛的",
+    "example": "Be energetic.",
+    "category": "形容词",
+    "subcategory": "状态描述"
+  },
+  {
+    "english": "enthusiastic",
+    "phonetic": "/ɪnˌθjuːziˈæstɪk/",
+    "chinese": "热情的",
+    "example": "Be enthusiastic.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "excellent",
+    "phonetic": "/ˈeksələnt/",
+    "chinese": "优秀的",
+    "example": "Excellent work.",
+    "category": "形容词",
+    "subcategory": "质量描述"
+  },
+  {
+    "english": "fascinating",
+    "phonetic": "/ˈfæsɪneɪtɪŋ/",
+    "chinese": "迷人的",
+    "example": "A fascinating story.",
+    "category": "形容词",
+    "subcategory": "吸引力描述"
+  },
+  {
+    "english": "flexible",
+    "phonetic": "/ˈfleksəbl/",
+    "chinese": "灵活的",
+    "example": "Be flexible.",
+    "category": "形容词",
+    "subcategory": "能力描述"
+  },
+  {
+    "english": "generous",
+    "phonetic": "/ˈdʒenərəs/",
+    "chinese": "慷慨的",
+    "example": "Be generous.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "gentle",
+    "phonetic": "/ˈdʒentl/",
+    "chinese": "温柔的",
+    "example": "A gentle touch.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "genuine",
+    "phonetic": "/ˈdʒenjuɪn/",
+    "chinese": "真诚的",
+    "example": "A genuine person.",
+    "category": "形容词",
+    "subcategory": "品质描述"
+  },
+  {
+    "english": "grateful",
+    "phonetic": "/ˈɡreɪtfl/",
+    "chinese": "感激的",
+    "example": "I am grateful.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "honest",
+    "phonetic": "/ˈɒnɪst/",
+    "chinese": "诚实的",
+    "example": "Be honest.",
+    "category": "形容词",
+    "subcategory": "品质描述"
+  },
+  {
+    "english": "humble",
+    "phonetic": "/ˈhʌmbl/",
+    "chinese": "谦逊的",
+    "example": "Be humble.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "hysterical",
+    "phonetic": "/hɪˈsterɪkl/",
+    "chinese": "歇斯底里的",
+    "example": "Don't be hysterical.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "imaginative",
+    "phonetic": "/ɪˈmædʒɪnətɪv/",
+    "chinese": "富有想象力的",
+    "example": "Be imaginative.",
+    "category": "形容词",
+    "subcategory": "能力描述"
+  },
+  {
+    "english": "impatient",
+    "phonetic": "/ɪmˈpeɪʃnt/",
+    "chinese": "不耐烦的",
+    "example": "Don't be impatient.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "independent",
+    "phonetic": "/ˌɪndɪˈpendənt/",
+    "chinese": "独立的",
+    "example": "Be independent.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "innocent",
+    "phonetic": "/ˈɪnəsnt/",
+    "chinese": "无辜的",
+    "example": "An innocent child.",
+    "category": "形容词",
+    "subcategory": "品质描述"
+  },
+  {
+    "english": "intelligent",
+    "phonetic": "/ɪnˈtelɪdʒənt/",
+    "chinese": "聪明的",
+    "example": "Be intelligent.",
+    "category": "形容词",
+    "subcategory": "智力描述"
+  },
+  {
+    "english": "jealous",
+    "phonetic": "/ˈdʒeləs/",
+    "chinese": "嫉妒的",
+    "example": "Don't be jealous.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "joyful",
+    "phonetic": "/ˈdʒɔɪfl/",
+    "chinese": "快乐的",
+    "example": "A joyful moment.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "keen",
+    "phonetic": "/kiːn/",
+    "chinese": "热衷的",
+    "example": "I am keen.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "knowledgeable",
+    "phonetic": "/ˈnɒlɪdʒəbl/",
+    "chinese": "知识渊博的",
+    "example": "Be knowledgeable.",
+    "category": "形容词",
+    "subcategory": "能力描述"
+  },
+  {
+    "english": "loyal",
+    "phonetic": "/ˈlɔɪəl/",
+    "chinese": "忠诚的",
+    "example": "Be loyal.",
+    "category": "形容词",
+    "subcategory": "品质描述"
+  },
+  {
+    "english": "mature",
+    "phonetic": "/məˈtʃʊr/",
+    "chinese": "成熟的",
+    "example": "Be mature.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "modest",
+    "phonetic": "/ˈmɒdɪst/",
+    "chinese": "谦虚的",
+    "example": "Be modest.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "naive",
+    "phonetic": "/naɪˈiːv/",
+    "chinese": "天真的",
+    "example": "Don't be naive.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "nervous",
+    "phonetic": "/ˈnɜːrvəs/",
+    "chinese": "紧张的",
+    "example": "I feel nervous.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "obedient",
+    "phonetic": "/əˈbiːdiənt/",
+    "chinese": "听话的",
+    "example": "Be obedient.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "optimistic",
+    "phonetic": "/ˌɒptɪˈmɪstɪk/",
+    "chinese": "乐观的",
+    "example": "Be optimistic.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "passionate",
+    "phonetic": "/ˈpæʃənət/",
+    "chinese": "热情的",
+    "example": "Be passionate.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "patient",
+    "phonetic": "/ˈpeɪʃnt/",
+    "chinese": "耐心的",
+    "example": "Be patient.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "pessimistic",
+    "phonetic": "/ˌpesɪˈmɪstɪk/",
+    "chinese": "悲观的",
+    "example": "Don't be pessimistic.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "polite",
+    "phonetic": "/pəˈlaɪt/",
+    "chinese": "有礼貌的",
+    "example": "Be polite.",
+    "category": "形容词",
+    "subcategory": "品质描述"
+  },
+  {
+    "english": "practical",
+    "phonetic": "/ˈpræktɪkl/",
+    "chinese": "实用的",
+    "example": "Be practical.",
+    "category": "形容词",
+    "subcategory": "实用性描述"
+  },
+  {
+    "english": "proud",
+    "phonetic": "/praʊd/",
+    "chinese": "骄傲的",
+    "example": "Be proud.",
+    "category": "形容词",
+    "subcategory": "情绪描述"
+  },
+  {
+    "english": "punctual",
+    "phonetic": "/ˈpʌŋktʃuəl/",
+    "chinese": "准时的",
+    "example": "Be punctual.",
+    "category": "形容词",
+    "subcategory": "品质描述"
+  },
+  {
+    "english": "realistic",
+    "phonetic": "/ˌriːəˈlɪstɪk/",
+    "chinese": "现实的",
+    "example": "Be realistic.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "reliable",
+    "phonetic": "/rɪˈlaɪəbl/",
+    "chinese": "可靠的",
+    "example": "Be reliable.",
+    "category": "形容词",
+    "subcategory": "品质描述"
+  },
+  {
+    "english": "responsible",
+    "phonetic": "/rɪˈspɒnsəbl/",
+    "chinese": "负责任的",
+    "example": "Be responsible.",
+    "category": "形容词",
+    "subcategory": "品质描述"
+  },
+  {
+    "english": "rude",
+    "phonetic": "/ruːd/",
+    "chinese": "粗鲁的",
+    "example": "Don't be rude.",
+    "category": "形容词",
+    "subcategory": "品质描述"
+  },
+  {
+    "english": "sensitive",
+    "phonetic": "/ˈsensətɪv/",
+    "chinese": "敏感的",
+    "example": "Be sensitive.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "sincere",
+    "phonetic": "/sɪnˈsɪr/",
+    "chinese": "真诚的",
+    "example": "Be sincere.",
+    "category": "形容词",
+    "subcategory": "品质描述"
+  },
+  {
+    "english": "skillful",
+    "phonetic": "/ˈskɪlfl/",
+    "chinese": "熟练的",
+    "example": "A skillful worker.",
+    "category": "形容词",
+    "subcategory": "能力描述"
+  },
+  {
+    "english": "stubborn",
+    "phonetic": "/ˈstʌbərn/",
+    "chinese": "固执的",
+    "example": "Don't be stubborn.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "talented",
+    "phonetic": "/ˈtæləntɪd/",
+    "chinese": "有才华的",
+    "example": "A talented artist.",
+    "category": "形容词",
+    "subcategory": "能力描述"
+  },
+  {
+    "english": "thoughtful",
+    "phonetic": "/ˈθɔːtfl/",
+    "chinese": "体贴的",
+    "example": "Be thoughtful.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "tolerant",
+    "phonetic": "/ˈtɒlərənt/",
+    "chinese": "宽容的",
+    "example": "Be tolerant.",
+    "category": "形容词",
+    "subcategory": "性格描述"
+  },
+  {
+    "english": "traditional",
+    "phonetic": "/trəˈdɪʃənl/",
+    "chinese": "传统的",
+    "example": "Traditional values.",
+    "category": "形容词",
+    "subcategory": "性质描述"
+  },
+  {
+    "english": "unusual",
+    "phonetic": "/ʌnˈjuːʒuəl/",
+    "chinese": "不寻常的",
+    "example": "An unusual event.",
+    "category": "形容词",
+    "subcategory": "性质描述"
+  },
+  {
+    "english": "valuable",
+    "phonetic": "/ˈvæljuəbl/",
+    "chinese": "有价值的",
+    "example": "A valuable lesson.",
+    "category": "形容词",
+    "subcategory": "价值描述"
+  },
+  {
+    "english": "vivid",
+    "phonetic": "/ˈvɪvɪd/",
+    "chinese": "生动的",
+    "example": "A vivid memory.",
+    "category": "形容词",
+    "subcategory": "外观描述"
+  },
+  {
+    "english": "wise",
+    "phonetic": "/waɪz/",
+    "chinese": "明智的",
+    "example": "A wise decision.",
+    "category": "形容词",
+    "subcategory": "智力描述"
+  },
+  {
+    "english": "bag",
+    "phonetic": "/bæɡ/",
+    "chinese": "包",
+    "example": "Carry the bag.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "ball",
+    "phonetic": "/bɔːl/",
+    "chinese": "球",
+    "example": "Play with the ball.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "bed",
+    "phonetic": "/bed/",
+    "chinese": "床",
+    "example": "Sleep in the bed.",
+    "category": "名词",
+    "subcategory": "家具"
+  },
+  {
+    "english": "belt",
+    "phonetic": "/belt/",
+    "chinese": "腰带",
+    "example": "Wear the belt.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "book",
+    "phonetic": "/bʊk/",
+    "chinese": "书",
+    "example": "Read the book.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "bottle",
+    "phonetic": "/ˈbɒtl/",
+    "chinese": "瓶子",
+    "example": "Open the bottle.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "box",
+    "phonetic": "/bɒks/",
+    "chinese": "盒子",
+    "example": "Put it in the box.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "brush",
+    "phonetic": "/brʌʃ/",
+    "chinese": "刷子",
+    "example": "Use the brush.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "camera",
+    "phonetic": "/ˈkæmərə/",
+    "chinese": "相机",
+    "example": "Take a photo.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "car",
+    "phonetic": "/kɑːr/",
+    "chinese": "汽车",
+    "example": "Drive the car.",
+    "category": "名词",
+    "subcategory": "交通工具"
+  },
+  {
+    "english": "chair",
+    "phonetic": "/tʃeər/",
+    "chinese": "椅子",
+    "example": "Sit on the chair.",
+    "category": "名词",
+    "subcategory": "家具"
+  },
+  {
+    "english": "clock",
+    "phonetic": "/klɒk/",
+    "chinese": "时钟",
+    "example": "Check the clock.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "coat",
+    "phonetic": "/kəʊt/",
+    "chinese": "外套",
+    "example": "Wear the coat.",
+    "category": "名词",
+    "subcategory": "衣物"
+  },
+  {
+    "english": "computer",
+    "phonetic": "/kəmˈpjuːtər/",
+    "chinese": "电脑",
+    "example": "Use the computer.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "cup",
+    "phonetic": "/kʌp/",
+    "chinese": "杯子",
+    "example": "Drink from the cup.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "desk",
+    "phonetic": "/desk/",
+    "chinese": "书桌",
+    "example": "Work at the desk.",
+    "category": "名词",
+    "subcategory": "家具"
+  },
+  {
+    "english": "door",
+    "phonetic": "/dɔːr/",
+    "chinese": "门",
+    "example": "Open the door.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "dress",
+    "phonetic": "/dres/",
+    "chinese": "连衣裙",
+    "example": "Wear the dress.",
+    "category": "名词",
+    "subcategory": "衣物"
+  },
+  {
+    "english": "fan",
+    "phonetic": "/fæn/",
+    "chinese": "风扇",
+    "example": "Turn on the fan.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "glasses",
+    "phonetic": "/ˈɡlɑːsɪz/",
+    "chinese": "眼镜",
+    "example": "Wear glasses.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "hat",
+    "phonetic": "/hæt/",
+    "chinese": "帽子",
+    "example": "Wear the hat.",
+    "category": "名词",
+    "subcategory": "衣物"
+  },
+  {
+    "english": "key",
+    "phonetic": "/kiː/",
+    "chinese": "钥匙",
+    "example": "Use the key.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "lamp",
+    "phonetic": "/læmp/",
+    "chinese": "台灯",
+    "example": "Turn on the lamp.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "map",
+    "phonetic": "/mæp/",
+    "chinese": "地图",
+    "example": "Look at the map.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "mirror",
+    "phonetic": "/ˈmɪrər/",
+    "chinese": "镜子",
+    "example": "Look in the mirror.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "pen",
+    "phonetic": "/pen/",
+    "chinese": "钢笔",
+    "example": "Write with the pen.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "phone",
+    "phonetic": "/fəʊn/",
+    "chinese": "电话",
+    "example": "Answer the phone.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "picture",
+    "phonetic": "/ˈpɪktʃər/",
+    "chinese": "图片",
+    "example": "Look at the picture.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "ring",
+    "phonetic": "/rɪŋ/",
+    "chinese": "戒指",
+    "example": "Wear the ring.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "shirt",
+    "phonetic": "/ʃɜːrt/",
+    "chinese": "衬衫",
+    "example": "Wear the shirt.",
+    "category": "名词",
+    "subcategory": "衣物"
+  },
+  {
+    "english": "shoe",
+    "phonetic": "/ʃuː/",
+    "chinese": "鞋子",
+    "example": "Wear the shoes.",
+    "category": "名词",
+    "subcategory": "衣物"
+  },
+  {
+    "english": "table",
+    "phonetic": "/ˈteɪbl/",
+    "chinese": "桌子",
+    "example": "Put it on the table.",
+    "category": "名词",
+    "subcategory": "家具"
+  },
+  {
+    "english": "watch",
+    "phonetic": "/wɒtʃ/",
+    "chinese": "手表",
+    "example": "Wear the watch.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "window",
+    "phonetic": "/ˈwɪndəʊ/",
+    "chinese": "窗户",
+    "example": "Open the window.",
+    "category": "名词",
+    "subcategory": "物品"
+  },
+  {
+    "english": "air",
+    "phonetic": "/eər/",
+    "chinese": "空气",
+    "example": "Fresh air.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "cloud",
+    "phonetic": "/klaʊd/",
+    "chinese": "云",
+    "example": "Look at the clouds.",
+    "category": "名词",
+    "subcategory": "天气"
+  },
+  {
+    "english": "earth",
+    "phonetic": "/ɜːrθ/",
+    "chinese": "地球",
+    "example": "Save the earth.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "fire",
+    "phonetic": "/faɪər/",
+    "chinese": "火",
+    "example": "Light the fire.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "flower",
+    "phonetic": "/ˈflaʊər/",
+    "chinese": "花",
+    "example": "Smell the flower.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "grass",
+    "phonetic": "/ɡræs/",
+    "chinese": "草",
+    "example": "Walk on the grass.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "leaf",
+    "phonetic": "/liːf/",
+    "chinese": "叶子",
+    "example": "Pick up the leaf.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "light",
+    "phonetic": "/laɪt/",
+    "chinese": "光",
+    "example": "Turn on the light.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "moon",
+    "phonetic": "/muːn/",
+    "chinese": "月亮",
+    "example": "Look at the moon.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "mountain",
+    "phonetic": "/ˈmaʊntən/",
+    "chinese": "山",
+    "example": "Climb the mountain.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "rain",
+    "phonetic": "/reɪn/",
+    "chinese": "雨",
+    "example": "It's raining.",
+    "category": "名词",
+    "subcategory": "天气"
+  },
+  {
+    "english": "river",
+    "phonetic": "/ˈrɪvər/",
+    "chinese": "河流",
+    "example": "Swim in the river.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "rock",
+    "phonetic": "/rɒk/",
+    "chinese": "岩石",
+    "example": "Sit on the rock.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "sea",
+    "phonetic": "/siː/",
+    "chinese": "海",
+    "example": "Swim in the sea.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "sky",
+    "phonetic": "/skaɪ/",
+    "chinese": "天空",
+    "example": "Look at the sky.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "snow",
+    "phonetic": "/snəʊ/",
+    "chinese": "雪",
+    "example": "Play in the snow.",
+    "category": "名词",
+    "subcategory": "天气"
+  },
+  {
+    "english": "star",
+    "phonetic": "/stɑːr/",
+    "chinese": "星星",
+    "example": "Look at the stars.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "sun",
+    "phonetic": "/sʌn/",
+    "chinese": "太阳",
+    "example": "The sun is hot.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "tree",
+    "phonetic": "/triː/",
+    "chinese": "树",
+    "example": "Climb the tree.",
+    "category": "名词",
+    "subcategory": "自然"
+  },
+  {
+    "english": "wind",
+    "phonetic": "/wɪnd/",
+    "chinese": "风",
+    "example": "Feel the wind.",
+    "category": "名词",
+    "subcategory": "天气"
+  },
+  {
+    "english": "century",
+    "phonetic": "/ˈsentʃuri/",
+    "chinese": "世纪",
+    "example": "21st century.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "decade",
+    "phonetic": "/ˈdekeɪd/",
+    "chinese": "十年",
+    "example": "A decade ago.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "day",
+    "phonetic": "/deɪ/",
+    "chinese": "天",
+    "example": "Have a nice day.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "hour",
+    "phonetic": "/ˈaʊər/",
+    "chinese": "小时",
+    "example": "Wait an hour.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "minute",
+    "phonetic": "/ˈmɪnɪt/",
+    "chinese": "分钟",
+    "example": "Wait a minute.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "month",
+    "phonetic": "/mʌnθ/",
+    "chinese": "月",
+    "example": "Next month.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "second",
+    "phonetic": "/ˈsekənd/",
+    "chinese": "秒",
+    "example": "Just a second.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "week",
+    "phonetic": "/wiːk/",
+    "chinese": "周",
+    "example": "Next week.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "year",
+    "phonetic": "/jɪr/",
+    "chinese": "年",
+    "example": "Happy New Year.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "yesterday",
+    "phonetic": "/ˈjestədeɪ/",
+    "chinese": "昨天",
+    "example": "Yesterday was nice.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "today",
+    "phonetic": "/təˈdeɪ/",
+    "chinese": "今天",
+    "example": "Today is Monday.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "tomorrow",
+    "phonetic": "/təˈmɒrəʊ/",
+    "chinese": "明天",
+    "example": "See you tomorrow.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "morning",
+    "phonetic": "/ˈmɔːrnɪŋ/",
+    "chinese": "早晨",
+    "example": "Good morning.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "afternoon",
+    "phonetic": "/ˌæftərˈnuːn/",
+    "chinese": "下午",
+    "example": "Good afternoon.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "evening",
+    "phonetic": "/ˈiːvnɪŋ/",
+    "chinese": "晚上",
+    "example": "Good evening.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "night",
+    "phonetic": "/naɪt/",
+    "chinese": "夜晚",
+    "example": "Good night.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "weekend",
+    "phonetic": "/ˈwiːkend/",
+    "chinese": "周末",
+    "example": "Happy weekend.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "holiday",
+    "phonetic": "/ˈhɒlədeɪ/",
+    "chinese": "假期",
+    "example": "Enjoy the holiday.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "vacation",
+    "phonetic": "/veɪˈkeɪʃn/",
+    "chinese": "度假",
+    "example": "Take a vacation.",
+    "category": "名词",
+    "subcategory": "时间"
+  },
+  {
+    "english": "arm",
+    "phonetic": "/ɑːrm/",
+    "chinese": "手臂",
+    "example": "Stretch your arms.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "back",
+    "phonetic": "/bæk/",
+    "chinese": "背部",
+    "example": "My back hurts.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "blood",
+    "phonetic": "/blʌd/",
+    "chinese": "血液",
+    "example": "Donate blood.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "body",
+    "phonetic": "/ˈbɒdi/",
+    "chinese": "身体",
+    "example": "Keep your body healthy.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "bone",
+    "phonetic": "/bəʊn/",
+    "chinese": "骨头",
+    "example": "Break a bone.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "brain",
+    "phonetic": "/breɪn/",
+    "chinese": "大脑",
+    "example": "Use your brain.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "ear",
+    "phonetic": "/ɪr/",
+    "chinese": "耳朵",
+    "example": "Listen with your ears.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "eye",
+    "phonetic": "/aɪ/",
+    "chinese": "眼睛",
+    "example": "Open your eyes.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "face",
+    "phonetic": "/feɪs/",
+    "chinese": "脸",
+    "example": "Wash your face.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "finger",
+    "phonetic": "/ˈfɪŋɡər/",
+    "chinese": "手指",
+    "example": "Point with your finger.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "foot",
+    "phonetic": "/fʊt/",
+    "chinese": "脚",
+    "example": "Wash your feet.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "hair",
+    "phonetic": "/heər/",
+    "chinese": "头发",
+    "example": "Comb your hair.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "hand",
+    "phonetic": "/hænd/",
+    "chinese": "手",
+    "example": "Wash your hands.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "head",
+    "phonetic": "/hed/",
+    "chinese": "头",
+    "example": "Shake your head.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "heart",
+    "phonetic": "/hɑːrt/",
+    "chinese": "心脏",
+    "example": "Listen to your heart.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "leg",
+    "phonetic": "/leɡ/",
+    "chinese": "腿",
+    "example": "Stretch your legs.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "mouth",
+    "phonetic": "/maʊθ/",
+    "chinese": "嘴",
+    "example": "Open your mouth.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "neck",
+    "phonetic": "/nek/",
+    "chinese": "脖子",
+    "example": "Rub your neck.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "nose",
+    "phonetic": "/nəʊz/",
+    "chinese": "鼻子",
+    "example": "Blow your nose.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "shoulder",
+    "phonetic": "/ˈʃəʊldər/",
+    "chinese": "肩膀",
+    "example": "Shrug your shoulders.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "skin",
+    "phonetic": "/skɪn/",
+    "chinese": "皮肤",
+    "example": "Protect your skin.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "stomach",
+    "phonetic": "/ˈstʌmək/",
+    "chinese": "胃",
+    "example": "My stomach hurts.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  },
+  {
+    "english": "tooth",
+    "phonetic": "/tuːθ/",
+    "chinese": "牙齿",
+    "example": "Brush your teeth.",
+    "category": "名词",
+    "subcategory": "身体部位"
+  }
+]

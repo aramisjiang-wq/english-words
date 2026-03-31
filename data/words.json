@@ -1,0 +1,5966 @@
+[
+  {
+    "english": "zero",
+    "phonetic": "/ˈzɪroʊ/",
+    "chinese": "零",
+    "example": "Zero degrees.",
+    "category": "数词"
+  },
+  {
+    "english": "one",
+    "phonetic": "/wʌn/",
+    "chinese": "一",
+    "example": "One apple.",
+    "category": "数词"
+  },
+  {
+    "english": "two",
+    "phonetic": "/tuː/",
+    "chinese": "二",
+    "example": "Two cats.",
+    "category": "数词"
+  },
+  {
+    "english": "three",
+    "phonetic": "/θriː/",
+    "chinese": "三",
+    "example": "Three books.",
+    "category": "数词"
+  },
+  {
+    "english": "four",
+    "phonetic": "/fɔːr/",
+    "chinese": "四",
+    "example": "Four chairs.",
+    "category": "数词"
+  },
+  {
+    "english": "five",
+    "phonetic": "/faɪv/",
+    "chinese": "五",
+    "example": "Five fingers.",
+    "category": "数词"
+  },
+  {
+    "english": "six",
+    "phonetic": "/sɪks/",
+    "chinese": "六",
+    "example": "Six days.",
+    "category": "数词"
+  },
+  {
+    "english": "seven",
+    "phonetic": "/ˈsevn/",
+    "chinese": "七",
+    "example": "Seven colors.",
+    "category": "数词"
+  },
+  {
+    "english": "eight",
+    "phonetic": "/eɪt/",
+    "chinese": "八",
+    "example": "Eight hours.",
+    "category": "数词"
+  },
+  {
+    "english": "nine",
+    "phonetic": "/naɪn/",
+    "chinese": "九",
+    "example": "Nine planets.",
+    "category": "数词"
+  },
+  {
+    "english": "ten",
+    "phonetic": "/ten/",
+    "chinese": "十",
+    "example": "Ten dollars.",
+    "category": "数词"
+  },
+  {
+    "english": "eleven",
+    "phonetic": "/ɪˈlevn/",
+    "chinese": "十一",
+    "example": "Eleven players.",
+    "category": "数词"
+  },
+  {
+    "english": "twelve",
+    "phonetic": "/twelv/",
+    "chinese": "十二",
+    "example": "Twelve months.",
+    "category": "数词"
+  },
+  {
+    "english": "thirteen",
+    "phonetic": "/ˌθɜːrˈtiːn/",
+    "chinese": "十三",
+    "example": "Thirteen years old.",
+    "category": "数词"
+  },
+  {
+    "english": "fourteen",
+    "phonetic": "/ˌfɔːrˈtiːn/",
+    "chinese": "十四",
+    "example": "Fourteen days.",
+    "category": "数词"
+  },
+  {
+    "english": "fifteen",
+    "phonetic": "/ˌfɪfˈtiːn/",
+    "chinese": "十五",
+    "example": "Fifteen minutes.",
+    "category": "数词"
+  },
+  {
+    "english": "sixteen",
+    "phonetic": "/ˌsɪksˈtiːn/",
+    "chinese": "十六",
+    "example": "Sixteen students.",
+    "category": "数词"
+  },
+  {
+    "english": "seventeen",
+    "phonetic": "/ˌsevnˈtiːn/",
+    "chinese": "十七",
+    "example": "Seventeen cars.",
+    "category": "数词"
+  },
+  {
+    "english": "eighteen",
+    "phonetic": "/ˌeɪˈtiːn/",
+    "chinese": "十八",
+    "example": "Eighteen floors.",
+    "category": "数词"
+  },
+  {
+    "english": "nineteen",
+    "phonetic": "/ˌnaɪnˈtiːn/",
+    "chinese": "十九",
+    "example": "Nineteen years.",
+    "category": "数词"
+  },
+  {
+    "english": "twenty",
+    "phonetic": "/ˈtwenti/",
+    "chinese": "二十",
+    "example": "Twenty people.",
+    "category": "数词"
+  },
+  {
+    "english": "thirty",
+    "phonetic": "/ˈθɜːrti/",
+    "chinese": "三十",
+    "example": "Thirty years.",
+    "category": "数词"
+  },
+  {
+    "english": "forty",
+    "phonetic": "/ˈfɔːrti/",
+    "chinese": "四十",
+    "example": "Forty hours.",
+    "category": "数词"
+  },
+  {
+    "english": "fifty",
+    "phonetic": "/ˈfɪfti/",
+    "chinese": "五十",
+    "example": "Fifty dollars.",
+    "category": "数词"
+  },
+  {
+    "english": "sixty",
+    "phonetic": "/ˈsɪksti/",
+    "chinese": "六十",
+    "example": "Sixty seconds.",
+    "category": "数词"
+  },
+  {
+    "english": "seventy",
+    "phonetic": "/ˈsevnti/",
+    "chinese": "七十",
+    "example": "Seventy percent.",
+    "category": "数词"
+  },
+  {
+    "english": "eighty",
+    "phonetic": "/ˈeɪti/",
+    "chinese": "八十",
+    "example": "Eighty years old.",
+    "category": "数词"
+  },
+  {
+    "english": "ninety",
+    "phonetic": "/ˈnaɪnti/",
+    "chinese": "九十",
+    "example": "Ninety degrees.",
+    "category": "数词"
+  },
+  {
+    "english": "hundred",
+    "phonetic": "/ˈhʌndrəd/",
+    "chinese": "百",
+    "example": "One hundred.",
+    "category": "数词"
+  },
+  {
+    "english": "thousand",
+    "phonetic": "/ˈθaʊznd/",
+    "chinese": "千",
+    "example": "One thousand.",
+    "category": "数词"
+  },
+  {
+    "english": "million",
+    "phonetic": "/ˈmɪljən/",
+    "chinese": "百万",
+    "example": "One million.",
+    "category": "数词"
+  },
+  {
+    "english": "billion",
+    "phonetic": "/ˈbɪljən/",
+    "chinese": "十亿",
+    "example": "One billion.",
+    "category": "数词"
+  },
+  {
+    "english": "trillion",
+    "phonetic": "/ˈtrɪljən/",
+    "chinese": "万亿",
+    "example": "One trillion.",
+    "category": "数词"
+  },
+  {
+    "english": "first",
+    "phonetic": "/fɜːrst/",
+    "chinese": "第一",
+    "example": "First place.",
+    "category": "数词"
+  },
+  {
+    "english": "second",
+    "phonetic": "/ˈsekənd/",
+    "chinese": "第二",
+    "example": "Second floor.",
+    "category": "数词"
+  },
+  {
+    "english": "third",
+    "phonetic": "/θɜːrd/",
+    "chinese": "第三",
+    "example": "Third time.",
+    "category": "数词"
+  },
+  {
+    "english": "fourth",
+    "phonetic": "/fɔːrθ/",
+    "chinese": "第四",
+    "example": "Fourth of July.",
+    "category": "数词"
+  },
+  {
+    "english": "fifth",
+    "phonetic": "/fɪfθ/",
+    "chinese": "第五",
+    "example": "Fifth avenue.",
+    "category": "数词"
+  },
+  {
+    "english": "sixth",
+    "phonetic": "/sɪksθ/",
+    "chinese": "第六",
+    "example": "Sixth sense.",
+    "category": "数词"
+  },
+  {
+    "english": "seventh",
+    "phonetic": "/ˈsevnθ/",
+    "chinese": "第七",
+    "example": "Seventh heaven.",
+    "category": "数词"
+  },
+  {
+    "english": "eighth",
+    "phonetic": "/eɪtθ/",
+    "chinese": "第八",
+    "example": "Eighth note.",
+    "category": "数词"
+  },
+  {
+    "english": "ninth",
+    "phonetic": "/naɪnθ/",
+    "chinese": "第九",
+    "example": "Ninth month.",
+    "category": "数词"
+  },
+  {
+    "english": "tenth",
+    "phonetic": "/tenθ/",
+    "chinese": "第十",
+    "example": "Tenth anniversary.",
+    "category": "数词"
+  },
+  {
+    "english": "eleventh",
+    "phonetic": "/ɪˈlevnθ/",
+    "chinese": "第十一",
+    "example": "Eleventh hour.",
+    "category": "数词"
+  },
+  {
+    "english": "twelfth",
+    "phonetic": "/twelfθ/",
+    "chinese": "第十二",
+    "example": "Twelfth night.",
+    "category": "数词"
+  },
+  {
+    "english": "thirteenth",
+    "phonetic": "/ˌθɜːrˈtiːnθ/",
+    "chinese": "第十三",
+    "example": "Thirteenth floor.",
+    "category": "数词"
+  },
+  {
+    "english": "twentieth",
+    "phonetic": "/ˈtwentiəθ/",
+    "chinese": "第二十",
+    "example": "Twentieth century.",
+    "category": "数词"
+  },
+  {
+    "english": "thirtieth",
+    "phonetic": "/ˈθɜːrtiəθ/",
+    "chinese": "第三十",
+    "example": "Thirtieth birthday.",
+    "category": "数词"
+  },
+  {
+    "english": "hundredth",
+    "phonetic": "/ˈhʌndrədθ/",
+    "chinese": "第一百",
+    "example": "Hundredth anniversary.",
+    "category": "数词"
+  },
+  {
+    "english": "thousandth",
+    "phonetic": "/ˈθaʊzndθ/",
+    "chinese": "第一千",
+    "example": "Thousandth customer.",
+    "category": "数词"
+  },
+  {
+    "english": "half",
+    "phonetic": "/hæf/",
+    "chinese": "一半",
+    "example": "Half an hour.",
+    "category": "数词"
+  },
+  {
+    "english": "quarter",
+    "phonetic": "/ˈkwɔːrtər/",
+    "chinese": "四分之一",
+    "example": "A quarter past.",
+    "category": "数词"
+  },
+  {
+    "english": "third",
+    "phonetic": "/θɜːrd/",
+    "chinese": "三分之一",
+    "example": "One third.",
+    "category": "数词"
+  },
+  {
+    "english": "fifth",
+    "phonetic": "/fɪfθ/",
+    "chinese": "五分之一",
+    "example": "One fifth.",
+    "category": "数词"
+  },
+  {
+    "english": "tenth",
+    "phonetic": "/tenθ/",
+    "chinese": "十分之一",
+    "example": "One tenth.",
+    "category": "数词"
+  },
+  {
+    "english": "percent",
+    "phonetic": "/pərˈsent/",
+    "chinese": "百分之",
+    "example": "Fifty percent.",
+    "category": "数词"
+  },
+  {
+    "english": "decimal",
+    "phonetic": "/ˈdesɪml/",
+    "chinese": "小数",
+    "example": "Decimal point.",
+    "category": "数词"
+  },
+  {
+    "english": "point",
+    "phonetic": "/pɔɪnt/",
+    "chinese": "点",
+    "example": "Three point five.",
+    "category": "数词"
+  },
+  {
+    "english": "all",
+    "phonetic": "/ɔːl/",
+    "chinese": "全部",
+    "example": "All of them.",
+    "category": "数词"
+  },
+  {
+    "english": "some",
+    "phonetic": "/sʌm/",
+    "chinese": "一些",
+    "example": "Some water.",
+    "category": "数词"
+  },
+  {
+    "english": "many",
+    "phonetic": "/ˈmeni/",
+    "chinese": "许多",
+    "example": "Many people.",
+    "category": "数词"
+  },
+  {
+    "english": "much",
+    "phonetic": "/mʌtʃ/",
+    "chinese": "许多",
+    "example": "Much money.",
+    "category": "数词"
+  },
+  {
+    "english": "few",
+    "phonetic": "/fjuː/",
+    "chinese": "很少",
+    "example": "A few friends.",
+    "category": "数词"
+  },
+  {
+    "english": "little",
+    "phonetic": "/ˈlɪtl/",
+    "chinese": "很少",
+    "example": "A little time.",
+    "category": "数词"
+  },
+  {
+    "english": "a lot of",
+    "phonetic": "/ə lɑːt əv/",
+    "chinese": "许多",
+    "example": "A lot of work.",
+    "category": "数词"
+  },
+  {
+    "english": "plenty of",
+    "phonetic": "/ˈplenti əv/",
+    "chinese": "大量",
+    "example": "Plenty of food.",
+    "category": "数词"
+  },
+  {
+    "english": "enough",
+    "phonetic": "/ɪˈnʌf/",
+    "chinese": "足够",
+    "example": "Enough money.",
+    "category": "数词"
+  },
+  {
+    "english": "too much",
+    "phonetic": "/tuː mʌtʃ/",
+    "chinese": "太多",
+    "example": "Too much sugar.",
+    "category": "数词"
+  },
+  {
+    "english": "too many",
+    "phonetic": "/tuː ˈmeni/",
+    "chinese": "太多",
+    "example": "Too many questions.",
+    "category": "数词"
+  },
+  {
+    "english": "at",
+    "phonetic": "/æt/",
+    "chinese": "在（时间点）",
+    "example": "At 8 o'clock.",
+    "category": "介词"
+  },
+  {
+    "english": "on",
+    "phonetic": "/ɑːn/",
+    "chinese": "在（具体日期）",
+    "example": "On Monday.",
+    "category": "介词"
+  },
+  {
+    "english": "in",
+    "phonetic": "/ɪn/",
+    "chinese": "在（时间段）",
+    "example": "In the morning.",
+    "category": "介词"
+  },
+  {
+    "english": "during",
+    "phonetic": "/ˈdʊrɪŋ/",
+    "chinese": "在...期间",
+    "example": "During the meeting.",
+    "category": "介词"
+  },
+  {
+    "english": "for",
+    "phonetic": "/fɔːr/",
+    "chinese": "持续（时间）",
+    "example": "For three days.",
+    "category": "介词"
+  },
+  {
+    "english": "since",
+    "phonetic": "/sɪns/",
+    "chinese": "自从",
+    "example": "Since yesterday.",
+    "category": "介词"
+  },
+  {
+    "english": "until",
+    "phonetic": "/ənˈtɪl/",
+    "chinese": "直到",
+    "example": "Until Friday.",
+    "category": "介词"
+  },
+  {
+    "english": "by",
+    "phonetic": "/baɪ/",
+    "chinese": "在...之前",
+    "example": "By tomorrow.",
+    "category": "介词"
+  },
+  {
+    "english": "before",
+    "phonetic": "/bɪˈfɔːr/",
+    "chinese": "在...之前",
+    "example": "Before lunch.",
+    "category": "介词"
+  },
+  {
+    "english": "after",
+    "phonetic": "/ˈæftər/",
+    "chinese": "在...之后",
+    "example": "After work.",
+    "category": "介词"
+  },
+  {
+    "english": "around",
+    "phonetic": "/əˈraʊnd/",
+    "chinese": "大约",
+    "example": "Around 5 pm.",
+    "category": "介词"
+  },
+  {
+    "english": "between",
+    "phonetic": "/bɪˈtwiːn/",
+    "chinese": "在...之间",
+    "example": "Between 9 and 10.",
+    "category": "介词"
+  },
+  {
+    "english": "within",
+    "phonetic": "/wɪˈðɪn/",
+    "chinese": "在...之内",
+    "example": "Within a week.",
+    "category": "介词"
+  },
+  {
+    "english": "in",
+    "phonetic": "/ɪn/",
+    "chinese": "在...里",
+    "example": "In the box.",
+    "category": "介词"
+  },
+  {
+    "english": "on",
+    "phonetic": "/ɑːn/",
+    "chinese": "在...上",
+    "example": "On the table.",
+    "category": "介词"
+  },
+  {
+    "english": "under",
+    "phonetic": "/ˈʌndər/",
+    "chinese": "在...下",
+    "example": "Under the bed.",
+    "category": "介词"
+  },
+  {
+    "english": "above",
+    "phonetic": "/əˈbʌv/",
+    "chinese": "在...上方",
+    "example": "Above the clouds.",
+    "category": "介词"
+  },
+  {
+    "english": "below",
+    "phonetic": "/bɪˈloʊ/",
+    "chinese": "在...下方",
+    "example": "Below the surface.",
+    "category": "介词"
+  },
+  {
+    "english": "over",
+    "phonetic": "/ˈoʊvər/",
+    "chinese": "在...上方",
+    "example": "Over the bridge.",
+    "category": "介词"
+  },
+  {
+    "english": "behind",
+    "phonetic": "/bɪˈhaɪnd/",
+    "chinese": "在...后",
+    "example": "Behind the door.",
+    "category": "介词"
+  },
+  {
+    "english": "in front of",
+    "phonetic": "/ɪn frʌnt əv/",
+    "chinese": "在...前",
+    "example": "In front of the house.",
+    "category": "介词"
+  },
+  {
+    "english": "beside",
+    "phonetic": "/bɪˈsaɪd/",
+    "chinese": "在...旁边",
+    "example": "Beside the river.",
+    "category": "介词"
+  },
+  {
+    "english": "next to",
+    "phonetic": "/nekst tuː/",
+    "chinese": "紧挨着",
+    "example": "Next to the bank.",
+    "category": "介词"
+  },
+  {
+    "english": "near",
+    "phonetic": "/nɪr/",
+    "chinese": "靠近",
+    "example": "Near the park.",
+    "category": "介词"
+  },
+  {
+    "english": "far from",
+    "phonetic": "/fɑːr frəm/",
+    "chinese": "远离",
+    "example": "Far from home.",
+    "category": "介词"
+  },
+  {
+    "english": "between",
+    "phonetic": "/bɪˈtwiːn/",
+    "chinese": "在...之间",
+    "example": "Between A and B.",
+    "category": "介词"
+  },
+  {
+    "english": "among",
+    "phonetic": "/əˈmʌŋ/",
+    "chinese": "在...之中",
+    "example": "Among the trees.",
+    "category": "介词"
+  },
+  {
+    "english": "around",
+    "phonetic": "/əˈraʊnd/",
+    "chinese": "围绕",
+    "example": "Around the corner.",
+    "category": "介词"
+  },
+  {
+    "english": "to",
+    "phonetic": "/tuː/",
+    "chinese": "到",
+    "example": "Go to school.",
+    "category": "介词"
+  },
+  {
+    "english": "from",
+    "phonetic": "/frəm/",
+    "chinese": "从",
+    "example": "From home.",
+    "category": "介词"
+  },
+  {
+    "english": "towards",
+    "phonetic": "/təˈwɔːrdz/",
+    "chinese": "朝向",
+    "example": "Walk towards me.",
+    "category": "介词"
+  },
+  {
+    "english": "away from",
+    "phonetic": "/əˈweɪ frəm/",
+    "chinese": "离开",
+    "example": "Run away from.",
+    "category": "介词"
+  },
+  {
+    "english": "into",
+    "phonetic": "/ˈɪntuː/",
+    "chinese": "进入",
+    "example": "Go into the room.",
+    "category": "介词"
+  },
+  {
+    "english": "out of",
+    "phonetic": "/aʊt əv/",
+    "chinese": "出来",
+    "example": "Get out of here.",
+    "category": "介词"
+  },
+  {
+    "english": "through",
+    "phonetic": "/θruː/",
+    "chinese": "穿过",
+    "example": "Walk through the door.",
+    "category": "介词"
+  },
+  {
+    "english": "across",
+    "phonetic": "/əˈkrɔːs/",
+    "chinese": "穿过",
+    "example": "Cross the street.",
+    "category": "介词"
+  },
+  {
+    "english": "along",
+    "phonetic": "/əˈlɔːŋ/",
+    "chinese": "沿着",
+    "example": "Walk along the path.",
+    "category": "介词"
+  },
+  {
+    "english": "around",
+    "phonetic": "/əˈraʊnd/",
+    "chinese": "绕着",
+    "example": "Walk around the lake.",
+    "category": "介词"
+  },
+  {
+    "english": "up",
+    "phonetic": "/ʌp/",
+    "chinese": "向上",
+    "example": "Go up the stairs.",
+    "category": "介词"
+  },
+  {
+    "english": "down",
+    "phonetic": "/daʊn/",
+    "chinese": "向下",
+    "example": "Come down here.",
+    "category": "介词"
+  },
+  {
+    "english": "back",
+    "phonetic": "/bæk/",
+    "chinese": "回",
+    "example": "Go back home.",
+    "category": "介词"
+  },
+  {
+    "english": "because of",
+    "phonetic": "/bɪˈkɔːz əv/",
+    "chinese": "因为",
+    "example": "Because of rain.",
+    "category": "介词"
+  },
+  {
+    "english": "due to",
+    "phonetic": "/duː tuː/",
+    "chinese": "由于",
+    "example": "Due to illness.",
+    "category": "介词"
+  },
+  {
+    "english": "for",
+    "phonetic": "/fɔːr/",
+    "chinese": "为了",
+    "example": "For you.",
+    "category": "介词"
+  },
+  {
+    "english": "with",
+    "phonetic": "/wɪð/",
+    "chinese": "用",
+    "example": "Write with a pen.",
+    "category": "介词"
+  },
+  {
+    "english": "without",
+    "phonetic": "/wɪˈðaʊt/",
+    "chinese": "没有",
+    "example": "Without water.",
+    "category": "介词"
+  },
+  {
+    "english": "by",
+    "phonetic": "/baɪ/",
+    "chinese": "通过",
+    "example": "By bus.",
+    "category": "介词"
+  },
+  {
+    "english": "I",
+    "phonetic": "/aɪ/",
+    "chinese": "我",
+    "example": "I am happy.",
+    "category": "代词"
+  },
+  {
+    "english": "you",
+    "phonetic": "/juː/",
+    "chinese": "你",
+    "example": "You are great.",
+    "category": "代词"
+  },
+  {
+    "english": "he",
+    "phonetic": "/hiː/",
+    "chinese": "他",
+    "example": "He is tall.",
+    "category": "代词"
+  },
+  {
+    "english": "she",
+    "phonetic": "/ʃiː/",
+    "chinese": "她",
+    "example": "She is beautiful.",
+    "category": "代词"
+  },
+  {
+    "english": "it",
+    "phonetic": "/ɪt/",
+    "chinese": "它",
+    "example": "It is raining.",
+    "category": "代词"
+  },
+  {
+    "english": "we",
+    "phonetic": "/wiː/",
+    "chinese": "我们",
+    "example": "We are friends.",
+    "category": "代词"
+  },
+  {
+    "english": "they",
+    "phonetic": "/ðeɪ/",
+    "chinese": "他们",
+    "example": "They are here.",
+    "category": "代词"
+  },
+  {
+    "english": "me",
+    "phonetic": "/miː/",
+    "chinese": "我（宾格）",
+    "example": "Help me.",
+    "category": "代词"
+  },
+  {
+    "english": "you",
+    "phonetic": "/juː/",
+    "chinese": "你（宾格）",
+    "example": "Love you.",
+    "category": "代词"
+  },
+  {
+    "english": "him",
+    "phonetic": "/hɪm/",
+    "chinese": "他（宾格）",
+    "example": "Call him.",
+    "category": "代词"
+  },
+  {
+    "english": "her",
+    "phonetic": "/hɜːr/",
+    "chinese": "她（宾格）",
+    "example": "See her.",
+    "category": "代词"
+  },
+  {
+    "english": "it",
+    "phonetic": "/ɪt/",
+    "chinese": "它（宾格）",
+    "example": "Feed it.",
+    "category": "代词"
+  },
+  {
+    "english": "us",
+    "phonetic": "/ʌs/",
+    "chinese": "我们（宾格）",
+    "example": "Join us.",
+    "category": "代词"
+  },
+  {
+    "english": "them",
+    "phonetic": "/ðem/",
+    "chinese": "他们（宾格）",
+    "example": "Tell them.",
+    "category": "代词"
+  },
+  {
+    "english": "my",
+    "phonetic": "/maɪ/",
+    "chinese": "我的",
+    "example": "My book.",
+    "category": "代词"
+  },
+  {
+    "english": "your",
+    "phonetic": "/jɔːr/",
+    "chinese": "你的",
+    "example": "Your car.",
+    "category": "代词"
+  },
+  {
+    "english": "his",
+    "phonetic": "/hɪz/",
+    "chinese": "他的",
+    "example": "His house.",
+    "category": "代词"
+  },
+  {
+    "english": "her",
+    "phonetic": "/hɜːr/",
+    "chinese": "她的",
+    "example": "Her name.",
+    "category": "代词"
+  },
+  {
+    "english": "its",
+    "phonetic": "/ɪts/",
+    "chinese": "它的",
+    "example": "Its tail.",
+    "category": "代词"
+  },
+  {
+    "english": "our",
+    "phonetic": "/aʊər/",
+    "chinese": "我们的",
+    "example": "Our home.",
+    "category": "代词"
+  },
+  {
+    "english": "their",
+    "phonetic": "/ðer/",
+    "chinese": "他们的",
+    "example": "Their children.",
+    "category": "代词"
+  },
+  {
+    "english": "mine",
+    "phonetic": "/maɪn/",
+    "chinese": "我的（名词性）",
+    "example": "This is mine.",
+    "category": "代词"
+  },
+  {
+    "english": "yours",
+    "phonetic": "/jɔːrz/",
+    "chinese": "你的（名词性）",
+    "example": "The book is yours.",
+    "category": "代词"
+  },
+  {
+    "english": "his",
+    "phonetic": "/hɪz/",
+    "chinese": "他的（名词性）",
+    "example": "The car is his.",
+    "category": "代词"
+  },
+  {
+    "english": "hers",
+    "phonetic": "/hɜːrz/",
+    "chinese": "她的（名词性）",
+    "example": "The phone is hers.",
+    "category": "代词"
+  },
+  {
+    "english": "ours",
+    "phonetic": "/aʊərz/",
+    "chinese": "我们的（名词性）",
+    "example": "The house is ours.",
+    "category": "代词"
+  },
+  {
+    "english": "theirs",
+    "phonetic": "/ðerz/",
+    "chinese": "他们的（名词性）",
+    "example": "The money is theirs.",
+    "category": "代词"
+  },
+  {
+    "english": "this",
+    "phonetic": "/ðɪs/",
+    "chinese": "这个",
+    "example": "This is good.",
+    "category": "代词"
+  },
+  {
+    "english": "that",
+    "phonetic": "/ðæt/",
+    "chinese": "那个",
+    "example": "That is bad.",
+    "category": "代词"
+  },
+  {
+    "english": "these",
+    "phonetic": "/ðiːz/",
+    "chinese": "这些",
+    "example": "These are mine.",
+    "category": "代词"
+  },
+  {
+    "english": "those",
+    "phonetic": "/ðoʊz/",
+    "chinese": "那些",
+    "example": "Those are yours.",
+    "category": "代词"
+  },
+  {
+    "english": "something",
+    "phonetic": "/ˈsʌmθɪŋ/",
+    "chinese": "某事",
+    "example": "Something happened.",
+    "category": "代词"
+  },
+  {
+    "english": "nothing",
+    "phonetic": "/ˈnʌθɪŋ/",
+    "chinese": "没什么",
+    "example": "Nothing matters.",
+    "category": "代词"
+  },
+  {
+    "english": "everything",
+    "phonetic": "/ˈevriθɪŋ/",
+    "chinese": "一切",
+    "example": "Everything is fine.",
+    "category": "代词"
+  },
+  {
+    "english": "anything",
+    "phonetic": "/ˈeniθɪŋ/",
+    "chinese": "任何事",
+    "example": "Anything is possible.",
+    "category": "代词"
+  },
+  {
+    "english": "someone",
+    "phonetic": "/ˈsʌmwʌn/",
+    "chinese": "某人",
+    "example": "Someone called.",
+    "category": "代词"
+  },
+  {
+    "english": "no one",
+    "phonetic": "/noʊ wʌn/",
+    "chinese": "没人",
+    "example": "No one knows.",
+    "category": "代词"
+  },
+  {
+    "english": "everyone",
+    "phonetic": "/ˈevriwʌn/",
+    "chinese": "每个人",
+    "example": "Everyone loves it.",
+    "category": "代词"
+  },
+  {
+    "english": "anyone",
+    "phonetic": "/ˈeniwʌn/",
+    "chinese": "任何人",
+    "example": "Anyone can do it.",
+    "category": "代词"
+  },
+  {
+    "english": "anybody",
+    "phonetic": "/ˈenibɑːdi/",
+    "chinese": "任何人",
+    "example": "Anybody here?",
+    "category": "代词"
+  },
+  {
+    "english": "somebody",
+    "phonetic": "/ˈsʌmbɑːdi/",
+    "chinese": "某人",
+    "example": "Somebody help.",
+    "category": "代词"
+  },
+  {
+    "english": "nobody",
+    "phonetic": "/ˈnoʊbɑːdi/",
+    "chinese": "没人",
+    "example": "Nobody cares.",
+    "category": "代词"
+  },
+  {
+    "english": "everybody",
+    "phonetic": "/ˈevribɑːdi/",
+    "chinese": "每个人",
+    "example": "Everybody knows.",
+    "category": "代词"
+  },
+  {
+    "english": "each",
+    "phonetic": "/iːtʃ/",
+    "chinese": "每个",
+    "example": "Each person.",
+    "category": "代词"
+  },
+  {
+    "english": "every",
+    "phonetic": "/ˈevri/",
+    "chinese": "每个",
+    "example": "Every day.",
+    "category": "代词"
+  },
+  {
+    "english": "either",
+    "phonetic": "/ˈiːðər/",
+    "chinese": "两者之一",
+    "example": "Either way.",
+    "category": "代词"
+  },
+  {
+    "english": "neither",
+    "phonetic": "/ˈniːðər/",
+    "chinese": "两者都不",
+    "example": "Neither is right.",
+    "category": "代词"
+  },
+  {
+    "english": "both",
+    "phonetic": "/boʊθ/",
+    "chinese": "两者都",
+    "example": "Both are good.",
+    "category": "代词"
+  },
+  {
+    "english": "all",
+    "phonetic": "/ɔːl/",
+    "chinese": "全部",
+    "example": "All of us.",
+    "category": "代词"
+  },
+  {
+    "english": "none",
+    "phonetic": "/nʌn/",
+    "chinese": "没有一个",
+    "example": "None of them.",
+    "category": "代词"
+  },
+  {
+    "english": "one",
+    "phonetic": "/wʌn/",
+    "chinese": "一个",
+    "example": "One of them.",
+    "category": "代词"
+  },
+  {
+    "english": "myself",
+    "phonetic": "/maɪˈself/",
+    "chinese": "我自己",
+    "example": "By myself.",
+    "category": "代词"
+  },
+  {
+    "english": "yourself",
+    "phonetic": "/jɔːrˈself/",
+    "chinese": "你自己",
+    "example": "Help yourself.",
+    "category": "代词"
+  },
+  {
+    "english": "himself",
+    "phonetic": "/hɪmˈself/",
+    "chinese": "他自己",
+    "example": "By himself.",
+    "category": "代词"
+  },
+  {
+    "english": "herself",
+    "phonetic": "/hɜːrˈself/",
+    "chinese": "她自己",
+    "example": "By herself.",
+    "category": "代词"
+  },
+  {
+    "english": "itself",
+    "phonetic": "/ɪtˈself/",
+    "chinese": "它自己",
+    "example": "By itself.",
+    "category": "代词"
+  },
+  {
+    "english": "ourselves",
+    "phonetic": "/aʊərˈselvz/",
+    "chinese": "我们自己",
+    "example": "By ourselves.",
+    "category": "代词"
+  },
+  {
+    "english": "yourselves",
+    "phonetic": "/jɔːrˈselvz/",
+    "chinese": "你们自己",
+    "example": "By yourselves.",
+    "category": "代词"
+  },
+  {
+    "english": "themselves",
+    "phonetic": "/ðemˈselvz/",
+    "chinese": "他们自己",
+    "example": "By themselves.",
+    "category": "代词"
+  },
+  {
+    "english": "dollar",
+    "phonetic": "/ˈdɑːlər/",
+    "chinese": "美元",
+    "example": "US dollar.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "euro",
+    "phonetic": "/ˈjʊroʊ/",
+    "chinese": "欧元",
+    "example": "Euro zone.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "pound",
+    "phonetic": "/paʊnd/",
+    "chinese": "英镑",
+    "example": "British pound.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "yen",
+    "phonetic": "/jen/",
+    "chinese": "日元",
+    "example": "Japanese yen.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "yuan",
+    "phonetic": "/juˈɑːn/",
+    "chinese": "人民币",
+    "example": "Chinese yuan.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "won",
+    "phonetic": "/wʌn/",
+    "chinese": "韩元",
+    "example": "South Korean won.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "ruble",
+    "phonetic": "/ˈruːbl/",
+    "chinese": "卢布",
+    "example": "Russian ruble.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "rupee",
+    "phonetic": "/ˈruːpiː/",
+    "chinese": "卢比",
+    "example": "Indian rupee.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "franc",
+    "phonetic": "/fræŋk/",
+    "chinese": "法郎",
+    "example": "Swiss franc.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "peso",
+    "phonetic": "/ˈpeɪsoʊ/",
+    "chinese": "比索",
+    "example": "Mexican peso.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "real",
+    "phonetic": "/reɪˈaʊ/",
+    "chinese": "雷亚尔",
+    "example": "Brazilian real.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "rand",
+    "phonetic": "/rænd/",
+    "chinese": "兰特",
+    "example": "South African rand.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "dirham",
+    "phonetic": "/dɪrˈhæm/",
+    "chinese": "迪拉姆",
+    "example": "UAE dirham.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "riyal",
+    "phonetic": "/riˈjɑːl/",
+    "chinese": "里亚尔",
+    "example": "Saudi riyal.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "money",
+    "phonetic": "/ˈmʌni/",
+    "chinese": "钱",
+    "example": "Make money.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "cash",
+    "phonetic": "/kæʃ/",
+    "chinese": "现金",
+    "example": "Pay in cash.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "credit",
+    "phonetic": "/ˈkredɪt/",
+    "chinese": "信用",
+    "example": "Credit card.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "debit",
+    "phonetic": "/ˈdebɪt/",
+    "chinese": "借记",
+    "example": "Debit card.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "bank",
+    "phonetic": "/bæŋk/",
+    "chinese": "银行",
+    "example": "Go to the bank.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "account",
+    "phonetic": "/əˈkaʊnt/",
+    "chinese": "账户",
+    "example": "Bank account.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "savings",
+    "phonetic": "/ˈseɪvɪŋz/",
+    "chinese": "储蓄",
+    "example": "Savings account.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "interest",
+    "phonetic": "/ˈɪntrəst/",
+    "chinese": "利息",
+    "example": "Pay interest.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "loan",
+    "phonetic": "/loʊn/",
+    "chinese": "贷款",
+    "example": "Take a loan.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "debt",
+    "phonetic": "/det/",
+    "chinese": "债务",
+    "example": "Pay off debt.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "budget",
+    "phonetic": "/ˈbʌdʒɪt/",
+    "chinese": "预算",
+    "example": "Make a budget.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "expense",
+    "phonetic": "/ɪkˈspens/",
+    "chinese": "费用",
+    "example": "Daily expenses.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "income",
+    "phonetic": "/ˈɪnkʌm/",
+    "chinese": "收入",
+    "example": "Annual income.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "salary",
+    "phonetic": "/ˈsæləri/",
+    "chinese": "薪水",
+    "example": "Monthly salary.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "wage",
+    "phonetic": "/weɪdʒ/",
+    "chinese": "工资",
+    "example": "Hourly wage.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "tax",
+    "phonetic": "/tæks/",
+    "chinese": "税",
+    "example": "Pay tax.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "price",
+    "phonetic": "/praɪs/",
+    "chinese": "价格",
+    "example": "Good price.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "cost",
+    "phonetic": "/kɔːst/",
+    "chinese": "成本",
+    "example": "High cost.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "cheap",
+    "phonetic": "/tʃiːp/",
+    "chinese": "便宜的",
+    "example": "Very cheap.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "expensive",
+    "phonetic": "/ɪkˈspensɪv/",
+    "chinese": "昂贵的",
+    "example": "Too expensive.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "discount",
+    "phonetic": "/ˈdɪskaʊnt/",
+    "chinese": "折扣",
+    "example": "Get a discount.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "sale",
+    "phonetic": "/seɪl/",
+    "chinese": "销售",
+    "example": "On sale.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "buy",
+    "phonetic": "/baɪ/",
+    "chinese": "买",
+    "example": "Buy a car.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "sell",
+    "phonetic": "/sel/",
+    "chinese": "卖",
+    "example": "Sell products.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "pay",
+    "phonetic": "/peɪ/",
+    "chinese": "支付",
+    "example": "Pay the bill.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "change",
+    "phonetic": "/tʃeɪndʒ/",
+    "chinese": "零钱",
+    "example": "Keep the change.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "tip",
+    "phonetic": "/tɪp/",
+    "chinese": "小费",
+    "example": "Leave a tip.",
+    "category": "货币词汇"
+  },
+  {
+    "english": "Monday",
+    "phonetic": "/ˈmʌndeɪ/",
+    "chinese": "星期一",
+    "example": "On Monday.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "Tuesday",
+    "phonetic": "/ˈtuːzdeɪ/",
+    "chinese": "星期二",
+    "example": "On Tuesday.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "Wednesday",
+    "phonetic": "/ˈwenzdeɪ/",
+    "chinese": "星期三",
+    "example": "On Wednesday.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "Thursday",
+    "phonetic": "/ˈθɜːrzdeɪ/",
+    "chinese": "星期四",
+    "example": "On Thursday.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "Friday",
+    "phonetic": "/ˈfraɪdeɪ/",
+    "chinese": "星期五",
+    "example": "On Friday.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "Saturday",
+    "phonetic": "/ˈsætərdeɪ/",
+    "chinese": "星期六",
+    "example": "On Saturday.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "Sunday",
+    "phonetic": "/ˈsʌndeɪ/",
+    "chinese": "星期日",
+    "example": "On Sunday.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "weekday",
+    "phonetic": "/ˈwiːkdeɪ/",
+    "chinese": "工作日",
+    "example": "On weekdays.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "weekend",
+    "phonetic": "/ˈwiːkend/",
+    "chinese": "周末",
+    "example": "On the weekend.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "January",
+    "phonetic": "/ˈdʒænjueri/",
+    "chinese": "一月",
+    "example": "In January.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "February",
+    "phonetic": "/ˈfebruəri/",
+    "chinese": "二月",
+    "example": "In February.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "March",
+    "phonetic": "/mɑːrtʃ/",
+    "chinese": "三月",
+    "example": "In March.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "April",
+    "phonetic": "/ˈeɪprəl/",
+    "chinese": "四月",
+    "example": "In April.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "May",
+    "phonetic": "/meɪ/",
+    "chinese": "五月",
+    "example": "In May.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "June",
+    "phonetic": "/dʒuːn/",
+    "chinese": "六月",
+    "example": "In June.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "July",
+    "phonetic": "/dʒʊˈlaɪ/",
+    "chinese": "七月",
+    "example": "In July.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "August",
+    "phonetic": "/ˈɔːɡəst/",
+    "chinese": "八月",
+    "example": "In August.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "September",
+    "phonetic": "/sepˈtembər/",
+    "chinese": "九月",
+    "example": "In September.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "October",
+    "phonetic": "/ɑːkˈtoʊbər/",
+    "chinese": "十月",
+    "example": "In October.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "November",
+    "phonetic": "/noʊˈvembər/",
+    "chinese": "十一月",
+    "example": "In November.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "December",
+    "phonetic": "/dɪˈsembər/",
+    "chinese": "十二月",
+    "example": "In December.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "spring",
+    "phonetic": "/sprɪŋ/",
+    "chinese": "春天",
+    "example": "In spring.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "summer",
+    "phonetic": "/ˈsʌmər/",
+    "chinese": "夏天",
+    "example": "In summer.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "autumn",
+    "phonetic": "/ˈɔːtəm/",
+    "chinese": "秋天",
+    "example": "In autumn.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "fall",
+    "phonetic": "/fɔːl/",
+    "chinese": "秋天（美式）",
+    "example": "In the fall.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "winter",
+    "phonetic": "/ˈwɪntər/",
+    "chinese": "冬天",
+    "example": "In winter.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "second",
+    "phonetic": "/ˈsekənd/",
+    "chinese": "秒",
+    "example": "One second.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "minute",
+    "phonetic": "/ˈmɪnɪt/",
+    "chinese": "分钟",
+    "example": "Five minutes.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "hour",
+    "phonetic": "/ˈaʊər/",
+    "chinese": "小时",
+    "example": "Two hours.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "day",
+    "phonetic": "/deɪ/",
+    "chinese": "天",
+    "example": "Seven days.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "week",
+    "phonetic": "/wiːk/",
+    "chinese": "周",
+    "example": "One week.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "month",
+    "phonetic": "/mʌnθ/",
+    "chinese": "月",
+    "example": "Six months.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "year",
+    "phonetic": "/jɪr/",
+    "chinese": "年",
+    "example": "Ten years.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "decade",
+    "phonetic": "/ˈdekeɪd/",
+    "chinese": "十年",
+    "example": "Three decades.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "century",
+    "phonetic": "/ˈsentʃəri/",
+    "chinese": "世纪",
+    "example": "This century.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "millennium",
+    "phonetic": "/mɪˈleniəm/",
+    "chinese": "千年",
+    "example": "New millennium.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "today",
+    "phonetic": "/təˈdeɪ/",
+    "chinese": "今天",
+    "example": "Today is Monday.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "tomorrow",
+    "phonetic": "/təˈmɔːroʊ/",
+    "chinese": "明天",
+    "example": "See you tomorrow.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "yesterday",
+    "phonetic": "/ˈjestərdeɪ/",
+    "chinese": "昨天",
+    "example": "Yesterday was Sunday.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "now",
+    "phonetic": "/naʊ/",
+    "chinese": "现在",
+    "example": "Right now.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "soon",
+    "phonetic": "/suːn/",
+    "chinese": "很快",
+    "example": "See you soon.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "later",
+    "phonetic": "/ˈleɪtər/",
+    "chinese": "稍后",
+    "example": "Talk later.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "early",
+    "phonetic": "/ˈɜːrli/",
+    "chinese": "早",
+    "example": "Wake up early.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "late",
+    "phonetic": "/leɪt/",
+    "chinese": "晚",
+    "example": "Arrive late.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "morning",
+    "phonetic": "/ˈmɔːrnɪŋ/",
+    "chinese": "早上",
+    "example": "Good morning.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "afternoon",
+    "phonetic": "/ˌæftərˈnuːn/",
+    "chinese": "下午",
+    "example": "Good afternoon.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "evening",
+    "phonetic": "/ˈiːvnɪŋ/",
+    "chinese": "晚上",
+    "example": "Good evening.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "night",
+    "phonetic": "/naɪt/",
+    "chinese": "夜晚",
+    "example": "Good night.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "midnight",
+    "phonetic": "/ˈmɪdnaɪt/",
+    "chinese": "午夜",
+    "example": "At midnight.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "noon",
+    "phonetic": "/nuːn/",
+    "chinese": "中午",
+    "example": "At noon.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "dawn",
+    "phonetic": "/dɔːn/",
+    "chinese": "黎明",
+    "example": "At dawn.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "dusk",
+    "phonetic": "/dʌsk/",
+    "chinese": "黄昏",
+    "example": "At dusk.",
+    "category": "时间词汇"
+  },
+  {
+    "english": "red",
+    "phonetic": "/red/",
+    "chinese": "红色",
+    "example": "Red apple.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "blue",
+    "phonetic": "/bluː/",
+    "chinese": "蓝色",
+    "example": "Blue sky.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "green",
+    "phonetic": "/ɡriːn/",
+    "chinese": "绿色",
+    "example": "Green grass.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "yellow",
+    "phonetic": "/ˈjeloʊ/",
+    "chinese": "黄色",
+    "example": "Yellow sun.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "orange",
+    "phonetic": "/ˈɔːrɪndʒ/",
+    "chinese": "橙色",
+    "example": "Orange juice.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "purple",
+    "phonetic": "/ˈpɜːrpl/",
+    "chinese": "紫色",
+    "example": "Purple flower.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "pink",
+    "phonetic": "/pɪŋk/",
+    "chinese": "粉色",
+    "example": "Pink dress.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "brown",
+    "phonetic": "/braʊn/",
+    "chinese": "棕色",
+    "example": "Brown hair.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "black",
+    "phonetic": "/blæk/",
+    "chinese": "黑色",
+    "example": "Black cat.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "white",
+    "phonetic": "/waɪt/",
+    "chinese": "白色",
+    "example": "White snow.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "gray",
+    "phonetic": "/ɡreɪ/",
+    "chinese": "灰色",
+    "example": "Gray sky.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "grey",
+    "phonetic": "/ɡreɪ/",
+    "chinese": "灰色（英式）",
+    "example": "Grey hair.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "gold",
+    "phonetic": "/ɡoʊld/",
+    "chinese": "金色",
+    "example": "Gold ring.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "silver",
+    "phonetic": "/ˈsɪlvər/",
+    "chinese": "银色",
+    "example": "Silver spoon.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "beige",
+    "phonetic": "/beɪʒ/",
+    "chinese": "米色",
+    "example": "Beige shirt.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "cream",
+    "phonetic": "/kriːm/",
+    "chinese": "奶油色",
+    "example": "Cream color.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "light",
+    "phonetic": "/laɪt/",
+    "chinese": "浅色",
+    "example": "Light blue.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "dark",
+    "phonetic": "/dɑːrk/",
+    "chinese": "深色",
+    "example": "Dark red.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "bright",
+    "phonetic": "/braɪt/",
+    "chinese": "明亮的",
+    "example": "Bright color.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "sunny",
+    "phonetic": "/ˈsʌni/",
+    "chinese": "晴朗的",
+    "example": "Sunny day.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "cloudy",
+    "phonetic": "/ˈklaʊdi/",
+    "chinese": "多云的",
+    "example": "Cloudy sky.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "rainy",
+    "phonetic": "/ˈreɪni/",
+    "chinese": "下雨的",
+    "example": "Rainy day.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "windy",
+    "phonetic": "/ˈwɪndi/",
+    "chinese": "有风的",
+    "example": "Windy day.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "snowy",
+    "phonetic": "/ˈsnoʊi/",
+    "chinese": "下雪的",
+    "example": "Snowy winter.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "stormy",
+    "phonetic": "/ˈstɔːrmi/",
+    "chinese": "暴风雨的",
+    "example": "Stormy night.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "foggy",
+    "phonetic": "/ˈfɑːɡi/",
+    "chinese": "有雾的",
+    "example": "Foggy morning.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "hot",
+    "phonetic": "/hɑːt/",
+    "chinese": "热的",
+    "example": "Hot weather.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "cold",
+    "phonetic": "/koʊld/",
+    "chinese": "冷的",
+    "example": "Cold day.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "warm",
+    "phonetic": "/wɔːrm/",
+    "chinese": "温暖的",
+    "example": "Warm spring.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "cool",
+    "phonetic": "/kuːl/",
+    "chinese": "凉爽的",
+    "example": "Cool evening.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "dry",
+    "phonetic": "/draɪ/",
+    "chinese": "干燥的",
+    "example": "Dry climate.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "wet",
+    "phonetic": "/wet/",
+    "chinese": "湿的",
+    "example": "Wet ground.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "humid",
+    "phonetic": "/ˈhjuːmɪd/",
+    "chinese": "潮湿的",
+    "example": "Humid weather.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "temperature",
+    "phonetic": "/ˈtemprətʃər/",
+    "chinese": "温度",
+    "example": "High temperature.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "weather",
+    "phonetic": "/ˈweðər/",
+    "chinese": "天气",
+    "example": "Good weather.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "climate",
+    "phonetic": "/ˈklaɪmət/",
+    "chinese": "气候",
+    "example": "Tropical climate.",
+    "category": "颜色和天气"
+  },
+  {
+    "english": "and",
+    "phonetic": "/ænd/",
+    "chinese": "和",
+    "example": "You and I.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "but",
+    "phonetic": "/bʌt/",
+    "chinese": "但是",
+    "example": "But I'm busy.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "or",
+    "phonetic": "/ɔːr/",
+    "chinese": "或者",
+    "example": "Tea or coffee.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "so",
+    "phonetic": "/soʊ/",
+    "chinese": "所以",
+    "example": "So I left.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "because",
+    "phonetic": "/bɪˈkɔːz/",
+    "chinese": "因为",
+    "example": "Because I love you.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "if",
+    "phonetic": "/ɪf/",
+    "chinese": "如果",
+    "example": "If it rains.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "when",
+    "phonetic": "/wen/",
+    "chinese": "当...时",
+    "example": "When I was young.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "while",
+    "phonetic": "/waɪl/",
+    "chinese": "当...时",
+    "example": "While cooking.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "after",
+    "phonetic": "/ˈæftər/",
+    "chinese": "在...后",
+    "example": "After dinner.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "before",
+    "phonetic": "/bɪˈfɔːr/",
+    "chinese": "在...前",
+    "example": "Before leaving.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "although",
+    "phonetic": "/ɔːlˈðoʊ/",
+    "chinese": "虽然",
+    "example": "Although tired.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "though",
+    "phonetic": "/ðoʊ/",
+    "chinese": "虽然",
+    "example": "Though small.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "even though",
+    "phonetic": "/ˈiːvn ðoʊ/",
+    "chinese": "即使",
+    "example": "Even though late.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "unless",
+    "phonetic": "/ənˈles/",
+    "chinese": "除非",
+    "example": "Unless you go.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "until",
+    "phonetic": "/ənˈtɪl/",
+    "chinese": "直到",
+    "example": "Until tomorrow.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "since",
+    "phonetic": "/sɪns/",
+    "chinese": "自从",
+    "example": "Since 2020.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "as",
+    "phonetic": "/æz/",
+    "chinese": "当...时",
+    "example": "As I walked.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "for",
+    "phonetic": "/fɔːr/",
+    "chinese": "因为",
+    "example": "For I love you.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "yet",
+    "phonetic": "/jet/",
+    "chinese": "然而",
+    "example": "Yet it's true.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "nor",
+    "phonetic": "/nɔːr/",
+    "chinese": "也不",
+    "example": "Neither nor.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "a",
+    "phonetic": "/ə/",
+    "chinese": "一个（辅音前）",
+    "example": "A book.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "an",
+    "phonetic": "/æn/",
+    "chinese": "一个（元音前）",
+    "example": "An apple.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "the",
+    "phonetic": "/ðə/",
+    "chinese": "这个/那个",
+    "example": "The sun.",
+    "category": "连词和冠词"
+  },
+  {
+    "english": "what",
+    "phonetic": "/wɑːt/",
+    "chinese": "什么",
+    "example": "What is this?",
+    "category": "疑问词"
+  },
+  {
+    "english": "who",
+    "phonetic": "/huː/",
+    "chinese": "谁",
+    "example": "Who are you?",
+    "category": "疑问词"
+  },
+  {
+    "english": "whom",
+    "phonetic": "/huːm/",
+    "chinese": "谁（宾格）",
+    "example": "Whom did you see?",
+    "category": "疑问词"
+  },
+  {
+    "english": "whose",
+    "phonetic": "/huːz/",
+    "chinese": "谁的",
+    "example": "Whose book?",
+    "category": "疑问词"
+  },
+  {
+    "english": "where",
+    "phonetic": "/wer/",
+    "chinese": "哪里",
+    "example": "Where are you?",
+    "category": "疑问词"
+  },
+  {
+    "english": "when",
+    "phonetic": "/wen/",
+    "chinese": "什么时候",
+    "example": "When is it?",
+    "category": "疑问词"
+  },
+  {
+    "english": "why",
+    "phonetic": "/waɪ/",
+    "chinese": "为什么",
+    "example": "Why not?",
+    "category": "疑问词"
+  },
+  {
+    "english": "how",
+    "phonetic": "/haʊ/",
+    "chinese": "怎样",
+    "example": "How are you?",
+    "category": "疑问词"
+  },
+  {
+    "english": "which",
+    "phonetic": "/wɪtʃ/",
+    "chinese": "哪一个",
+    "example": "Which one?",
+    "category": "疑问词"
+  },
+  {
+    "english": "what time",
+    "phonetic": "/wɑːt taɪm/",
+    "chinese": "几点",
+    "example": "What time is it?",
+    "category": "疑问词"
+  },
+  {
+    "english": "how many",
+    "phonetic": "/haʊ ˈmeni/",
+    "chinese": "多少",
+    "example": "How many?",
+    "category": "疑问词"
+  },
+  {
+    "english": "how much",
+    "phonetic": "/haʊ mʌtʃ/",
+    "chinese": "多少",
+    "example": "How much?",
+    "category": "疑问词"
+  },
+  {
+    "english": "how often",
+    "phonetic": "/haʊ ˈɔːfn/",
+    "chinese": "多久一次",
+    "example": "How often?",
+    "category": "疑问词"
+  },
+  {
+    "english": "how long",
+    "phonetic": "/haʊ lɔːŋ/",
+    "chinese": "多长时间",
+    "example": "How long?",
+    "category": "疑问词"
+  },
+  {
+    "english": "how far",
+    "phonetic": "/haʊ fɑːr/",
+    "chinese": "多远",
+    "example": "How far?",
+    "category": "疑问词"
+  },
+  {
+    "english": "how old",
+    "phonetic": "/haʊ oʊld/",
+    "chinese": "多大",
+    "example": "How old are you?",
+    "category": "疑问词"
+  },
+  {
+    "english": "be",
+    "phonetic": "/biː/",
+    "chinese": "是",
+    "example": "I am happy.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "have",
+    "phonetic": "/hæv/",
+    "chinese": "有",
+    "example": "I have a car.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "do",
+    "phonetic": "/duː/",
+    "chinese": "做",
+    "example": "Do your best.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "say",
+    "phonetic": "/seɪ/",
+    "chinese": "说",
+    "example": "Say hello.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "get",
+    "phonetic": "/ɡet/",
+    "chinese": "得到",
+    "example": "Get ready.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "make",
+    "phonetic": "/meɪk/",
+    "chinese": "制作",
+    "example": "Make a cake.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "go",
+    "phonetic": "/ɡoʊ/",
+    "chinese": "去",
+    "example": "Go home.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "know",
+    "phonetic": "/noʊ/",
+    "chinese": "知道",
+    "example": "I know it.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "take",
+    "phonetic": "/teɪk/",
+    "chinese": "拿",
+    "example": "Take a seat.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "see",
+    "phonetic": "/siː/",
+    "chinese": "看见",
+    "example": "See you later.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "come",
+    "phonetic": "/kʌm/",
+    "chinese": "来",
+    "example": "Come here.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "think",
+    "phonetic": "/θɪŋk/",
+    "chinese": "想",
+    "example": "I think so.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "look",
+    "phonetic": "/lʊk/",
+    "chinese": "看",
+    "example": "Look at this.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "want",
+    "phonetic": "/wɑːnt/",
+    "chinese": "想要",
+    "example": "I want coffee.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "give",
+    "phonetic": "/ɡɪv/",
+    "chinese": "给",
+    "example": "Give me a hand.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "use",
+    "phonetic": "/juːz/",
+    "chinese": "使用",
+    "example": "Use the pen.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "find",
+    "phonetic": "/faɪnd/",
+    "chinese": "找到",
+    "example": "Find the answer.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "tell",
+    "phonetic": "/tel/",
+    "chinese": "告诉",
+    "example": "Tell me.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "ask",
+    "phonetic": "/æsk/",
+    "chinese": "询问",
+    "example": "Ask a question.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "work",
+    "phonetic": "/wɜːrk/",
+    "chinese": "工作",
+    "example": "Work hard.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "seem",
+    "phonetic": "/siːm/",
+    "chinese": "似乎",
+    "example": "It seems good.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "feel",
+    "phonetic": "/fiːl/",
+    "chinese": "感觉",
+    "example": "I feel happy.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "try",
+    "phonetic": "/traɪ/",
+    "chinese": "尝试",
+    "example": "Try again.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "leave",
+    "phonetic": "/liːv/",
+    "chinese": "离开",
+    "example": "Leave now.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "call",
+    "phonetic": "/kɔːl/",
+    "chinese": "打电话",
+    "example": "Call me.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "need",
+    "phonetic": "/niːd/",
+    "chinese": "需要",
+    "example": "I need help.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "become",
+    "phonetic": "/bɪˈkʌm/",
+    "chinese": "成为",
+    "example": "Become a doctor.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "put",
+    "phonetic": "/pʊt/",
+    "chinese": "放",
+    "example": "Put it here.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "mean",
+    "phonetic": "/miːn/",
+    "chinese": "意思是",
+    "example": "What do you mean?",
+    "category": "最常用动词"
+  },
+  {
+    "english": "keep",
+    "phonetic": "/kiːp/",
+    "chinese": "保持",
+    "example": "Keep going.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "let",
+    "phonetic": "/let/",
+    "chinese": "让",
+    "example": "Let me help.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "begin",
+    "phonetic": "/bɪˈɡɪn/",
+    "chinese": "开始",
+    "example": "Begin now.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "show",
+    "phonetic": "/ʃoʊ/",
+    "chinese": "展示",
+    "example": "Show me.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "hear",
+    "phonetic": "/hɪr/",
+    "chinese": "听见",
+    "example": "I hear you.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "play",
+    "phonetic": "/pleɪ/",
+    "chinese": "玩",
+    "example": "Play games.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "run",
+    "phonetic": "/rʌn/",
+    "chinese": "跑",
+    "example": "Run fast.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "move",
+    "phonetic": "/muːv/",
+    "chinese": "移动",
+    "example": "Move forward.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "live",
+    "phonetic": "/lɪv/",
+    "chinese": "居住",
+    "example": "Live here.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "believe",
+    "phonetic": "/bɪˈliːv/",
+    "chinese": "相信",
+    "example": "I believe you.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "bring",
+    "phonetic": "/brɪŋ/",
+    "chinese": "带来",
+    "example": "Bring it here.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "happen",
+    "phonetic": "/ˈhæpən/",
+    "chinese": "发生",
+    "example": "What happened?",
+    "category": "最常用动词"
+  },
+  {
+    "english": "write",
+    "phonetic": "/raɪt/",
+    "chinese": "写",
+    "example": "Write a letter.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "provide",
+    "phonetic": "/prəˈvaɪd/",
+    "chinese": "提供",
+    "example": "Provide help.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "sit",
+    "phonetic": "/sɪt/",
+    "chinese": "坐",
+    "example": "Sit down.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "stand",
+    "phonetic": "/stænd/",
+    "chinese": "站",
+    "example": "Stand up.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "lose",
+    "phonetic": "/luːz/",
+    "chinese": "失去",
+    "example": "Don't lose hope.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "pay",
+    "phonetic": "/peɪ/",
+    "chinese": "支付",
+    "example": "Pay the bill.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "meet",
+    "phonetic": "/miːt/",
+    "chinese": "遇见",
+    "example": "Meet me there.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "include",
+    "phonetic": "/ɪnˈkluːd/",
+    "chinese": "包括",
+    "example": "Include everyone.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "continue",
+    "phonetic": "/kənˈtɪnjuː/",
+    "chinese": "继续",
+    "example": "Continue working.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "set",
+    "phonetic": "/set/",
+    "chinese": "设置",
+    "example": "Set the table.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "learn",
+    "phonetic": "/lɜːrn/",
+    "chinese": "学习",
+    "example": "Learn English.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "change",
+    "phonetic": "/tʃeɪndʒ/",
+    "chinese": "改变",
+    "example": "Change your mind.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "lead",
+    "phonetic": "/liːd/",
+    "chinese": "领导",
+    "example": "Lead the team.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "understand",
+    "phonetic": "/ˌʌndərˈstænd/",
+    "chinese": "理解",
+    "example": "I understand.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "watch",
+    "phonetic": "/wɑːtʃ/",
+    "chinese": "观看",
+    "example": "Watch TV.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "follow",
+    "phonetic": "/ˈfɑːloʊ/",
+    "chinese": "跟随",
+    "example": "Follow me.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "stop",
+    "phonetic": "/stɑːp/",
+    "chinese": "停止",
+    "example": "Stop there.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "create",
+    "phonetic": "/kriˈeɪt/",
+    "chinese": "创造",
+    "example": "Create art.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "speak",
+    "phonetic": "/spiːk/",
+    "chinese": "说话",
+    "example": "Speak English.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "read",
+    "phonetic": "/riːd/",
+    "chinese": "阅读",
+    "example": "Read books.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "allow",
+    "phonetic": "/əˈlaʊ/",
+    "chinese": "允许",
+    "example": "Allow me.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "add",
+    "phonetic": "/æd/",
+    "chinese": "添加",
+    "example": "Add sugar.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "spend",
+    "phonetic": "/spend/",
+    "chinese": "花费",
+    "example": "Spend money.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "grow",
+    "phonetic": "/ɡroʊ/",
+    "chinese": "成长",
+    "example": "Grow fast.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "open",
+    "phonetic": "/ˈoʊpən/",
+    "chinese": "打开",
+    "example": "Open the door.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "walk",
+    "phonetic": "/wɔːk/",
+    "chinese": "走路",
+    "example": "Walk to work.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "win",
+    "phonetic": "/wɪn/",
+    "chinese": "赢",
+    "example": "Win the game.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "offer",
+    "phonetic": "/ˈɔːfər/",
+    "chinese": "提供",
+    "example": "Offer help.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "remember",
+    "phonetic": "/rɪˈmembər/",
+    "chinese": "记得",
+    "example": "Remember me.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "love",
+    "phonetic": "/lʌv/",
+    "chinese": "爱",
+    "example": "Love you.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "consider",
+    "phonetic": "/kənˈsɪdər/",
+    "chinese": "考虑",
+    "example": "Consider it.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "appear",
+    "phonetic": "/əˈpɪr/",
+    "chinese": "出现",
+    "example": "Appear soon.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "buy",
+    "phonetic": "/baɪ/",
+    "chinese": "买",
+    "example": "Buy food.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "wait",
+    "phonetic": "/weɪt/",
+    "chinese": "等待",
+    "example": "Wait here.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "serve",
+    "phonetic": "/sɜːrv/",
+    "chinese": "服务",
+    "example": "Serve food.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "die",
+    "phonetic": "/daɪ/",
+    "chinese": "死",
+    "example": "Don't die.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "send",
+    "phonetic": "/send/",
+    "chinese": "发送",
+    "example": "Send email.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "expect",
+    "phonetic": "/ɪkˈspekt/",
+    "chinese": "期待",
+    "example": "Expect the best.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "build",
+    "phonetic": "/bɪld/",
+    "chinese": "建造",
+    "example": "Build a house.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "stay",
+    "phonetic": "/steɪ/",
+    "chinese": "停留",
+    "example": "Stay here.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "fall",
+    "phonetic": "/fɔːl/",
+    "chinese": "落下",
+    "example": "Fall down.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "cut",
+    "phonetic": "/kʌt/",
+    "chinese": "切",
+    "example": "Cut the paper.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "reach",
+    "phonetic": "/riːtʃ/",
+    "chinese": "到达",
+    "example": "Reach the top.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "kill",
+    "phonetic": "/kɪl/",
+    "chinese": "杀",
+    "example": "Don't kill.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "remain",
+    "phonetic": "/rɪˈmeɪn/",
+    "chinese": "保持",
+    "example": "Remain calm.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "suggest",
+    "phonetic": "/səˈdʒest/",
+    "chinese": "建议",
+    "example": "Suggest a plan.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "raise",
+    "phonetic": "/reɪz/",
+    "chinese": "举起",
+    "example": "Raise your hand.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "pass",
+    "phonetic": "/pæs/",
+    "chinese": "通过",
+    "example": "Pass the test.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "sell",
+    "phonetic": "/sel/",
+    "chinese": "卖",
+    "example": "Sell products.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "require",
+    "phonetic": "/rɪˈkwaɪər/",
+    "chinese": "需要",
+    "example": "Require help.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "report",
+    "phonetic": "/rɪˈpɔːrt/",
+    "chinese": "报告",
+    "example": "Report the news.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "decide",
+    "phonetic": "/dɪˈsaɪd/",
+    "chinese": "决定",
+    "example": "Decide now.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "pull",
+    "phonetic": "/pʊl/",
+    "chinese": "拉",
+    "example": "Pull the door.",
+    "category": "最常用动词"
+  },
+  {
+    "english": "good",
+    "phonetic": "/ɡʊd/",
+    "chinese": "好的",
+    "example": "Very good.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "new",
+    "phonetic": "/nuː/",
+    "chinese": "新的",
+    "example": "New car.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "first",
+    "phonetic": "/fɜːrst/",
+    "chinese": "第一",
+    "example": "First time.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "last",
+    "phonetic": "/læst/",
+    "chinese": "最后",
+    "example": "Last day.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "long",
+    "phonetic": "/lɔːŋ/",
+    "chinese": "长的",
+    "example": "Long time.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "great",
+    "phonetic": "/ɡreɪt/",
+    "chinese": "伟大的",
+    "example": "Great job.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "little",
+    "phonetic": "/ˈlɪtl/",
+    "chinese": "小的",
+    "example": "Little dog.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "own",
+    "phonetic": "/oʊn/",
+    "chinese": "自己的",
+    "example": "My own.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "other",
+    "phonetic": "/ˈʌðər/",
+    "chinese": "其他的",
+    "example": "Other people.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "old",
+    "phonetic": "/oʊld/",
+    "chinese": "老的",
+    "example": "Old man.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "right",
+    "phonetic": "/raɪt/",
+    "chinese": "正确的",
+    "example": "Right answer.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "big",
+    "phonetic": "/bɪɡ/",
+    "chinese": "大的",
+    "example": "Big house.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "high",
+    "phonetic": "/haɪ/",
+    "chinese": "高的",
+    "example": "High mountain.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "different",
+    "phonetic": "/ˈdɪfrənt/",
+    "chinese": "不同的",
+    "example": "Different color.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "small",
+    "phonetic": "/smɔːl/",
+    "chinese": "小的",
+    "example": "Small room.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "large",
+    "phonetic": "/lɑːrdʒ/",
+    "chinese": "大的",
+    "example": "Large city.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "next",
+    "phonetic": "/nekst/",
+    "chinese": "下一个",
+    "example": "Next time.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "early",
+    "phonetic": "/ˈɜːrli/",
+    "chinese": "早的",
+    "example": "Early morning.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "young",
+    "phonetic": "/jʌŋ/",
+    "chinese": "年轻的",
+    "example": "Young girl.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "important",
+    "phonetic": "/ɪmˈpɔːrtənt/",
+    "chinese": "重要的",
+    "example": "Very important.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "few",
+    "phonetic": "/fjuː/",
+    "chinese": "很少",
+    "example": "A few people.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "public",
+    "phonetic": "/ˈpʌblɪk/",
+    "chinese": "公共的",
+    "example": "Public place.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "bad",
+    "phonetic": "/bæd/",
+    "chinese": "坏的",
+    "example": "Bad weather.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "same",
+    "phonetic": "/seɪm/",
+    "chinese": "相同的",
+    "example": "Same thing.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "able",
+    "phonetic": "/ˈeɪbl/",
+    "chinese": "能够的",
+    "example": "Be able to.",
+    "category": "最常用形容词"
+  },
+  {
+    "english": "dog",
+    "phonetic": "/dɔːɡ/",
+    "chinese": "狗",
+    "example": "A loyal dog.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "cat",
+    "phonetic": "/kæt/",
+    "chinese": "猫",
+    "example": "A cute cat.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "rabbit",
+    "phonetic": "/ˈræbɪt/",
+    "chinese": "兔子",
+    "example": "A white rabbit.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "mouse",
+    "phonetic": "/maʊs/",
+    "chinese": "老鼠",
+    "example": "A small mouse.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "rat",
+    "phonetic": "/ræt/",
+    "chinese": "大老鼠",
+    "example": "A big rat.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "horse",
+    "phonetic": "/hɔːrs/",
+    "chinese": "马",
+    "example": "A black horse.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "cow",
+    "phonetic": "/kaʊ/",
+    "chinese": "牛",
+    "example": "A dairy cow.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "pig",
+    "phonetic": "/pɪɡ/",
+    "chinese": "猪",
+    "example": "A fat pig.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "sheep",
+    "phonetic": "/ʃiːp/",
+    "chinese": "绵羊",
+    "example": "A flock of sheep.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "goat",
+    "phonetic": "/ɡoʊt/",
+    "chinese": "山羊",
+    "example": "A mountain goat.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "deer",
+    "phonetic": "/dɪr/",
+    "chinese": "鹿",
+    "example": "A male deer.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "bear",
+    "phonetic": "/ber/",
+    "chinese": "熊",
+    "example": "A brown bear.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "lion",
+    "phonetic": "/ˈlaɪən/",
+    "chinese": "狮子",
+    "example": "The king of beasts.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "tiger",
+    "phonetic": "/ˈtaɪɡər/",
+    "chinese": "老虎",
+    "example": "A fierce tiger.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "elephant",
+    "phonetic": "/ˈelɪfənt/",
+    "chinese": "大象",
+    "example": "A large elephant.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "monkey",
+    "phonetic": "/ˈmʌŋki/",
+    "chinese": "猴子",
+    "example": "A clever monkey.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "panda",
+    "phonetic": "/ˈpændə/",
+    "chinese": "熊猫",
+    "example": "A panda bear.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "zebra",
+    "phonetic": "/ˈziːbrə/",
+    "chinese": "斑马",
+    "example": "A zebra stripe.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "giraffe",
+    "phonetic": "/dʒəˈræf/",
+    "chinese": "长颈鹿",
+    "example": "A tall giraffe.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "wolf",
+    "phonetic": "/wʊlf/",
+    "chinese": "狼",
+    "example": "A pack of wolves.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "fox",
+    "phonetic": "/fɑːks/",
+    "chinese": "狐狸",
+    "example": "A sly fox.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "squirrel",
+    "phonetic": "/ˈskwɜːrəl/",
+    "chinese": "松鼠",
+    "example": "A fluffy squirrel.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "bat",
+    "phonetic": "/bæt/",
+    "chinese": "蝙蝠",
+    "example": "A nocturnal bat.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "whale",
+    "phonetic": "/weɪl/",
+    "chinese": "鲸鱼",
+    "example": "A blue whale.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "dolphin",
+    "phonetic": "/ˈdɑːlfɪn/",
+    "chinese": "海豚",
+    "example": "A friendly dolphin.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "bird",
+    "phonetic": "/bɜːrd/",
+    "chinese": "鸟",
+    "example": "A small bird.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "chicken",
+    "phonetic": "/ˈtʃɪkɪn/",
+    "chinese": "鸡",
+    "example": "A hen and chicks.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "duck",
+    "phonetic": "/dʌk/",
+    "chinese": "鸭子",
+    "example": "A duckling.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "goose",
+    "phonetic": "/ɡuːs/",
+    "chinese": "鹅",
+    "example": "A wild goose.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "turkey",
+    "phonetic": "/ˈtɜːrki/",
+    "chinese": "火鸡",
+    "example": "A roasted turkey.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "eagle",
+    "phonetic": "/ˈiːɡl/",
+    "chinese": "鹰",
+    "example": "A bald eagle.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "hawk",
+    "phonetic": "/hɔːk/",
+    "chinese": "鹰",
+    "example": "A sharp-eyed hawk.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "owl",
+    "phonetic": "/aʊl/",
+    "chinese": "猫头鹰",
+    "example": "A wise owl.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "pigeon",
+    "phonetic": "/ˈpɪdʒɪn/",
+    "chinese": "鸽子",
+    "example": "A carrier pigeon.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "sparrow",
+    "phonetic": "/ˈspæroʊ/",
+    "chinese": "麻雀",
+    "example": "A little sparrow.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "crow",
+    "phonetic": "/kroʊ/",
+    "chinese": "乌鸦",
+    "example": "A black crow.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "phoenix",
+    "phonetic": "/ˈfiːnɪks/",
+    "chinese": "凤凰",
+    "example": "The mythical phoenix.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "snake",
+    "phonetic": "/sneɪk/",
+    "chinese": "蛇",
+    "example": "A venomous snake.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "lizard",
+    "phonetic": "/ˈlɪzərd/",
+    "chinese": "蜥蜴",
+    "example": "A green lizard.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "crocodile",
+    "phonetic": "/ˈkrɑːkədaɪl/",
+    "chinese": "鳄鱼",
+    "example": "A big crocodile.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "turtle",
+    "phonetic": "/ˈtɜːrtl/",
+    "chinese": "乌龟",
+    "example": "A slow turtle.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "frog",
+    "phonetic": "/frɔːɡ/",
+    "chinese": "青蛙",
+    "example": "A jumping frog.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "toad",
+    "phonetic": "/toʊd/",
+    "chinese": "蟾蜍",
+    "example": "A warty toad.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "chameleon",
+    "phonetic": "/kəˈmiːliən/",
+    "chinese": "变色龙",
+    "example": "A color-changing chameleon.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "butterfly",
+    "phonetic": "/ˈbʌtərflaɪ/",
+    "chinese": "蝴蝶",
+    "example": "A beautiful butterfly.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "bee",
+    "phonetic": "/biː/",
+    "chinese": "蜜蜂",
+    "example": "A busy bee.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "ant",
+    "phonetic": "/ænt/",
+    "chinese": "蚂蚁",
+    "example": "An ant colony.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "spider",
+    "phonetic": "/ˈspaɪdər/",
+    "chinese": "蜘蛛",
+    "example": "A web-spinning spider.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "fly",
+    "phonetic": "/flaɪ/",
+    "chinese": "苍蝇",
+    "example": "A house fly.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "mosquito",
+    "phonetic": "/məˈskiːtoʊ/",
+    "chinese": "蚊子",
+    "example": "A mosquito bite.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "beetle",
+    "phonetic": "/ˈbiːtl/",
+    "chinese": "甲虫",
+    "example": "A shiny beetle.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "grasshopper",
+    "phonetic": "/ˈɡræshɑːpər/",
+    "chinese": "蚱蜢",
+    "example": "A jumping grasshopper.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "dragonfly",
+    "phonetic": "/ˈdræɡənflaɪ/",
+    "chinese": "蜻蜓",
+    "example": "A dragonfly skimming.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "fish",
+    "phonetic": "/fɪʃ/",
+    "chinese": "鱼",
+    "example": "A goldfish.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "shark",
+    "phonetic": "/ʃɑːrk/",
+    "chinese": "鲨鱼",
+    "example": "A great white shark.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "crab",
+    "phonetic": "/kræb/",
+    "chinese": "螃蟹",
+    "example": "A red crab.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "lobster",
+    "phonetic": "/ˈlɑːbstər/",
+    "chinese": "龙虾",
+    "example": "A boiled lobster.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "shrimp",
+    "phonetic": "/ʃrɪmp/",
+    "chinese": "虾",
+    "example": "Fried shrimp.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "squid",
+    "phonetic": "/skwɪd/",
+    "chinese": "鱿鱼",
+    "example": "Grilled squid.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "octopus",
+    "phonetic": "/ˈɑːktəpəs/",
+    "chinese": "章鱼",
+    "example": "An eight-armed octopus.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "jellyfish",
+    "phonetic": "/ˈdʒelifɪʃ/",
+    "chinese": "水母",
+    "example": "A glowing jellyfish.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "seahorse",
+    "phonetic": "/ˈsiːhɔːrs/",
+    "chinese": "海马",
+    "example": "A tiny seahorse.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "turtle",
+    "phonetic": "/ˈtɜːrtl/",
+    "chinese": "海龟",
+    "example": "A sea turtle.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "wing",
+    "phonetic": "/wɪŋ/",
+    "chinese": "翅膀",
+    "example": "A bird's wing.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "claw",
+    "phonetic": "/klɔː/",
+    "chinese": "爪子",
+    "example": "Sharp claws.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "paw",
+    "phonetic": "/pɔː/",
+    "chinese": "脚掌",
+    "example": "Soft paws.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "hoof",
+    "phonetic": "/huːf/",
+    "chinese": "蹄",
+    "example": "Horse's hooves.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "feather",
+    "phonetic": "/ˈfeðər/",
+    "chinese": "羽毛",
+    "example": "Colorful feathers.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "fur",
+    "phonetic": "/fɜːr/",
+    "chinese": "皮毛",
+    "example": "Soft fur.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "scale",
+    "phonetic": "/skeɪl/",
+    "chinese": "鳞片",
+    "example": "Fish scales.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "shell",
+    "phonetic": "/ʃel/",
+    "chinese": "壳",
+    "example": "Turtle shell.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "horn",
+    "phonetic": "/hɔːrn/",
+    "chinese": "角",
+    "example": "Rhino horn.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "tusk",
+    "phonetic": "/tʌsk/",
+    "chinese": "象牙",
+    "example": "Elephant tusks.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "mane",
+    "phonetic": "/meɪn/",
+    "chinese": "鬃毛",
+    "example": "Lion's mane.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "tail",
+    "phonetic": "/teɪl/",
+    "chinese": "尾巴",
+    "example": "A wagging tail.",
+    "category": "动物词汇"
+  },
+  {
+    "english": "party",
+    "phonetic": "/ˈpɑːrti/",
+    "chinese": "聚会",
+    "example": "Birthday party.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "meeting",
+    "phonetic": "/ˈmiːtɪŋ/",
+    "chinese": "会议",
+    "example": "Business meeting.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "gathering",
+    "phonetic": "/ˈɡæðərɪŋ/",
+    "chinese": "聚会",
+    "example": "Family gathering.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "celebration",
+    "phonetic": "/ˌselɪˈbreɪʃn/",
+    "chinese": "庆祝",
+    "example": "Wedding celebration.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "festival",
+    "phonetic": "/ˈfɪstɪvl/",
+    "chinese": "节日",
+    "example": "Music festival.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "ceremony",
+    "phonetic": "/ˈserəmoʊni/",
+    "chinese": "仪式",
+    "example": "Opening ceremony.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "reunion",
+    "phonetic": "/ˌriːˈjuːniən/",
+    "chinese": "重聚",
+    "example": "Family reunion.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "picnic",
+    "phonetic": "/ˈpɪknɪk/",
+    "chinese": "野餐",
+    "example": "Park picnic.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "date",
+    "phonetic": "/deɪt/",
+    "chinese": "约会",
+    "example": "Go on a date.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "visit",
+    "phonetic": "/ˈvɪzɪt/",
+    "chinese": "拜访",
+    "example": "Pay a visit.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "friend",
+    "phonetic": "/frend/",
+    "chinese": "朋友",
+    "example": "A good friend.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "best friend",
+    "phonetic": "/best frend/",
+    "chinese": "最好的朋友",
+    "example": "My best friend.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "neighbor",
+    "phonetic": "/ˈneɪbər/",
+    "chinese": "邻居",
+    "example": "Friendly neighbor.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "colleague",
+    "phonetic": "/ˈkɑːliːɡ/",
+    "chinese": "同事",
+    "example": "My colleague.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "partner",
+    "phonetic": "/ˈpɑːrtnər/",
+    "chinese": "伙伴",
+    "example": "Business partner.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "boss",
+    "phonetic": "/bɔːs/",
+    "chinese": "上司",
+    "example": "Meet the boss.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "employee",
+    "phonetic": "/ˌemplɔɪˈiː/",
+    "chinese": "员工",
+    "example": "New employee.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "mentor",
+    "phonetic": "/ˈmentɔːr/",
+    "chinese": "导师",
+    "example": "Work mentor.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "rival",
+    "phonetic": "/ˈraɪvl/",
+    "chinese": "对手",
+    "example": "Business rival.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "opponent",
+    "phonetic": "/əˈpoʊnənt/",
+    "chinese": "对手",
+    "example": "Political opponent.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "enemy",
+    "phonetic": "/ˈenəmi/",
+    "chinese": "敌人",
+    "example": "A sworn enemy.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "stranger",
+    "phonetic": "/ˈstreɪndʒər/",
+    "chinese": "陌生人",
+    "example": "A complete stranger.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "guest",
+    "phonetic": "/ɡest/",
+    "chinese": "客人",
+    "example": "Welcome our guests.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "host",
+    "phonetic": "/hoʊst/",
+    "chinese": "主人",
+    "example": "Party host.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "greet",
+    "phonetic": "/ɡriːt/",
+    "chinese": "问候",
+    "example": "Greet everyone.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "introduce",
+    "phonetic": "/ˌɪntrəˈdjuːs/",
+    "chinese": "介绍",
+    "example": "Introduce myself.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "shake hands",
+    "phonetic": "/ʃeɪk hændz/",
+    "chinese": "握手",
+    "example": "Shake hands firmly.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "hug",
+    "phonetic": "/hʌɡ/",
+    "chinese": "拥抱",
+    "example": "Give a hug.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "kiss",
+    "phonetic": "/kɪs/",
+    "chinese": "亲吻",
+    "example": "Kiss on the cheek.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "chat",
+    "phonetic": "/tʃæt/",
+    "chinese": "聊天",
+    "example": "Chat online.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "talk",
+    "phonetic": "/tɔːk/",
+    "chinese": "谈话",
+    "example": "Talk quietly.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "discuss",
+    "phonetic": "/dɪˈskʌs/",
+    "chinese": "讨论",
+    "example": "Discuss the topic.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "argue",
+    "phonetic": "/ˈɑːrɡjuː/",
+    "chinese": "争论",
+    "example": "Argue heatedly.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "debate",
+    "phonetic": "/dɪˈbeɪt/",
+    "chinese": "辩论",
+    "example": "Debate the issue.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "persuade",
+    "phonetic": "/pərˈsweɪd/",
+    "chinese": "说服",
+    "example": "Persuade others.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "convince",
+    "phonetic": "/kənˈvɪns/",
+    "chinese": "说服",
+    "example": "Convince the jury.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "criticize",
+    "phonetic": "/ˈkrɪtɪsaɪz/",
+    "chinese": "批评",
+    "example": "Criticize fairly.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "praise",
+    "phonetic": "/preɪz/",
+    "chinese": "赞扬",
+    "example": "Praise publicly.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "friendly",
+    "phonetic": "/ˈfrendli/",
+    "chinese": "友好的",
+    "example": "Very friendly.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "polite",
+    "phonetic": "/pəˈlaɪt/",
+    "chinese": "有礼貌的",
+    "example": "Very polite.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "rude",
+    "phonetic": "/ruːd/",
+    "chinese": "粗鲁的",
+    "example": "Don't be rude.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "shy",
+    "phonetic": "/ʃaɪ/",
+    "chinese": "害羞的",
+    "example": "A shy person.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "outgoing",
+    "phonetic": "/ˈaʊtɡoʊɪŋ/",
+    "chinese": "外向的",
+    "example": "Very outgoing.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "sociable",
+    "phonetic": "/ˈsoʊʃəbl/",
+    "chinese": "社交的",
+    "example": "Very sociable.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "popular",
+    "phonetic": "/ˈpɑːpjələr/",
+    "chinese": "受欢迎的",
+    "example": "Very popular.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "famous",
+    "phonetic": "/ˈfeɪməs/",
+    "chinese": "著名的",
+    "example": "World famous.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "generous",
+    "phonetic": "/ˈdʒenərəs/",
+    "chinese": "慷慨的",
+    "example": "Very generous.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "kind",
+    "phonetic": "/kaɪnd/",
+    "chinese": "善良的",
+    "example": "A kind heart.",
+    "category": "社交词汇"
+  },
+  {
+    "english": "company",
+    "phonetic": "/ˈkʌmpəni/",
+    "chinese": "公司",
+    "example": "Our company.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "corporation",
+    "phonetic": "/ˌkɔːrpəˈreɪʃn/",
+    "chinese": "企业",
+    "example": "Multinational corporation.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "business",
+    "phonetic": "/ˈbɪznəs/",
+    "chinese": "商业",
+    "example": "Small business.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "enterprise",
+    "phonetic": "/ˈentərpraɪz/",
+    "chinese": "企业",
+    "example": "Private enterprise.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "firm",
+    "phonetic": "/fɜːrm/",
+    "chinese": "商行",
+    "example": "Law firm.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "startup",
+    "phonetic": "/ˈstɑːrtʌp/",
+    "chinese": "初创公司",
+    "example": "Tech startup.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "branch",
+    "phonetic": "/bræntʃ/",
+    "chinese": "分公司",
+    "example": "Branch office.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "headquarters",
+    "phonetic": "/ˌhedˈkwɔːrtərz/",
+    "chinese": "总部",
+    "example": "Company headquarters.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "department",
+    "phonetic": "/dɪˈpɑːrtmənt/",
+    "chinese": "部门",
+    "example": "Sales department.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "division",
+    "phonetic": "/dɪˈvɪʒn/",
+    "chinese": "部门",
+    "example": "Marketing division.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "team",
+    "phonetic": "/tiːm/",
+    "chinese": "团队",
+    "example": "Our team.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "CEO",
+    "phonetic": "/ˌsiː iː ˈoʊ/",
+    "chinese": "首席执行官",
+    "example": "Company CEO.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "CFO",
+    "phonetic": "/ˌsiː ef ˈoʊ/",
+    "chinese": "首席财务官",
+    "example": "Meet the CFO.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "COO",
+    "phonetic": "/ˌsiː oʊ ˈoʊ/",
+    "chinese": "首席运营官",
+    "example": "The COO.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "president",
+    "phonetic": "/ˈprezɪdənt/",
+    "chinese": "总裁",
+    "example": "Company president.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "vice president",
+    "phonetic": "/ˌvaɪs ˈprezɪdənt/",
+    "chinese": "副总裁",
+    "example": "VP of sales.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "director",
+    "phonetic": "/dəˈrektər/",
+    "chinese": "总监",
+    "example": "Project director.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "manager",
+    "phonetic": "/ˈmænɪdʒər/",
+    "chinese": "经理",
+    "example": "Department manager.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "supervisor",
+    "phonetic": "/ˈsuːpərvaɪzər/",
+    "chinese": "主管",
+    "example": "Shift supervisor.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "associate",
+    "phonetic": "/əˈsoʊsiət/",
+    "chinese": "副职",
+    "example": "Sales associate.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "intern",
+    "phonetic": "/ˈɪntɜːrn/",
+    "chinese": "实习生",
+    "example": "Summer intern.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "trainee",
+    "phonetic": "/ˌtreɪˈniː/",
+    "chinese": "培训生",
+    "example": "Management trainee.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "negotiate",
+    "phonetic": "/nɪˈɡoʊʃieɪt/",
+    "chinese": "谈判",
+    "example": "Negotiate a deal.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "contract",
+    "phonetic": "/ˈkɑːntrækt/",
+    "chinese": "合同",
+    "example": "Sign a contract.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "deal",
+    "phonetic": "/diːl/",
+    "chinese": "交易",
+    "example": "Close the deal.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "investment",
+    "phonetic": "/ɪnˈvestmənt/",
+    "chinese": "投资",
+    "example": "Foreign investment.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "profit",
+    "phonetic": "/ˈprɑːfɪt/",
+    "chinese": "利润",
+    "example": "Net profit.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "loss",
+    "phonetic": "/lɔːs/",
+    "chinese": "亏损",
+    "example": "Operating loss.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "revenue",
+    "phonetic": "/ˈrevənuː/",
+    "chinese": "收入",
+    "example": "Annual revenue.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "growth",
+    "phonetic": "/ɡroʊθ/",
+    "chinese": "增长",
+    "example": "Economic growth.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "merger",
+    "phonetic": "/ˈmɜːrdʒər/",
+    "chinese": "合并",
+    "example": "Corporate merger.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "acquisition",
+    "phonetic": "/ˌæk wɪˈzɪʃn/",
+    "chinese": "收购",
+    "example": "Company acquisition.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "marketing",
+    "phonetic": "/ˈmɑːrkɪtɪŋ/",
+    "chinese": "市场营销",
+    "example": "Digital marketing.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "advertising",
+    "phonetic": "/ˈædvərtaɪzɪŋ/",
+    "chinese": "广告",
+    "example": "Online advertising.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "promotion",
+    "phonetic": "/prəˈmoʊʃn/",
+    "chinese": "促销",
+    "example": "Sales promotion.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "brand",
+    "phonetic": "/brænd/",
+    "chinese": "品牌",
+    "example": "Brand awareness.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "product",
+    "phonetic": "/ˈprɑːdʌkt/",
+    "chinese": "产品",
+    "example": "New product.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "target",
+    "phonetic": "/ˈtɑːrɡɪt/",
+    "chinese": "目标",
+    "example": "Target market.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "customer",
+    "phonetic": "/ˈkʌstəmər/",
+    "chinese": "客户",
+    "example": "Loyal customer.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "client",
+    "phonetic": "/ˈklaɪənt/",
+    "chinese": "客户",
+    "example": "VIP client.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "market",
+    "phonetic": "/ˈmɑːrkɪt/",
+    "chinese": "市场",
+    "example": "Stock market.",
+    "category": "商业词汇"
+  },
+  {
+    "english": "lawyer",
+    "phonetic": "/ˈlɔːjər/",
+    "chinese": "律师",
+    "example": "Defense lawyer.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "judge",
+    "phonetic": "/dʒʌdʒ/",
+    "chinese": "法官",
+    "example": "The judge ruled.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "attorney",
+    "phonetic": "/əˈtɜːrni/",
+    "chinese": "律师",
+    "example": "District attorney.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "solicitor",
+    "phonetic": "/səˈlɪsɪtər/",
+    "chinese": "事务律师",
+    "example": "Senior solicitor.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "barrister",
+    "phonetic": "/ˈbærɪstər/",
+    "chinese": "大律师",
+    "example": "Leading barrister.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "clerk",
+    "phonetic": "/klɜːrk/",
+    "chinese": "书记员",
+    "example": "Court clerk.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "jury",
+    "phonetic": "/ˈdʒʊri/",
+    "chinese": "陪审团",
+    "example": "Jury verdict.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "defendant",
+    "phonetic": "/dɪˈfendənt/",
+    "chinese": "被告",
+    "example": "The defendant.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "plaintiff",
+    "phonetic": "/ˈpleɪntɪf/",
+    "chinese": "原告",
+    "example": "The plaintiff.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "witness",
+    "phonetic": "/ˈwɪtnəs/",
+    "chinese": "证人",
+    "example": "A key witness.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "trial",
+    "phonetic": "/ˈtraɪəl/",
+    "chinese": "审判",
+    "example": "Criminal trial.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "hearing",
+    "phonetic": "/ˈhɪrɪŋ/",
+    "chinese": "听证会",
+    "example": "Court hearing.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "arrest",
+    "phonetic": "/əˈrest/",
+    "chinese": "逮捕",
+    "example": "Make an arrest.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "charge",
+    "phonetic": "/tʃɑːrdʒ/",
+    "chinese": "指控",
+    "example": "Press charges.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "accuse",
+    "phonetic": "/əˈkjuːz/",
+    "chinese": "指控",
+    "example": "Accuse someone.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "convict",
+    "phonetic": "/kənˈvɪkt/",
+    "chinese": "定罪",
+    "example": "Convict the criminal.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "sentence",
+    "phonetic": "/ˈsentəns/",
+    "chinese": "判刑",
+    "example": "Sentence to prison.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "appeal",
+    "phonetic": "/əˈpiːl/",
+    "chinese": "上诉",
+    "example": "File an appeal.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "verdict",
+    "phonetic": "/ˈvɜːrdɪkt/",
+    "chinese": "裁决",
+    "example": "Jury verdict.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "evidence",
+    "phonetic": "/ˈevɪdəns/",
+    "chinese": "证据",
+    "example": "Present evidence.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "law",
+    "phonetic": "/lɔː/",
+    "chinese": "法律",
+    "example": "Civil law.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "right",
+    "phonetic": "/raɪt/",
+    "chinese": "权利",
+    "example": "Human rights.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "duty",
+    "phonetic": "/ˈduːti/",
+    "chinese": "义务",
+    "example": "Legal duty.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "crime",
+    "phonetic": "/kraɪm/",
+    "chinese": "犯罪",
+    "example": "Commit a crime.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "illegal",
+    "phonetic": "/ɪˈliːɡl/",
+    "chinese": "非法的",
+    "example": "Illegal activity.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "legal",
+    "phonetic": "/ˈliːɡl/",
+    "chinese": "合法的",
+    "example": "Legal action.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "contract",
+    "phonetic": "/ˈkɑːntrækt/",
+    "chinese": "合同",
+    "example": "Sign a contract.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "agreement",
+    "phonetic": "/əˈɡriːmənt/",
+    "chinese": "协议",
+    "example": "Reach an agreement.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "property",
+    "phonetic": "/ˈprɑːpərti/",
+    "chinese": "财产",
+    "example": "Private property.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "ownership",
+    "phonetic": "/ˈoʊnərʃɪp/",
+    "chinese": "所有权",
+    "example": "Transfer ownership.",
+    "category": "法律词汇"
+  },
+  {
+    "english": "mountain",
+    "phonetic": "/ˈmaʊntən/",
+    "chinese": "山",
+    "example": "A high mountain.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "hill",
+    "phonetic": "/hɪl/",
+    "chinese": "小山",
+    "example": "A small hill.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "valley",
+    "phonetic": "/ˈvæli/",
+    "chinese": "山谷",
+    "example": "A deep valley.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "river",
+    "phonetic": "/ˈrɪvər/",
+    "chinese": "河流",
+    "example": "A long river.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "lake",
+    "phonetic": "/leɪk/",
+    "chinese": "湖泊",
+    "example": "A deep lake.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "sea",
+    "phonetic": "/siː/",
+    "chinese": "海洋",
+    "example": "The blue sea.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "ocean",
+    "phonetic": "/ˈoʊʃn/",
+    "chinese": "海洋",
+    "example": "The Pacific Ocean.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "island",
+    "phonetic": "/ˈaɪlənd/",
+    "chinese": "岛屿",
+    "example": "A tropical island.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "beach",
+    "phonetic": "/biːtʃ/",
+    "chinese": "海滩",
+    "example": "A sandy beach.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "desert",
+    "phonetic": "/ˈdezərt/",
+    "chinese": "沙漠",
+    "example": "Sahara Desert.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "forest",
+    "phonetic": "/ˈfɔːrɪst/",
+    "chinese": "森林",
+    "example": "Dense forest.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "plain",
+    "phonetic": "/pleɪn/",
+    "chinese": "平原",
+    "example": "Vast plains.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "plateau",
+    "phonetic": "/plæˈtoʊ/",
+    "chinese": "高原",
+    "example": "Tibetan Plateau.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "canyon",
+    "phonetic": "/ˈkænjən/",
+    "chinese": "峡谷",
+    "example": "Grand Canyon.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "volcano",
+    "phonetic": "/vɑːlˈkeɪnoʊ/",
+    "chinese": "火山",
+    "example": "Active volcano.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "glacier",
+    "phonetic": "/ˈɡleɪʃər/",
+    "chinese": "冰川",
+    "example": "Mountain glacier.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "north",
+    "phonetic": "/nɔːrθ/",
+    "chinese": "北",
+    "example": "North direction.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "south",
+    "phonetic": "/saʊθ/",
+    "chinese": "南",
+    "example": "South pole.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "east",
+    "phonetic": "/iːst/",
+    "chinese": "东",
+    "example": "East coast.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "west",
+    "phonetic": "/west/",
+    "chinese": "西",
+    "example": "West side.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "northeast",
+    "phonetic": "/ˌnɔːrθˈiːst/",
+    "chinese": "东北",
+    "example": "Northeast China.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "northwest",
+    "phonetic": "/ˌnɔːrθˈwest/",
+    "chinese": "西北",
+    "example": "Northwest region.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "southeast",
+    "phonetic": "/ˌsaʊθˈiːst/",
+    "chinese": "东南",
+    "example": "Southeast Asia.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "southwest",
+    "phonetic": "/ˌsaʊθˈwest/",
+    "chinese": "西南",
+    "example": "Southwest area.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "equator",
+    "phonetic": "/ɪˈkweɪtər/",
+    "chinese": "赤道",
+    "example": "Cross the equator.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "pole",
+    "phonetic": "/poʊl/",
+    "chinese": "极地",
+    "example": "North Pole.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "hemisphere",
+    "phonetic": "/ˈhemɪsfɪr/",
+    "chinese": "半球",
+    "example": "Northern hemisphere.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "mine",
+    "phonetic": "/maɪn/",
+    "chinese": "矿",
+    "example": "Coal mine.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "quarry",
+    "phonetic": "/ˈkwɑːri/",
+    "chinese": "采石场",
+    "example": "Stone quarry.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "oil",
+    "phonetic": "/ɔɪl/",
+    "chinese": "石油",
+    "example": "Oil field.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "gas",
+    "phonetic": "/ɡæs/",
+    "chinese": "天然气",
+    "example": "Natural gas.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "coal",
+    "phonetic": "/koʊl/",
+    "chinese": "煤炭",
+    "example": "Coal mining.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "mineral",
+    "phonetic": "/ˈmɪnərəl/",
+    "chinese": "矿物",
+    "example": "Mineral resources.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "water",
+    "phonetic": "/ˈwɔːtər/",
+    "chinese": "水资源",
+    "example": "Water resources.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "forest",
+    "phonetic": "/ˈfɔːrɪst/",
+    "chinese": "森林资源",
+    "example": "Forest resources.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "wildlife",
+    "phonetic": "/ˈwaɪldlaɪf/",
+    "chinese": "野生动物",
+    "example": "Protect wildlife.",
+    "category": "地理词汇"
+  },
+  {
+    "english": "ancient",
+    "phonetic": "/ˈeɪnʃənt/",
+    "chinese": "古代",
+    "example": "Ancient history.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "medieval",
+    "phonetic": "/ˌmiːdiˈiːvl/",
+    "chinese": "中世纪",
+    "example": "Medieval period.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "modern",
+    "phonetic": "/ˈmɑːdərn/",
+    "chinese": "现代",
+    "example": "Modern era.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "contemporary",
+    "phonetic": "/kənˈtempəreri/",
+    "chinese": "当代",
+    "example": "Contemporary art.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "primitive",
+    "phonetic": "/ˈprɪmətɪv/",
+    "chinese": "原始",
+    "example": "Primitive society.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "classical",
+    "phonetic": "/ˈklæsɪkl/",
+    "chinese": "古典",
+    "example": "Classical civilization.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "renaissance",
+    "phonetic": "/ˈrenəsɑːns/",
+    "chinese": "文艺复兴",
+    "example": "Renaissance art.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "industrial",
+    "phonetic": "/ɪnˈdʌstriəl/",
+    "chinese": "工业的",
+    "example": "Industrial revolution.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "war",
+    "phonetic": "/wɔːr/",
+    "chinese": "战争",
+    "example": "World War.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "battle",
+    "phonetic": "/ˈbætl/",
+    "chinese": "战役",
+    "example": "A famous battle.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "revolution",
+    "phonetic": "/ˌrevəˈluːʃn/",
+    "chinese": "革命",
+    "example": "French Revolution.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "rebellion",
+    "phonetic": "/rɪˈbeljən/",
+    "chinese": "叛乱",
+    "example": "Slave rebellion.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "independence",
+    "phonetic": "/ˌɪndɪˈpendəns/",
+    "chinese": "独立",
+    "example": "Independence Day.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "treaty",
+    "phonetic": "/ˈtriːti/",
+    "chinese": "条约",
+    "example": "Peace treaty.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "empire",
+    "phonetic": "/ˈempaɪr/",
+    "chinese": "帝国",
+    "example": "Roman Empire.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "kingdom",
+    "phonetic": "/ˈkɪŋdəm/",
+    "chinese": "王国",
+    "example": "United Kingdom.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "dynasty",
+    "phonetic": "/ˈdaɪnəsti/",
+    "chinese": "朝代",
+    "example": "Ming Dynasty.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "civilization",
+    "phonetic": "/ˌsɪvələˈzeɪʃn/",
+    "chinese": "文明",
+    "example": "Ancient civilization.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "emperor",
+    "phonetic": "/ˈempərər/",
+    "chinese": "皇帝",
+    "example": "The Roman Emperor.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "king",
+    "phonetic": "/kɪŋ/",
+    "chinese": "国王",
+    "example": "The king ruled.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "queen",
+    "phonetic": "/kwiːn/",
+    "chinese": "女王",
+    "example": "The queen reigned.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "hero",
+    "phonetic": "/ˈhɪroʊ/",
+    "chinese": "英雄",
+    "example": "National hero.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "leader",
+    "phonetic": "/ˈliːdər/",
+    "chinese": "领袖",
+    "example": "Great leader.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "politician",
+    "phonetic": "/ˌpɑːlɪˈtɪʃn/",
+    "chinese": "政治家",
+    "example": "Senior politician.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "inventor",
+    "phonetic": "/ɪnˈventər/",
+    "chinese": "发明家",
+    "example": "Great inventor.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "scientist",
+    "phonetic": "/ˈsaɪəntɪst/",
+    "chinese": "科学家",
+    "example": "Famous scientist.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "explorer",
+    "phonetic": "/ɪkˈsplɔːrər/",
+    "chinese": "探险家",
+    "example": "Polar explorer.",
+    "category": "历史词汇"
+  },
+  {
+    "english": "physics",
+    "phonetic": "/ˈfɪzɪks/",
+    "chinese": "物理学",
+    "example": "Quantum physics.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "chemistry",
+    "phonetic": "/ˈkemɪstri/",
+    "chinese": "化学",
+    "example": "Organic chemistry.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "biology",
+    "phonetic": "/baɪˈɑːlədʒi/",
+    "chinese": "生物学",
+    "example": "Molecular biology.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "astronomy",
+    "phonetic": "/əˈstrɑːnəmi/",
+    "chinese": "天文学",
+    "example": "Modern astronomy.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "geology",
+    "phonetic": "/dʒiˈɑːlədʒi/",
+    "chinese": "地质学",
+    "example": "Structural geology.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "mathematics",
+    "phonetic": "/ˌmæθəˈmætɪks/",
+    "chinese": "数学",
+    "example": "Pure mathematics.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "statistics",
+    "phonetic": "/stəˈtɪstɪks/",
+    "chinese": "统计学",
+    "example": "Business statistics.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "medicine",
+    "phonetic": "/ˈmedɪsɪn/",
+    "chinese": "医学",
+    "example": "Evidence-based medicine.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "atom",
+    "phonetic": "/ˈætəm/",
+    "chinese": "原子",
+    "example": "Carbon atom.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "molecule",
+    "phonetic": "/ˈmɑːlɪkjuːl/",
+    "chinese": "分子",
+    "example": "Water molecule.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "cell",
+    "phonetic": "/sel/",
+    "chinese": "细胞",
+    "example": "Cell division.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "gene",
+    "phonetic": "/dʒiːn/",
+    "chinese": "基因",
+    "example": "Gene mutation.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "DNA",
+    "phonetic": "/ˌdiː en ˈeɪ/",
+    "chinese": "脱氧核糖核酸",
+    "example": "DNA analysis.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "element",
+    "phonetic": "/ˈelɪmənt/",
+    "chinese": "元素",
+    "example": "Chemical element.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "reaction",
+    "phonetic": "/riˈækʃn/",
+    "chinese": "反应",
+    "example": "Chemical reaction.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "experiment",
+    "phonetic": "/ɪkˈsperɪmənt/",
+    "chinese": "实验",
+    "example": "Conduct an experiment.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "theory",
+    "phonetic": "/ˈθɪəri/",
+    "chinese": "理论",
+    "example": "Scientific theory.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "hypothesis",
+    "phonetic": "/haɪˈpɑːθəsɪs/",
+    "chinese": "假设",
+    "example": "Test the hypothesis.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "discovery",
+    "phonetic": "/dɪˈskʌvəri/",
+    "chinese": "发现",
+    "example": "Major discovery.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "invention",
+    "phonetic": "/ɪnˈvenʃn/",
+    "chinese": "发明",
+    "example": "Great invention.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "laboratory",
+    "phonetic": "/ˈlæbrətɔːri/",
+    "chinese": "实验室",
+    "example": "Research laboratory.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "microscope",
+    "phonetic": "/ˈmaɪkrəskoʊp/",
+    "chinese": "显微镜",
+    "example": "Electron microscope.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "telescope",
+    "phonetic": "/ˈtelɪskoʊp/",
+    "chinese": "望远镜",
+    "example": "Space telescope.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "experiment",
+    "phonetic": "/ɪkˈsperɪmənt/",
+    "chinese": "实验",
+    "example": "Lab experiment.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "sample",
+    "phonetic": "/ˈsæmpl/",
+    "chinese": "样本",
+    "example": "Blood sample.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "data",
+    "phonetic": "/ˈdeɪtə/",
+    "chinese": "数据",
+    "example": "Research data.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "result",
+    "phonetic": "/rɪˈzʌlt/",
+    "chinese": "结果",
+    "example": "Test results.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "analysis",
+    "phonetic": "/əˈnæləsɪs/",
+    "chinese": "分析",
+    "example": "Data analysis.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "research",
+    "phonetic": "/rɪˈsɜːrtʃ/",
+    "chinese": "研究",
+    "example": "Scientific research.",
+    "category": "科学词汇"
+  },
+  {
+    "english": "mind",
+    "phonetic": "/maɪnd/",
+    "chinese": "心灵",
+    "example": "Human mind.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "thought",
+    "phonetic": "/θɔːt/",
+    "chinese": "思想",
+    "example": "Deep thought.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "feeling",
+    "phonetic": "/ˈfiːlɪŋ/",
+    "chinese": "感觉",
+    "example": "A strange feeling.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "emotion",
+    "phonetic": "/ɪˈmoʊʃn/",
+    "chinese": "情绪",
+    "example": "Strong emotion.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "behavior",
+    "phonetic": "/bɪˈheɪvjər/",
+    "chinese": "行为",
+    "example": "Human behavior.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "personality",
+    "phonetic": "/ˌpɜːrsəˈnæləti/",
+    "chinese": "人格",
+    "example": "Personality trait.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "memory",
+    "phonetic": "/ˈmeməri/",
+    "chinese": "记忆",
+    "example": "Memory loss.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "perception",
+    "phonetic": "/pərˈsepʃn/",
+    "chinese": "感知",
+    "example": "Visual perception.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "consciousness",
+    "phonetic": "/ˈkɑːnʃəsnəs/",
+    "chinese": "意识",
+    "example": "Loss of consciousness.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "subconscious",
+    "phonetic": "/ˌsʌbˈkɑːnʃəs/",
+    "chinese": "潜意识",
+    "example": "The subconscious mind.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "stress",
+    "phonetic": "/stres/",
+    "chinese": "压力",
+    "example": "Work stress.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "anxiety",
+    "phonetic": "/æŋˈzaɪəti/",
+    "chinese": "焦虑",
+    "example": "Feeling of anxiety.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "depression",
+    "phonetic": "/dɪˈpreʃn/",
+    "chinese": "抑郁",
+    "example": "Clinical depression.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "trauma",
+    "phonetic": "/ˈtraʊmə/",
+    "chinese": "心理创伤",
+    "example": "Emotional trauma.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "phobia",
+    "phonetic": "/ˈfoʊbiə/",
+    "chinese": "恐惧症",
+    "example": "Social phobia.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "obsession",
+    "phonetic": "/əbˈseʃn/",
+    "chinese": "痴迷",
+    "example": "An obsession.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "motivation",
+    "phonetic": "/ˌmoʊtɪˈveɪʃn/",
+    "chinese": "动机",
+    "example": "Work motivation.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "attitude",
+    "phonetic": "/ˈætɪtuːd/",
+    "chinese": "态度",
+    "example": "Positive attitude.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "intelligence",
+    "phonetic": "/ɪnˈtelɪdʒəns/",
+    "chinese": "智力",
+    "example": "High intelligence.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "therapy",
+    "phonetic": "/ˈθerəpi/",
+    "chinese": "治疗",
+    "example": "Physical therapy.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "counseling",
+    "phonetic": "/ˈkaʊnsəlɪŋ/",
+    "chinese": "心理咨询",
+    "example": "Career counseling.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "treatment",
+    "phonetic": "/ˈtriːtmənt/",
+    "chinese": "治疗",
+    "example": "Medical treatment.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "diagnosis",
+    "phonetic": "/ˌdaɪəɡˈnoʊsɪs/",
+    "chinese": "诊断",
+    "example": "Early diagnosis.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "prescription",
+    "phonetic": "/rɪˈskrɪpʃn/",
+    "chinese": "处方",
+    "example": "Doctor's prescription.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "patient",
+    "phonetic": "/ˈpeɪʃnt/",
+    "chinese": "病人",
+    "example": "Hospital patient.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "recovery",
+    "phonetic": "/rɪˈkʌvəri/",
+    "chinese": "康复",
+    "example": "Full recovery.",
+    "category": "心理学词汇"
+  },
+  {
+    "english": "philosophy",
+    "phonetic": "/fɪˈlɑːsəfi/",
+    "chinese": "哲学",
+    "example": "Study philosophy.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "existence",
+    "phonetic": "/ɪɡˈzɪstəns/",
+    "chinese": "存在",
+    "example": "Human existence.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "reality",
+    "phonetic": "/riˈæləti/",
+    "chinese": "现实",
+    "example": "Face reality.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "truth",
+    "phonetic": "/truːθ/",
+    "chinese": "真理",
+    "example": "Seek the truth.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "knowledge",
+    "phonetic": "/ˈnɑːlɪdʒ/",
+    "chinese": "知识",
+    "example": "Human knowledge.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "wisdom",
+    "phonetic": "/ˈwɪzdəm/",
+    "chinese": "智慧",
+    "example": "Great wisdom.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "reason",
+    "phonetic": "/ˈriːzn/",
+    "chinese": "理性",
+    "example": "Human reason.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "logic",
+    "phonetic": "/ˈlɑːdʒɪk/",
+    "chinese": "逻辑",
+    "example": "Logical reasoning.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "ethics",
+    "phonetic": "/ˈeθɪks/",
+    "chinese": "伦理学",
+    "example": "Business ethics.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "morality",
+    "phonetic": "/məˈræləti/",
+    "chinese": "道德",
+    "example": "Question morality.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "idealism",
+    "phonetic": "/aɪˈdiːəlɪzəm/",
+    "chinese": "唯心主义",
+    "example": "Philosophical idealism.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "materialism",
+    "phonetic": "/məˈtɪriəlɪzəm/",
+    "chinese": "唯物主义",
+    "example": "Historical materialism.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "existentialism",
+    "phonetic": "/ˌeɡzɪˈstenʃəlɪzəm/",
+    "chinese": "存在主义",
+    "example": "Existentialist philosophy.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "pragmatism",
+    "phonetic": "/ˈpræɡmətɪzəm/",
+    "chinese": "实用主义",
+    "example": "American pragmatism.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "stoicism",
+    "phonetic": "/ˈstoʊɪsɪzəm/",
+    "chinese": "斯多葛主义",
+    "example": "Practice stoicism.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "nihilism",
+    "phonetic": "/ˈnaɪɪlɪzəm/",
+    "chinese": "虚无主义",
+    "example": "Philosophical nihilism.",
+    "category": "哲学词汇"
+  },
+  {
+    "english": "wake up",
+    "phonetic": "/weɪk ʌp/",
+    "chinese": "醒来",
+    "example": "Wake up early.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "get up",
+    "phonetic": "/ɡet ʌp/",
+    "chinese": "起床",
+    "example": "Get up late.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "have breakfast",
+    "phonetic": "/hæv ˈbrekfəst/",
+    "chinese": "吃早餐",
+    "example": "Have breakfast.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "have lunch",
+    "phonetic": "/hæv lʌntʃ/",
+    "chinese": "吃午餐",
+    "example": "Have lunch at noon.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "have dinner",
+    "phonetic": "/hæv ˈdɪnər/",
+    "chinese": "吃晚餐",
+    "example": "Have dinner together.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "go to work",
+    "phonetic": "/ɡoʊ tə wɜːrk/",
+    "chinese": "上班",
+    "example": "Go to work by bus.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "go home",
+    "phonetic": "/ɡoʊ hoʊm/",
+    "chinese": "回家",
+    "example": "Go home early.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "watch TV",
+    "phonetic": "/wɑːtʃ ˌtiː ˈviː/",
+    "chinese": "看电视",
+    "example": "Watch TV at night.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "read a book",
+    "phonetic": "/riːd ə bʊk/",
+    "chinese": "读书",
+    "example": "Read a book.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "listen to music",
+    "phonetic": "/ˈlɪsn tə ˈmjuːzɪk/",
+    "chinese": "听音乐",
+    "example": "Listen to music.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "take a shower",
+    "phonetic": "/teɪk ə ˈʃaʊər/",
+    "chinese": "淋浴",
+    "example": "Take a shower.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "take a bath",
+    "phonetic": "/teɪk ə bæθ/",
+    "chinese": "泡澡",
+    "example": "Take a bath.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "brush teeth",
+    "phonetic": "/brʌʃ tiːθ/",
+    "chinese": "刷牙",
+    "example": "Brush teeth twice.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "go to bed",
+    "phonetic": "/ɡoʊ tə bed/",
+    "chinese": "睡觉",
+    "example": "Go to bed late.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "cook",
+    "phonetic": "/kʊk/",
+    "chinese": "做饭",
+    "example": "Cook dinner.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "clean",
+    "phonetic": "/kliːn/",
+    "chinese": "打扫",
+    "example": "Clean the house.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "wash",
+    "phonetic": "/wɑːʃ/",
+    "chinese": "洗涤",
+    "example": "Wash clothes.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "iron",
+    "phonetic": "/ˈaɪərn/",
+    "chinese": "熨烫",
+    "example": "Iron shirts.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "sweep",
+    "phonetic": "/swiːp/",
+    "chinese": "扫地",
+    "example": "Sweep the floor.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "mop",
+    "phonetic": "/mɑːp/",
+    "chinese": "拖地",
+    "example": "Mop the floor.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "vacuum",
+    "phonetic": "/ˈvækjuːm/",
+    "chinese": "吸尘",
+    "example": "Vacuum the carpet.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "dust",
+    "phonetic": "/dʌst/",
+    "chinese": "掸灰",
+    "example": "Dust the furniture.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "water plants",
+    "phonetic": "/ˈwɔːtər plænts/",
+    "chinese": "浇花",
+    "example": "Water the plants.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "take out trash",
+    "phonetic": "/teɪk aʊt træʃ/",
+    "chinese": "倒垃圾",
+    "example": "Take out the trash.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "relax",
+    "phonetic": "/rɪˈlæks/",
+    "chinese": "放松",
+    "example": "Relax at home.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "rest",
+    "phonetic": "/rest/",
+    "chinese": "休息",
+    "example": "Need to rest.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "nap",
+    "phonetic": "/næp/",
+    "chinese": "小睡",
+    "example": "Take a nap.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "play games",
+    "phonetic": "/pleɪ ɡeɪmz/",
+    "chinese": "玩游戏",
+    "example": "Play video games.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "go shopping",
+    "phonetic": "/ɡoʊ ˈʃɑːpɪŋ/",
+    "chinese": "购物",
+    "example": "Go shopping.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "go for a walk",
+    "phonetic": "/ɡoʊ fər ə wɔːk/",
+    "chinese": "散步",
+    "example": "Go for a walk.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "call friends",
+    "phonetic": "/kɔːl frendz/",
+    "chinese": "打电话给朋友",
+    "example": "Call my friends.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "surf the internet",
+    "phonetic": "/sɜːrf ði ˈɪntərnet/",
+    "chinese": "上网",
+    "example": "Surf the internet.",
+    "category": "日常生活词汇"
+  },
+  {
+    "english": "piece",
+    "phonetic": "/piːs/",
+    "chinese": "片/块",
+    "example": "A piece of paper.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "cup",
+    "phonetic": "/kʌp/",
+    "chinese": "杯",
+    "example": "A cup of coffee.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "glass",
+    "phonetic": "/ɡlæs/",
+    "chinese": "玻璃杯",
+    "example": "A glass of water.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "bottle",
+    "phonetic": "/ˈbɑːtl/",
+    "chinese": "瓶",
+    "example": "A bottle of wine.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "pair",
+    "phonetic": "/per/",
+    "chinese": "双",
+    "example": "A pair of shoes.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "box",
+    "phonetic": "/bɑːks/",
+    "chinese": "盒",
+    "example": "A box of chocolates.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "bag",
+    "phonetic": "/bæɡ/",
+    "chinese": "袋",
+    "example": "A bag of rice.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "dozen",
+    "phonetic": "/ˈdʌzn/",
+    "chinese": "打",
+    "example": "A dozen eggs.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "bunch",
+    "phonetic": "/bʌntʃ/",
+    "chinese": "串",
+    "example": "A bunch of grapes.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "slice",
+    "phonetic": "/slaɪs/",
+    "chinese": "片",
+    "example": "A slice of bread.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "piece",
+    "phonetic": "/piːs/",
+    "chinese": "张",
+    "example": "A piece of furniture.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "piece",
+    "phonetic": "/piːs/",
+    "chinese": "块",
+    "example": "A piece of cake.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "always",
+    "phonetic": "/ˈɔːlweɪz/",
+    "chinese": "总是",
+    "example": "I always arrive early.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "usually",
+    "phonetic": "/ˈjuːʒuəli/",
+    "chinese": "通常",
+    "example": "I usually walk to work.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "often",
+    "phonetic": "/ˈɔːfən/",
+    "chinese": "经常",
+    "example": "I often go to the gym.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "sometimes",
+    "phonetic": "/ˈsʌmtaɪmz/",
+    "chinese": "有时",
+    "example": "I sometimes work late.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "occasionally",
+    "phonetic": "/əˈkeɪʒənəli/",
+    "chinese": "偶尔",
+    "example": "I occasionally eat out.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "rarely",
+    "phonetic": "/ˈrerli/",
+    "chinese": "很少",
+    "example": "I rarely watch TV.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "seldom",
+    "phonetic": "/ˈseldəm/",
+    "chinese": "很少",
+    "example": "I seldom get sick.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "never",
+    "phonetic": "/ˈnevər/",
+    "chinese": "从不",
+    "example": "I never skip breakfast.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "very",
+    "phonetic": "/ˈveri/",
+    "chinese": "非常",
+    "example": "Very good.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "really",
+    "phonetic": "/ˈriːəli/",
+    "chinese": "真的",
+    "example": "Really delicious.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "extremely",
+    "phonetic": "/ɪkˈstriːmli/",
+    "chinese": "极其",
+    "example": "Extremely difficult.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "quite",
+    "phonetic": "/kwaɪt/",
+    "chinese": "相当",
+    "example": "Quite good.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "rather",
+    "phonetic": "/ˈræðər/",
+    "chinese": "相当",
+    "example": "Rather expensive.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "slightly",
+    "phonetic": "/ˈslaɪtli/",
+    "chinese": "稍微",
+    "example": "Slightly better.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "almost",
+    "phonetic": "/ˈɑːlmoʊst/",
+    "chinese": "几乎",
+    "example": "Almost finished.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "nearly",
+    "phonetic": "/ˈnɪrli/",
+    "chinese": "将近",
+    "example": "Nearly there.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "hardly",
+    "phonetic": "/ˈhɑːrdli/",
+    "chinese": "几乎不",
+    "example": "Hardly any.",
+    "category": "综合词汇"
+  },
+  {
+    "english": "completely",
+    "phonetic": "/kəmˈpliːtli/",
+    "chinese": "完全",
+    "example": "Completely agree.",
+    "category": "综合词汇"
+  }
+]
