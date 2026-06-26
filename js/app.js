@@ -34,7 +34,7 @@
       title: "持续精进你的<em>词汇</em>",
     },
     phrases: {
-      file: "data/phrases.json?v=8",
+      file: "data/phrases.json?v=10",
       totalLabel: "总短语",
       title: "积累地道的<em>场景表达</em>",
     },
