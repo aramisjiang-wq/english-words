@@ -95,7 +95,7 @@
           <span class="word-english-text">${escapeHtml(english)}</span>
           <button class="play-btn" onclick="event.stopPropagation(); ${handlers.speak}('${safeEnglish}')" aria-label="朗读">${sound}</button>
         </div>
-        <div class="word-phonetic">${escapeHtml(word.phonetic || "")}</div>
+        ${word.phonetic ? `<div class="word-phonetic">${escapeHtml(word.phonetic)}</div>` : ""}
         <div class="word-chinese">${escapeHtml(word.chinese || "")}</div>
         ${word.example ? `<div class="word-example">${escapeHtml(word.example)}</div>` : ""}
         <div class="word-tags">${meta}</div>

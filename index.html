@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=7">
+    <link rel="stylesheet" href="css/styles.css?v=9">
     <script>
         (function () {
             try {
@@ -28,7 +28,8 @@
                 <span class="brand-sub">英语单词学习</span>
             </div>
             <nav class="nav">
-                <button class="nav-item active" onclick="switchPage('learn')" data-page="learn">单词</button>
+                <button class="nav-item active" onclick="switchContent('words')" data-content="words">单词</button>
+                <button class="nav-item" onclick="switchContent('phrases')" data-content="phrases">短语</button>
                 <button class="nav-item" onclick="switchPage('stats')" data-page="stats">分析</button>
                 <button class="nav-item" onclick="switchPage('settings')" data-page="settings">设置</button>
             </nav>
@@ -42,9 +43,9 @@
         <section class="today">
             <div class="today-main">
                 <p class="eyebrow">今日学习 <span id="streakLabel" class="streak-label"></span></p>
-                <h1 class="today-title">持续精进你的<em>词汇</em></h1>
+                <h1 class="today-title" id="todayTitle">持续精进你的<em>词汇</em></h1>
                 <div class="metrics">
-                    <div class="metric" onclick="filterByStatus('all')" title="查看全部"><b id="totalWords">0</b><span>总词汇</span></div>
+                    <div class="metric" onclick="filterByStatus('all')" title="查看全部"><b id="totalWords">0</b><span id="totalLabel">总词汇</span></div>
                     <div class="metric is-mastered" onclick="filterByStatus('green')" title="筛选已掌握"><b id="masteredWords">0</b><span>已掌握</span></div>
                     <div class="metric is-difficult" onclick="filterByStatus('red')" title="筛选难记"><b id="difficultWords">0</b><span>难记</span></div>
                     <div class="metric" onclick="filterByStatus('gray')" title="筛选未学习"><b id="learningWords">0</b><span>学习中</span></div>
@@ -243,11 +244,11 @@
         </div>
     </div>
 
-    <script src="js/icons.js?v=7"></script>
-    <script src="js/filter-render.js?v=7"></script>
-    <script src="js/learning-utils.js?v=7"></script>
-    <script src="js/session-renderers.js?v=7"></script>
-    <script src="js/ui-feedback.js?v=7"></script>
-    <script src="js/app.js?v=7"></script>
+    <script src="js/icons.js?v=9"></script>
+    <script src="js/filter-render.js?v=9"></script>
+    <script src="js/learning-utils.js?v=9"></script>
+    <script src="js/session-renderers.js?v=9"></script>
+    <script src="js/ui-feedback.js?v=9"></script>
+    <script src="js/app.js?v=9"></script>
 </body>
 </html>

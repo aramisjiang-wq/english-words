@@ -26,6 +26,21 @@
   let selectedWords = new Set();
   let dailyGoal = 20;
 
+  // Content types share the same grid / filter / study / SRS engine.
+  const CONTENT = {
+    words: {
+      file: "data/words_merged.json?v=8",
+      totalLabel: "总词汇",
+      title: "持续精进你的<em>词汇</em>",
+    },
+    phrases: {
+      file: "data/phrases.json?v=8",
+      totalLabel: "总短语",
+      title: "积累地道的<em>场景表达</em>",
+    },
+  };
+  let contentType = "words";
+
   let selectedVoice = null;
   let speechRate = 0.9;
   let availableVoices = [];
@@ -86,7 +101,7 @@
     grid.innerHTML =
       '<div class="empty-state"><div class="spinner"></div><h3>正在加载单词…</h3></div>';
     try {
-      const response = await fetch("data/words_merged.json?v=6");
+      const response = await fetch(CONTENT[contentType].file);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const rawWords = await response.json();
       wordsData = initializeWordKeys(rawWords);
@@ -315,6 +330,7 @@
   }
 
   function renderWords() {
+    $("wordGrid").classList.toggle("phrases", contentType === "phrases");
     window.WordFilterRender.renderWords({
       wordsData,
       wordStatus,
@@ -356,8 +372,9 @@
   function renderPager({ total, page, pages }) {
     const el = $("pager");
     if (!el) return;
+    const unit = contentType === "phrases" ? "条短语" : "个单词";
     if (pages <= 1) {
-      el.innerHTML = total ? `<span class="pager-info">共 ${total} 个单词</span>` : "";
+      el.innerHTML = total ? `<span class="pager-info">共 ${total} ${unit}</span>` : "";
       return;
     }
     const btn = (label, target, { active = false, disabled = false } = {}) =>
@@ -483,8 +500,13 @@
   /* ---------- Stats & goal ---------- */
   function updateStats() {
     const total = wordsData.length;
-    const mastered = Object.values(wordStatus).filter((s) => s === "green").length;
-    const difficult = Object.values(wordStatus).filter((s) => s === "red").length;
+    let mastered = 0;
+    let difficult = 0;
+    wordsData.forEach((w) => {
+      const s = wordStatus[LU.keyOf(w)];
+      if (s === "green") mastered += 1;
+      else if (s === "red") difficult += 1;
+    });
     const learning = total - mastered - difficult;
 
     $("totalWords").textContent = total;
@@ -1276,7 +1298,41 @@
       return;
     }
     document.querySelectorAll(".modal.active").forEach((m) => m.classList.remove("active"));
-    setActiveNav("learn");
+    setContentNav();
+  }
+
+  function setContentNav() {
+    document.querySelectorAll(".nav-item").forEach((i) => i.classList.remove("active"));
+    document.querySelector(`.nav-item[data-content="${contentType}"]`)?.classList.add("active");
+  }
+
+  function applyContentLabels() {
+    const c = CONTENT[contentType];
+    const title = $("todayTitle");
+    if (title) title.innerHTML = c.title;
+    const totalLabel = $("totalLabel");
+    if (totalLabel) totalLabel.textContent = c.totalLabel;
+  }
+
+  function switchContent(type) {
+    if (!CONTENT[type]) return;
+    document.querySelectorAll(".modal.active").forEach((m) => m.classList.remove("active"));
+    if (type === contentType) {
+      setContentNav();
+      return;
+    }
+    contentType = type;
+    store.set("contentType", type);
+    setContentNav();
+    applyContentLabels();
+    // Reset filters/search — old theme/POS values won't exist in the new set.
+    $("searchBox").value = "";
+    $("statusFilter").value = "all";
+    $("sortFilter").value = "order";
+    $("presetFilter").value = "all";
+    currentPage = 1;
+    updateBreadcrumb(null);
+    loadWords();
   }
 
   /* ---------- Analytics ---------- */
@@ -1556,6 +1612,9 @@
     wordReviewData = store.get("wordReviewData", {});
     achievements = store.get("achievements", {});
     dailyGoal = store.get("dailyGoal", 20);
+    contentType = CONTENT[store.get("contentType", "words")] ? store.get("contentType", "words") : "words";
+    setContentNav();
+    applyContentLabels();
 
     loadWords();
     loadVoices();
@@ -1575,6 +1634,7 @@
   /* ---------- Expose handlers used by inline HTML / renderers ---------- */
   Object.assign(window, {
     switchPage,
+    switchContent,
     applyPresetFilter,
     resetFilters,
     selectTheme,

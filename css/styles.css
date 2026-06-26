@@ -476,6 +476,10 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(166px, 1fr));
     gap: 10px;
 }
+/* phrases are longer than single words — give them room */
+.word-grid.phrases { grid-template-columns: repeat(auto-fill, minmax(248px, 1fr)); }
+.word-grid.phrases .word-english-text { font-size: 1.04rem; line-height: 1.32; }
+.word-grid.phrases .word-card { min-height: 124px; }
 
 .word-card {
     background: var(--surface);
