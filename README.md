@@ -1,80 +1,96 @@
-# 英语单词学习系统 - 项目结构
+# 英语单词学习系统
 
-## 文件结构
+一个专注、优雅的纯前端英语单词学习应用：5000+ 单词分类浏览、间隔复习（SM-2）、测验 / 造句 / 听力 / 拼写多种练习模式，以及学习分析与成就系统。零依赖、零构建，一个静态服务器即可运行。
+
+![tech](https://img.shields.io/badge/stack-Vanilla_JS-informational) ![build](https://img.shields.io/badge/build-none-success) ![theme](https://img.shields.io/badge/theme-light%2Fdark-blueviolet)
+
+## ✨ 功能特性
+
+- **分类浏览**：父分类 / 子分类 / 词性 / 主题 多维筛选，预设筛选与分类标签快速进入。
+- **间隔复习**：基于 SM-2 的轻量调度器，按记忆曲线安排到期复习；测验 / 听力 / 拼写 / 造句的每次作答都会反馈到复习引擎。
+- **多种练习**：词汇测验（支持 A–D / 1–4 键盘作答）、造句练习、听力听写、拼写填空。
+- **学习分析**：本月学习热力图、掌握率趋势折线图、全局单词状态点图。
+- **成就系统**：掌握里程碑与连续学习天数等 11 项成就。
+- **每日目标**：进度环实时显示当日已学单词数 / 目标。
+- **浅色 / 深色主题**：跟随系统并可手动切换，选择会被记住。
+- **本地持久化**：全部进度保存在浏览器 `localStorage`，无需登录与后端。
+
+## 🗂 项目结构
 
 ```
 English Words/
-├── index.html              # 主页面（前端应用）
-├── words.db               # SQLite 数据库
-├── data/                 # 数据文件目录
-│   ├── words_merged.json   # 合并后的单词数据（主数据源）
-│   ├── words.json         # 原始单词数据
-│   ├── expanded_words.json
-│   └── expanded_words_part2.json
-├── scripts/              # Python 脚本目录
-│   ├── init_db.py        # 数据库初始化
-│   ├── export_db_to_json.py # 导出数据库到 JSON
-│   ├── check_duplicates.py # 检查重复单词
-│   ├── check_count.py     # 统计单词数量
-│   ├── check_words_table.py # 检查数据库表结构
-│   ├── check_table_structure.py # 检查表结构
-│   ├── convert.py        # Markdown 转 JSON
-│   ├── expand_to_5000.py # 扩展词汇到 5000
-│   ├── expand_to_5000_part2.py
-│   ├── expand_to_5000_part3.py
-│   ├── expand_to_5000_final.py
-│   ├── expand_common_words.py
-│   ├── expand_comprehensive.py
-│   ├── expand_massive.py
-│   ├── expand_vocabulary.py
-│   ├── expand_vocabulary_part2.py
-│   └── expand_vocabulary_part3.py
-└── docs/                # 文档目录
-    ├── VOCABULARY_SUMMARY.md
-    └── 英文单词分类大全.md
+├── index.html              # 应用外壳（结构 + 主题预设）
+├── css/
+│   └── styles.css          # 设计系统（设计令牌 / 浅深双主题 / 响应式）
+├── js/
+│   ├── app.js              # 应用主逻辑（状态、页面、练习、分析）
+│   ├── filter-render.js    # 单词筛选与卡片渲染
+│   ├── learning-utils.js   # 采样、测验生成、SM-2 间隔复习调度
+│   ├── session-renderers.js# 测验/练习/听力/拼写的视图模板
+│   └── ui-feedback.js      # Toast 通知与确认对话框（替代 alert/confirm）
+├── data/
+│   └── words_merged.json   # 单词主数据源（前端唯一依赖）
+├── scripts/                # 数据生成 / 维护用的 Python 脚本
+└── docs/                   # 词汇与设计文档
 ```
 
-## 使用说明
+### 前端架构
 
-### 运行前端应用
-直接在浏览器中打开 `index.html`，或使用本地服务器：
+应用按职责拆分为独立模块，均以 `window.*` 命名空间挂载，无打包步骤：
+
+| 模块 | 职责 |
+| --- | --- |
+| `css/styles.css` | 以 CSS 变量定义的设计令牌，统一驱动浅 / 深主题与全部组件样式 |
+| `js/app.js` | 状态管理、数据加载、筛选、练习流程、分析渲染、键盘快捷键 |
+| `js/learning-utils.js` | `WordLearningUtils`：采样、测验选项、SM-2 调度（`scheduleNext` / `collectDueKeys`） |
+| `js/filter-render.js` | `WordFilterRender`：多维索引、筛选与卡片 HTML 渲染 |
+| `js/session-renderers.js` | `WordSessionRenderers`：各练习模式的纯函数视图模板 |
+| `js/ui-feedback.js` | `UI`：toast / Promise 化 confirm 对话框 |
+
+数据流：单词以稳定的 `__key`（`english::chinese::category` + 去重序号）标识，单词状态、复习记录与学习历史均按该键持久化，避免重复词冲突。
+
+## 🚀 本地运行
+
+应用通过 `fetch` 加载 JSON，需经本地服务器访问（不能直接 `file://` 打开）：
+
 ```bash
 python3 -m http.server 8000
-```
-然后访问 `http://localhost:8000`
-
-### 运行 Python 脚本
-所有脚本都需要在 `scripts/` 目录下运行：
-```bash
-cd scripts
-python3 script_name.py
+# 然后访问 http://localhost:8000
 ```
 
-### 主要脚本说明
+## ⌨️ 键盘快捷键
 
-- **init_db.py**: 初始化数据库并导入单词数据
-- **export_db_to_json.py**: 从数据库导出单词到 JSON（供前端使用）
-- **check_duplicates.py**: 检查数据库中是否有重复单词
-- **check_count.py**: 统计数据库中的单词数量
-- **convert.py**: 将 Markdown 格式的单词列表转换为 JSON
+| 快捷键 | 操作 |
+| --- | --- |
+| `Ctrl/⌘ + K` | 聚焦搜索框 |
+| `Ctrl/⌘ + Q` | 开始测验 |
+| `Ctrl/⌘ + P` | 造句练习 |
+| `Ctrl/⌘ + R` | 智能复习 |
+| `Ctrl/⌘ + L` | 听力练习 |
+| `Ctrl/⌘ + S` | 学习分析 |
+| `Ctrl/⌘ + A` | 成就系统 |
+| `A`–`D` / `1`–`4` | 测验中选择选项 |
+| `Esc` | 关闭弹窗 |
 
-### 数据流程
+## 🛠 数据维护（可选）
 
-1. **原始数据**: `docs/英文单词分类大全.md` (Markdown 格式)
-2. **转换**: `scripts/convert.py` → `data/words.json`
-3. **导入数据库**: `scripts/init_db.py` → `words.db`
-4. **导出 JSON**: `scripts/export_db_to_json.py` → `data/words_merged.json`
-5. **前端使用**: `index.html` 加载 `data/words_merged.json`
+`scripts/` 下的 Python 脚本用于生成与校验词库，前端运行不依赖它们。
 
-## 部署到 Vercel
+| 脚本 | 说明 |
+| --- | --- |
+| `convert.py` | 将 `docs/英文单词分类大全.md` 转为 JSON |
+| `init_db.py` | 初始化 SQLite 并导入单词 |
+| `export_db_to_json.py` | 从数据库导出 `data/words_merged.json` |
+| `check_duplicates.py` / `check_count.py` | 校验重复与统计数量 |
 
-1. 将项目推送到 GitHub
-2. 在 Vercel 中导入仓库
-3. 配置：
-   - Framework Preset: Other
-   - Root Directory: ./
-   - Build Command: (留空)
-   - Output Directory: ./
-4. 部署完成
+数据流程：`docs/*.md` → `convert.py` → `words.json` → `init_db.py` → SQLite → `export_db_to_json.py` → `data/words_merged.json` → 前端加载。
 
-注意：部署时只需上传 `index.html` 和 `data/words_merged.json`，其他文件用于开发和管理。
+## ☁️ 部署
+
+任意静态托管（Vercel / Netlify / GitHub Pages）均可，无需构建：
+
+1. 推送到 GitHub；
+2. 导入仓库，Framework Preset 选 **Other**，Build Command 留空，Output Directory 设为 `./`；
+3. 部署完成。
+
+运行时仅需 `index.html`、`css/`、`js/` 与 `data/words_merged.json`。

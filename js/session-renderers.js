@@ -23,18 +23,29 @@
 
   function buildQuizQuestionHtml(word, options, index, total) {
     const safeWord = escapeHtml(word.english);
+    const safePhonetic = escapeHtml(word.phonetic || "");
     const safeCorrect = escapeJsString(word.chinese);
+    const safeEnglishJs = escapeJsString(word.english);
+    const letters = ["A", "B", "C", "D", "E", "F"];
     const optionHtml = options
-      .map((opt) => {
+      .map((opt, i) => {
         const safeOpt = escapeHtml(opt);
         const safeOptJs = escapeJsString(opt);
-        return `<div class="quiz-option" onclick="checkQuizAnswer('${safeOptJs}', '${safeCorrect}')">${safeOpt}</div>`;
+        const safeOptAttr = escapeHtml(opt);
+        return `<div class="quiz-option" data-opt="${safeOptAttr}" onclick="checkQuizAnswer('${safeOptJs}', '${safeCorrect}')">
+          <span class="opt-key">${letters[i] || i + 1}</span>
+          <span class="opt-text">${safeOpt}</span>
+        </div>`;
       })
       .join("");
 
     return `<div class="session-card center">
-      <p class="session-progress">问题 ${index + 1}/${total}</p>
-      <h2 class="session-title">${safeWord}</h2>
+      <p class="session-progress">问题 ${index + 1} / ${total}</p>
+      <div class="session-word-head" style="justify-content:center">
+        <h2 class="session-title" style="margin-bottom:6px">${safeWord}</h2>
+        <button class="play-btn session-play-btn" onclick="speak('${safeEnglishJs}')">🔊</button>
+      </div>
+      <p class="session-phonetic">${safePhonetic}</p>
       <div class="session-options">
         ${optionHtml}
       </div>

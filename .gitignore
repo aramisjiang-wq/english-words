@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Local editor / preview tooling
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# SQLite working DB
+*.db
