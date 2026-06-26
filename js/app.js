@@ -86,7 +86,7 @@
     grid.innerHTML =
       '<div class="empty-state"><div class="spinner"></div><h3>正在加载单词…</h3></div>';
     try {
-      const response = await fetch("data/words_merged.json");
+      const response = await fetch("data/words_merged.json?v=3");
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const rawWords = await response.json();
       wordsData = initializeWordKeys(rawWords);
@@ -220,41 +220,38 @@
     select.innerHTML = opts.join("");
   }
 
-  function populateCategories() {
-    const uniq = (field, fallback) => [...new Set(wordsData.map((w) => w[field] || fallback))];
-
-    fillSelect($("parentCategoryFilter"), "父分类", uniq("parent_category", "其他"));
-    fillSelect($("childCategoryFilter"), "子分类", uniq("child_category", "其他"));
-    fillSelect($("categoryFilter"), "全部分类", uniq("category", ""));
-    fillSelect($("partOfSpeechFilter"), "全部词性", uniq("part_of_speech", "其他"));
-    fillSelect($("themeFilter"), "全部主题", uniq("theme", "其他"));
-
-    const counts = {};
+  function sortedByCount(field, fallback) {
+    const counts = new Map();
     wordsData.forEach((w) => {
-      counts[w.category] = (counts[w.category] || 0) + 1;
+      const k = w[field] || fallback;
+      counts.set(k, (counts.get(k) || 0) + 1);
     });
-    const top = Object.entries(counts)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10)
-      .map(([c]) => c);
-
-    $("categoryTabs").innerHTML =
-      top.map((c) => `<div class="category-tab" onclick="selectCategory('${c}', this)">${c}</div>`).join("") +
-      `<div class="category-tab" onclick="showAllCategories()">查看全部 →</div>`;
+    return [...counts.entries()].sort((a, b) => b[1] - a[1]);
   }
 
-  function showAllCategories() {
-    const categories = [...new Set(wordsData.map((w) => w.category))];
+  function populateCategories() {
+    const themes = sortedByCount("theme", "通用");
+    const pos = sortedByCount("part_of_speech", "其他");
+    fillSelect($("themeFilter"), "全部主题", themes.map(([k]) => k));
+    fillSelect($("partOfSpeechFilter"), "全部词性", pos.map(([k]) => k));
+
+    // Theme tabs — "通用" is the bulk/default view, so it's the "全部" tab.
+    const tabThemes = themes.filter(([k]) => k !== "通用");
     $("categoryTabs").innerHTML =
-      categories.map((c) => `<div class="category-tab" onclick="selectCategory('${c}', this)">${c}</div>`).join("") +
-      `<div class="category-tab" onclick="populateCategories()">收起 ←</div>`;
+      `<div class="category-tab active" onclick="selectTheme('all', this)">全部</div>` +
+      tabThemes
+        .map(
+          ([k, n]) =>
+            `<div class="category-tab" onclick="selectTheme('${escapeJsString(k)}', this)">${escapeHtml(k)}<span class="tab-count">${n}</span></div>`
+        )
+        .join("");
   }
 
-  function selectCategory(category, element) {
+  function selectTheme(theme, element) {
     document.querySelectorAll(".category-tab").forEach((t) => t.classList.remove("active"));
     if (element) element.classList.add("active");
-    $("categoryFilter").value = category;
-    updateBreadcrumb(category);
+    $("themeFilter").value = theme;
+    updateBreadcrumb(theme === "all" ? null : theme);
     filterWords();
   }
 
@@ -268,23 +265,20 @@
         : '<span class="breadcrumb-item active">全部单词</span>';
   }
 
-  const toggleAdvancedFilters = () => $("advancedFilters").classList.toggle("hidden");
+  const FILTER_IDS = ["themeFilter", "partOfSpeechFilter", "statusFilter"];
+  const PAGE_SIZE = 60;
+  let currentPage = 1;
 
-  const FILTER_IDS = [
-    "categoryFilter",
-    "partOfSpeechFilter",
-    "statusFilter",
-    "parentCategoryFilter",
-    "childCategoryFilter",
-    "themeFilter",
-  ];
+  function markFirstTabActive() {
+    document.querySelectorAll(".category-tab").forEach((t, i) => t.classList.toggle("active", i === 0));
+  }
 
   function resetFilters() {
     $("searchBox").value = "";
     FILTER_IDS.forEach((id) => ($(id).value = "all"));
     $("presetFilter").value = "all";
-    document.querySelectorAll(".category-tab").forEach((t) => t.classList.remove("active"));
-    updateBreadcrumb("all");
+    markFirstTabActive();
+    updateBreadcrumb(null);
     filterWords();
   }
 
@@ -302,17 +296,15 @@
       "unlearned-words": { statusFilter: "gray" },
     };
     Object.entries(presets[preset] || {}).forEach(([id, value]) => ($(id).value = value));
+    updateBreadcrumb(presets[preset]?.themeFilter || null);
     filterWords();
   }
 
   function getFilters() {
     return {
       searchTerm: $("searchBox").value,
-      parentCategoryFilter: $("parentCategoryFilter").value,
-      childCategoryFilter: $("childCategoryFilter").value,
-      categoryFilter: $("categoryFilter").value,
-      partOfSpeechFilter: $("partOfSpeechFilter").value,
       themeFilter: $("themeFilter").value,
+      partOfSpeechFilter: $("partOfSpeechFilter").value,
       statusFilter: $("statusFilter").value,
     };
   }
@@ -328,12 +320,51 @@
       onWordClickName: "handleWordClick",
       onSpeakName: "speak",
       onSetStatusName: "setStatus",
+      page: currentPage,
+      pageSize: PAGE_SIZE,
+      onPager: renderPager,
     });
   }
 
   function filterWords() {
+    currentPage = 1;
     saveFilterPreferences();
     renderWords();
+  }
+
+  function setPage(n) {
+    currentPage = n;
+    renderWords();
+    const grid = $("wordGrid");
+    const top = grid.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+
+  function renderPager({ total, page, pages }) {
+    const el = $("pager");
+    if (!el) return;
+    if (pages <= 1) {
+      el.innerHTML = total ? `<span class="pager-info">共 ${total} 个单词</span>` : "";
+      return;
+    }
+    const btn = (label, target, { active = false, disabled = false } = {}) =>
+      `<button class="pager-btn${active ? " active" : ""}" ${disabled ? "disabled" : `onclick="setPage(${target})"`}>${label}</button>`;
+    const gap = '<span class="pager-gap">…</span>';
+
+    const end = Math.min(pages, Math.max(5, page + 2));
+    const start = Math.max(1, end - 4);
+    const nums = [];
+    for (let i = start; i <= end; i += 1) nums.push(i);
+
+    el.innerHTML =
+      `<span class="pager-info">共 ${total} 个 · 第 ${page}/${pages} 页</span>` +
+      '<div class="pager-controls">' +
+      btn("‹", page - 1, { disabled: page <= 1 }) +
+      (start > 1 ? btn("1", 1) + (start > 2 ? gap : "") : "") +
+      nums.map((i) => btn(String(i), i, { active: i === page })).join("") +
+      (end < pages ? (end < pages - 1 ? gap : "") + btn(String(pages), pages) : "") +
+      btn("›", page + 1, { disabled: page >= pages }) +
+      "</div>";
   }
 
   function saveFilterPreferences() {
@@ -1217,11 +1248,10 @@
   Object.assign(window, {
     switchPage,
     applyPresetFilter,
-    toggleAdvancedFilters,
     resetFilters,
-    selectCategory,
-    showAllCategories,
+    selectTheme,
     populateCategories,
+    setPage,
     handleWordClick,
     setStatus,
     speak,

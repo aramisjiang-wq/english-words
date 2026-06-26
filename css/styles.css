@@ -432,35 +432,60 @@ body {
 }
 .category-tab:hover { border-color: var(--accent-line); color: var(--accent); }
 .category-tab.active { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+.tab-count { margin-left: 6px; font-size: 0.82em; opacity: 0.6; font-variant-numeric: tabular-nums; }
+.category-tab.active .tab-count { opacity: 0.85; }
+
+/* pagination */
+.pager {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+    margin-top: 22px; padding-top: 18px;
+    border-top: 1px solid var(--line);
+}
+.pager:empty { display: none; }
+.pager-info { font-size: 0.82rem; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.pager-controls { display: flex; align-items: center; gap: 5px; margin-left: auto; }
+.pager-btn {
+    min-width: 34px; height: 34px; padding: 0 10px;
+    border: 1px solid var(--line); background: var(--surface);
+    color: var(--ink-soft); border-radius: var(--r-sm);
+    font-family: inherit; font-size: 0.85rem; font-weight: 500;
+    cursor: pointer; transition: all var(--dur) var(--ease);
+    font-variant-numeric: tabular-nums;
+}
+.pager-btn:hover:not(:disabled) { border-color: var(--accent-line); color: var(--accent); }
+.pager-btn.active { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+.pager-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.pager-gap { color: var(--ink-faint); padding: 0 2px; }
 
 /* ============================================================
    Word grid — dictionary cards
    ============================================================ */
 .word-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(228px, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+    gap: 12px;
 }
 
 .word-card {
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--r-md);
-    padding: 16px 16px 14px;
+    padding: 13px 14px 11px;
     cursor: pointer;
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 184px;
+    min-height: 150px;
     transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease);
-    animation: rise 0.3s var(--ease) both;
+    animation: rise 0.25s var(--ease) both;
 }
-@keyframes rise { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes rise { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 
 /* status as a quiet left rule */
 .word-card::before {
     content: "";
-    position: absolute; left: 0; top: 14px; bottom: 14px;
+    position: absolute; left: 0; top: 11px; bottom: 11px;
     width: 3px; border-radius: var(--r-pill);
     background: var(--neutral);
     opacity: 0;
@@ -476,7 +501,7 @@ body {
 .word-english-text {
     font-family: var(--font-serif);
     font-weight: 500;
-    font-size: 1.32rem;
+    font-size: 1.14rem;
     line-height: 1.18;
     letter-spacing: -0.01em;
     color: var(--ink);
@@ -484,7 +509,7 @@ body {
 }
 .play-btn {
     flex-shrink: 0;
-    width: 28px; height: 28px;
+    width: 26px; height: 26px;
     display: inline-flex; align-items: center; justify-content: center;
     border: 1px solid var(--line);
     background: transparent;
@@ -495,31 +520,31 @@ body {
 }
 .play-btn:hover { color: var(--accent); border-color: var(--accent-line); background: var(--accent-soft); }
 
-.word-phonetic { font-family: var(--font-serif); font-style: italic; font-size: 0.86rem; color: var(--ink-faint); margin-bottom: 7px; word-break: break-word; }
-.word-chinese { font-size: 0.96rem; font-weight: 500; color: var(--ink); margin-bottom: 8px; word-break: break-word; }
+.word-phonetic { font-family: var(--font-serif); font-style: italic; font-size: 0.78rem; color: var(--ink-faint); margin-bottom: 5px; word-break: break-word; }
+.word-chinese { font-size: 0.88rem; font-weight: 500; color: var(--ink); margin-bottom: 6px; word-break: break-word; }
 .word-example {
-    font-size: 0.78rem; line-height: 1.5; color: var(--ink-soft);
-    padding-left: 11px; border-left: 2px solid var(--line);
+    font-size: 0.72rem; line-height: 1.45; color: var(--ink-soft);
+    padding-left: 10px; border-left: 2px solid var(--line);
     margin-top: auto;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
 
-.word-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
+.word-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px; }
 .word-tag {
-    font-size: 0.66rem; font-weight: 500; letter-spacing: 0.02em;
+    font-size: 0.64rem; font-weight: 500; letter-spacing: 0.02em;
     color: var(--ink-faint);
     padding: 1px 0;
 }
-.word-tag::after { content: "·"; margin-left: 6px; color: var(--line-strong); }
+.word-tag::after { content: "·"; margin-left: 5px; color: var(--line-strong); }
 .word-tag:last-child::after { content: ""; margin: 0; }
 .pos-tag { color: var(--accent); }
 
 /* status segmented control */
-.word-actions { display: flex; gap: 0; margin-top: 12px; border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; }
+.word-actions { display: flex; gap: 0; margin-top: 9px; border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; }
 .status-badge {
     flex: 1;
-    padding: 6px 4px;
-    font-size: 0.72rem; font-weight: 500;
+    padding: 5px 3px;
+    font-size: 0.68rem; font-weight: 500;
     text-align: center;
     background: var(--surface);
     color: var(--ink-faint);
@@ -815,7 +840,7 @@ body {
     .nav { order: 3; width: 100%; margin-left: 0; }
     .nav-item { flex: 1; text-align: center; }
     .topbar-spacer { display: none; }
-    .word-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 11px; }
+    .word-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
     .today { padding: 22px; }
     .today-title { font-size: 1.5rem; }
     .session-title { font-size: 1.7rem; }
@@ -824,8 +849,8 @@ body {
 
 @media (max-width: 480px) {
     .word-grid { grid-template-columns: 1fr 1fr; gap: 9px; }
-    .word-card { min-height: 168px; padding: 13px; }
-    .word-english-text { font-size: 1.15rem; }
+    .word-card { min-height: 142px; padding: 12px; }
+    .word-english-text { font-size: 1.08rem; }
     .today-aside { flex-direction: column; align-items: stretch; gap: 14px; }
     .metric { padding-right: 18px; margin-right: 18px; }
     .toast-stack { left: 12px; right: 12px; max-width: none; }

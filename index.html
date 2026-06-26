@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link rel="stylesheet" href="css/styles.css?v=3">
     <script>
         (function () {
             try {
@@ -100,8 +100,8 @@
                 <option value="difficult-words">难记单词</option>
                 <option value="unlearned-words">未学习</option>
             </select>
-            <select class="filter-select" id="categoryFilter">
-                <option value="all">全部分类</option>
+            <select class="filter-select" id="themeFilter">
+                <option value="all">全部主题</option>
             </select>
             <select class="filter-select" id="partOfSpeechFilter">
                 <option value="all">全部词性</option>
@@ -112,31 +112,7 @@
                 <option value="green">已掌握</option>
                 <option value="red">难记</option>
             </select>
-            <button class="action-btn btn-quiet" onclick="toggleAdvancedFilters()" title="高级筛选"><span data-icon="filter" data-icon-size="18"></span>高级</button>
             <button class="action-btn btn-quiet" onclick="resetFilters()" title="重置筛选"><span data-icon="reset" data-icon-size="18"></span>重置</button>
-        </div>
-
-        <div class="advanced-filters hidden" id="advancedFilters">
-            <div class="advanced-filters-content">
-                <div class="filter-group">
-                    <label>父分类</label>
-                    <select class="filter-select" id="parentCategoryFilter">
-                        <option value="all">父分类</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>子分类</label>
-                    <select class="filter-select" id="childCategoryFilter">
-                        <option value="all">子分类</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>主题</label>
-                    <select class="filter-select" id="themeFilter">
-                        <option value="all">全部主题</option>
-                    </select>
-                </div>
-            </div>
         </div>
 
         <div class="batch-bar hidden" id="batchBar">
@@ -154,6 +130,8 @@
         <div class="category-tabs" id="categoryTabs"></div>
 
         <div class="word-grid" id="wordGrid"></div>
+
+        <div class="pager" id="pager"></div>
     </div>
 
     <div class="modal" id="quizModal">
@@ -231,11 +209,11 @@
         </div>
     </div>
 
-    <script src="js/icons.js?v=2"></script>
-    <script src="js/filter-render.js?v=2"></script>
-    <script src="js/learning-utils.js?v=2"></script>
-    <script src="js/session-renderers.js?v=2"></script>
-    <script src="js/ui-feedback.js?v=2"></script>
-    <script src="js/app.js?v=2"></script>
+    <script src="js/icons.js?v=3"></script>
+    <script src="js/filter-render.js?v=3"></script>
+    <script src="js/learning-utils.js?v=3"></script>
+    <script src="js/session-renderers.js?v=3"></script>
+    <script src="js/ui-feedback.js?v=3"></script>
+    <script src="js/app.js?v=3"></script>
 </body>
 </html>
