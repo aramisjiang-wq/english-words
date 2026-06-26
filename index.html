@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=12">
+    <link rel="stylesheet" href="css/styles.css?v=13">
     <script>
         (function () {
             try {
@@ -87,6 +87,7 @@
             <button class="action-btn btn-primary" onclick="startQuiz()" title="快捷键: Ctrl+Q"><span data-icon="target" data-icon-size="18"></span>测验</button>
             <button class="action-btn" id="btnPractice" onclick="startPractice()" title="快捷键: Ctrl+P"><span data-icon="pen" data-icon-size="18"></span>造句</button>
             <button class="action-btn" onclick="startListening()" title="快捷键: Ctrl+L"><span data-icon="headphones" data-icon-size="18"></span>听力</button>
+            <button class="action-btn" id="btnSpeaking" onclick="startSpeaking()" title="跟读练习"><span data-icon="mic" data-icon-size="18"></span>跟读</button>
             <button class="action-btn" id="btnSpelling" onclick="startSpelling()" title="快捷键: Ctrl+S"><span data-icon="type" data-icon-size="18"></span>拼写</button>
             <span class="divider"></span>
             <div class="searchbar">
@@ -168,6 +169,16 @@
         </div>
     </div>
 
+    <div class="modal" id="speakingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">跟读练习</h2>
+                <button class="close-btn" onclick="closeSpeakingModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
+            </div>
+            <div id="speakingContent"></div>
+        </div>
+    </div>
+
     <div class="modal" id="detailModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -244,11 +255,11 @@
         </div>
     </div>
 
-    <script src="js/icons.js?v=12"></script>
-    <script src="js/filter-render.js?v=12"></script>
-    <script src="js/learning-utils.js?v=12"></script>
-    <script src="js/session-renderers.js?v=12"></script>
-    <script src="js/ui-feedback.js?v=12"></script>
-    <script src="js/app.js?v=12"></script>
+    <script src="js/icons.js?v=13"></script>
+    <script src="js/filter-render.js?v=13"></script>
+    <script src="js/learning-utils.js?v=13"></script>
+    <script src="js/session-renderers.js?v=13"></script>
+    <script src="js/ui-feedback.js?v=13"></script>
+    <script src="js/app.js?v=13"></script>
 </body>
 </html>

@@ -742,6 +742,32 @@ body {
 .study-rate-unknown .study-key { background: rgba(255,255,255,0.25); color: inherit; }
 .study-hint { margin-top: 14px; font-size: 0.76rem; color: var(--ink-faint); }
 
+/* speaking / read-aloud */
+.session-card.speaking .speak-cn { font-size: 1.05rem; color: var(--ink-soft); margin: 6px 0 4px; }
+.mic-btn {
+    display: inline-flex; flex-direction: column; align-items: center; gap: 8px;
+    margin: 22px auto 4px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-line);
+    background: var(--accent-soft);
+    color: var(--accent);
+    cursor: pointer;
+    font-family: inherit; font-size: 0.82rem; font-weight: 600;
+    transition: all var(--dur) var(--ease);
+}
+.mic-btn:hover { background: var(--accent); color: var(--on-accent); transform: scale(1.03); }
+.mic-btn .icon { width: 30px; height: 30px; }
+.mic-btn.listening {
+    background: var(--danger); color: #fff; border-color: transparent;
+    animation: micPulse 1.2s var(--ease) infinite;
+}
+@keyframes micPulse {
+    0% { box-shadow: 0 0 0 0 var(--danger-soft); }
+    70% { box-shadow: 0 0 0 18px transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+}
+
 /* word detail */
 .detail-word { font-family: var(--font-serif); font-weight: 500; font-size: 2rem; letter-spacing: -0.01em; color: var(--ink); }
 .detail-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }

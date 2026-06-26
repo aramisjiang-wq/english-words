@@ -95,7 +95,7 @@
      only reaches level 4 once it has been recalled correctly in at least
      one *productive* skill (spelling / listening / sentence use), not just
      recognized. Self-marking 已掌握 counts only as recognition. */
-  const PRODUCTIVE_SKILLS = ["spell", "listen", "use"];
+  const PRODUCTIVE_SKILLS = ["spell", "listen", "use", "speak"];
   const PROFICIENCY_LABELS = ["未学习", "眼熟", "认识", "巩固", "会用", "精通"];
 
   function proficiency(record, status) {

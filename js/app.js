@@ -746,6 +746,178 @@
     updateStats();
   };
 
+  /* ---------- Speaking (read-aloud, speech recognition) ---------- */
+  const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+  let speakingQueue = [];
+  let speakingIndex = 0;
+  let recog = null;
+  let recognizing = false;
+
+  const speechSupported = () => !!SpeechRec;
+
+  function getSpeakPool() {
+    const f = getFilters();
+    const term = (f.searchTerm || "").trim().toLowerCase();
+    const list = wordsData.filter((w) => {
+      if (f.themeFilter !== "all" && (w.theme || "通用") !== f.themeFilter) return false;
+      if (f.partOfSpeechFilter !== "all" && (w.part_of_speech || "其他") !== f.partOfSpeechFilter) return false;
+      if (f.statusFilter !== "all" && (wordStatus[LU.keyOf(w)] || "gray") !== f.statusFilter) return false;
+      if (term && !(String(w.english).toLowerCase().includes(term) || String(w.chinese).includes(term))) return false;
+      return true;
+    });
+    return LU.sample(list, 8);
+  }
+
+  function startSpeaking() {
+    if (!speechSupported()) {
+      UI.warning("当前浏览器不支持语音识别，建议使用 Chrome", { title: "跟读" });
+      return;
+    }
+    speakingQueue = getSpeakPool();
+    if (speakingQueue.length === 0) {
+      UI.info("当前范围没有可练习的内容", { title: "跟读" });
+      return;
+    }
+    speakingIndex = 0;
+    $("speakingModal").classList.add("active");
+    showSpeakingCard();
+  }
+
+  function showSpeakingCard() {
+    if (speakingIndex >= speakingQueue.length) {
+      $("speakingContent").innerHTML = window.WordSessionRenderers.buildCompletionHtml(
+        "跟读完成！",
+        "再来一组",
+        "startSpeaking()"
+      );
+      renderWords();
+      updateStats();
+      return;
+    }
+    const word = speakingQueue[speakingIndex];
+    $("speakingContent").innerHTML = window.WordSessionRenderers.buildSpeakingHtml(
+      word,
+      speakingIndex,
+      speakingQueue.length
+    );
+    setTimeout(() => speak(word.english), 300);
+  }
+
+  function setMicState(state) {
+    const btn = $("micBtn");
+    const label = $("micLabel");
+    if (!btn) return;
+    btn.classList.toggle("listening", state === "listening");
+    if (label) label.textContent = state === "listening" ? "聆听中…（再次点击结束）" : "点击朗读";
+  }
+
+  function toggleSpeechRec() {
+    if (recognizing) {
+      try {
+        recog && recog.stop();
+      } catch (e) {}
+      return;
+    }
+    const word = speakingQueue[speakingIndex];
+    if (!word) return;
+    recog = new SpeechRec();
+    recog.lang = "en-US";
+    recog.interimResults = false;
+    recog.maxAlternatives = 5;
+    recognizing = true;
+    setMicState("listening");
+    recog.onresult = (e) => scoreSpeaking(word, [...e.results[0]].map((a) => a.transcript));
+    recog.onerror = () => {
+      recognizing = false;
+      setMicState("idle");
+      const fb = $("speakFeedback");
+      if (fb) showFeedback(fb, "warning", '<p class="session-feedback-title warning">没听清，请再试一次</p>');
+    };
+    recog.onend = () => {
+      recognizing = false;
+      setMicState("idle");
+    };
+    try {
+      recog.start();
+    } catch (e) {
+      recognizing = false;
+      setMicState("idle");
+    }
+  }
+
+  function normalizeSpoken(s) {
+    return String(s).toLowerCase().replace(/[^a-z0-9\s']/g, " ").replace(/\s+/g, " ").trim();
+  }
+
+  function scoreSpeaking(word, alternatives) {
+    const target = normalizeSpoken(word.english);
+    const targetWords = target.split(" ").filter(Boolean);
+    let best = 0;
+    let bestAlt = alternatives[0] || "";
+    alternatives.forEach((a) => {
+      const t = normalizeSpoken(a);
+      if (t === target) {
+        best = 1;
+        bestAlt = a;
+        return;
+      }
+      const aw = new Set(t.split(" "));
+      const match = targetWords.filter((w) => aw.has(w)).length;
+      const ratio = targetWords.length ? match / targetWords.length : 0;
+      if (ratio > best) {
+        best = ratio;
+        bestAlt = a;
+      }
+    });
+
+    const ok = best >= 0.8;
+    recordReviewOutcome(word, ok, "speak");
+    const pct = Math.round(best * 100);
+    const fb = $("speakFeedback");
+    if (!fb) return;
+    if (best >= 0.99) {
+      showFeedback(
+        fb,
+        "success",
+        `<p class="session-feedback-title success">发音标准！</p>
+         <p class="session-feedback-hint">识别到：${escapeHtml(bestAlt)}</p>`
+      );
+    } else if (ok) {
+      showFeedback(
+        fb,
+        "success",
+        `<p class="session-feedback-title success">不错（${pct}%）</p>
+         <p class="session-feedback-text">你说的：${escapeHtml(bestAlt)}</p>
+         <p class="session-feedback-hint">目标：${escapeHtml(word.english)}</p>`
+      );
+    } else {
+      showFeedback(
+        fb,
+        "error",
+        `<p class="session-feedback-title error">再试一次（${pct}%）</p>
+         <p class="session-feedback-text">识别到：${escapeHtml(bestAlt || "（无）")}</p>
+         <p class="session-feedback-hint">目标：${escapeHtml(word.english)}</p>`
+      );
+    }
+  }
+
+  function nextSpeaking() {
+    speakingIndex += 1;
+    showSpeakingCard();
+  }
+
+  const closeSpeakingModal = () => {
+    if (recog) {
+      try {
+        recog.abort();
+      } catch (e) {}
+    }
+    recognizing = false;
+    $("speakingModal").classList.remove("active");
+    renderWords();
+    updateStats();
+  };
+
   /* ---------- Word detail ---------- */
   function openWordDetail(wordKey) {
     const word = wordByKey.get(wordKey);
@@ -773,6 +945,7 @@
       .join("");
     const skillChips = [
       ["meaning", "词义"],
+      ["speak", "朗读"],
       ["use", "造句"],
       ["spell", "拼写"],
       ["listen", "听写"],
@@ -1630,6 +1803,7 @@
     contentType = CONTENT[store.get("contentType", "words")] ? store.get("contentType", "words") : "words";
     setContentNav();
     applyContentLabels();
+    if (!speechSupported()) $("btnSpeaking")?.classList.add("hidden");
 
     loadWords();
     loadVoices();
@@ -1667,6 +1841,10 @@
     revealStudy,
     rateStudy,
     closeStudyModal,
+    startSpeaking,
+    toggleSpeechRec,
+    nextSpeaking,
+    closeSpeakingModal,
     openWordDetail,
     setStatusFromDetail,
     closeDetailModal,

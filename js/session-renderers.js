@@ -168,6 +168,28 @@
     </div>`;
   }
 
+  function buildSpeakingHtml(word, index, total) {
+    const eng = escapeHtml(word.english);
+    const engJs = escapeJsString(word.english);
+    const sound = window.Icon ? window.Icon("volume", 20) : "🔊";
+    const mic = window.Icon ? window.Icon("mic", 22) : "🎤";
+    return `<div class="session-card center speaking">
+      <p class="session-progress">跟读 ${index + 1} / ${total}</p>
+      <div class="session-word-head" style="justify-content:center">
+        <h2 class="session-title" style="margin:0">${eng}</h2>
+        <button class="play-btn session-play-btn" onclick="speak('${engJs}')" aria-label="朗读">${sound}</button>
+      </div>
+      <p class="session-phonetic">${escapeHtml(word.phonetic || "")}</p>
+      <p class="speak-cn">${escapeHtml(word.chinese || "")}</p>
+      <button class="mic-btn" id="micBtn" onclick="toggleSpeechRec()">${mic}<span id="micLabel">点击朗读</span></button>
+      <div id="speakFeedback" class="session-feedback"></div>
+      <div class="session-actions" style="justify-content:center;margin-top:16px">
+        <button class="action-btn" onclick="speak('${engJs}')">先听一遍</button>
+        <button class="action-btn btn-primary" onclick="nextSpeaking()">下一个 →</button>
+      </div>
+    </div>`;
+  }
+
   function buildStudyCompleteHtml(stats) {
     return `<div class="session-complete">
       <h3>本组学习完成</h3>
@@ -187,5 +209,6 @@
     buildSpellingWordHtml,
     buildStudyCardHtml,
     buildStudyCompleteHtml,
+    buildSpeakingHtml,
   };
 })();
