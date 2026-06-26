@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=3">
+    <link rel="stylesheet" href="css/styles.css?v=4">
     <script>
         (function () {
             try {
@@ -41,7 +41,7 @@
 
         <section class="today">
             <div class="today-main">
-                <p class="eyebrow">今日学习</p>
+                <p class="eyebrow">今日学习 <span id="streakLabel" class="streak-label"></span></p>
                 <h1 class="today-title">持续精进你的<em>词汇</em></h1>
                 <div class="metrics">
                     <div class="metric"><b id="totalWords">0</b><span>总词汇</span></div>
@@ -68,11 +68,17 @@
                         <span class="goal-label">今日目标</span>
                     </div>
                 </div>
-                <button class="review-cta" onclick="startSmartReview()" title="快捷键: Ctrl+R">
-                    <span data-icon="review" data-icon-size="18"></span>
-                    开始复习
-                    <span class="pill" id="reviewCount">0</span>
-                </button>
+                <div class="today-cta">
+                    <button class="review-cta" onclick="startStudy()" title="快捷键: Ctrl+E">
+                        <span data-icon="book" data-icon-size="18"></span>
+                        开始学习
+                    </button>
+                    <button class="review-cta secondary" onclick="startSmartReview()" title="快捷键: Ctrl+R">
+                        <span data-icon="review" data-icon-size="18"></span>
+                        复习
+                        <span class="pill" id="reviewCount">0</span>
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -144,6 +150,26 @@
         </div>
     </div>
 
+    <div class="modal" id="studyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">学习新词</h2>
+                <button class="close-btn" onclick="closeStudyModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
+            </div>
+            <div id="studyContent"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">单词详情</h2>
+                <button class="close-btn" onclick="closeDetailModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
+            </div>
+            <div id="detailContent"></div>
+        </div>
+    </div>
+
     <div class="modal" id="practiceModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -209,11 +235,11 @@
         </div>
     </div>
 
-    <script src="js/icons.js?v=3"></script>
-    <script src="js/filter-render.js?v=3"></script>
-    <script src="js/learning-utils.js?v=3"></script>
-    <script src="js/session-renderers.js?v=3"></script>
-    <script src="js/ui-feedback.js?v=3"></script>
-    <script src="js/app.js?v=3"></script>
+    <script src="js/icons.js?v=4"></script>
+    <script src="js/filter-render.js?v=4"></script>
+    <script src="js/learning-utils.js?v=4"></script>
+    <script src="js/session-renderers.js?v=4"></script>
+    <script src="js/ui-feedback.js?v=4"></script>
+    <script src="js/app.js?v=4"></script>
 </body>
 </html>

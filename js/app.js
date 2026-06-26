@@ -383,13 +383,7 @@
   /* ---------- Word status ---------- */
   function handleWordClick(wordKey) {
     if (batchMode) toggleWordSelection(wordKey);
-    else cycleStatus(wordKey);
-  }
-
-  function cycleStatus(wordKey) {
-    const status = wordStatus[wordKey] || "gray";
-    const next = status === "gray" ? "green" : status === "green" ? "red" : "gray";
-    setStatus(wordKey, next);
+    else openWordDetail(wordKey);
   }
 
   function setStatus(wordKey, status) {
@@ -494,6 +488,11 @@
       `<div class="segment gray" style="flex:${learning}"></div>`;
 
     $("reviewCount").textContent = getDueReviewWords().length;
+
+    const streak = currentStreak();
+    const streakEl = $("streakLabel");
+    if (streakEl) streakEl.textContent = streak > 0 ? `· 连续学习 ${streak} 天` : "";
+
     updateGoalRing();
     checkAchievements();
   }
@@ -619,6 +618,159 @@
     isReviewMode = true;
     $("quizModal").classList.add("active");
     showQuizQuestion();
+  }
+
+  /* ---------- Study (flashcards, active recall) ---------- */
+  let studyQueue = [];
+  let studyIndex = 0;
+  let studyRevealed = false;
+  let studyStats = { known: 0, vague: 0, unknown: 0 };
+
+  // Unlearned words within the current filter scope, in curriculum order.
+  function getStudyPool() {
+    const f = getFilters();
+    const term = (f.searchTerm || "").trim().toLowerCase();
+    return wordsData.filter((w) => {
+      if ((wordStatus[LU.keyOf(w)] || "gray") !== "gray") return false;
+      if (f.themeFilter !== "all" && (w.theme || "通用") !== f.themeFilter) return false;
+      if (f.partOfSpeechFilter !== "all" && (w.part_of_speech || "其他") !== f.partOfSpeechFilter) return false;
+      if (term) {
+        const hit =
+          String(w.english).toLowerCase().includes(term) ||
+          String(w.chinese).toLowerCase().includes(term);
+        if (!hit) return false;
+      }
+      return true;
+    });
+  }
+
+  function startStudy() {
+    const pool = getStudyPool();
+    if (pool.length === 0) {
+      UI.info("当前范围没有未学习的单词，换个主题或去复习吧", { title: "学习" });
+      return;
+    }
+    studyQueue = pool.slice(0, 10);
+    studyIndex = 0;
+    studyStats = { known: 0, vague: 0, unknown: 0 };
+    $("studyModal").classList.add("active");
+    showStudyCard();
+  }
+
+  function showStudyCard() {
+    studyRevealed = false;
+    if (studyIndex >= studyQueue.length) {
+      $("studyContent").innerHTML = window.WordSessionRenderers.buildStudyCompleteHtml(studyStats);
+      renderWords();
+      updateStats();
+      return;
+    }
+    const word = studyQueue[studyIndex];
+    $("studyContent").innerHTML = window.WordSessionRenderers.buildStudyCardHtml(
+      word,
+      studyIndex,
+      studyQueue.length
+    );
+    setTimeout(() => speak(word.english), 300);
+  }
+
+  function revealStudy() {
+    if (studyRevealed) return;
+    studyRevealed = true;
+    $("studyBack")?.classList.remove("hidden");
+    $("studyRevealBtn")?.classList.add("hidden");
+    $("studyRate")?.classList.remove("hidden");
+  }
+
+  function rateStudy(rating) {
+    if (!studyRevealed) return;
+    const word = studyQueue[studyIndex];
+    if (word) {
+      const key = LU.keyOf(word);
+      if (rating === "known") {
+        wordStatus[key] = "green";
+        recordReviewOutcome(word, true);
+        studyStats.known += 1;
+      } else if (rating === "vague") {
+        recordReviewOutcome(word, false);
+        studyStats.vague += 1;
+      } else {
+        wordStatus[key] = "red";
+        recordReviewOutcome(word, false);
+        studyStats.unknown += 1;
+      }
+      saveStatus();
+    }
+    studyIndex += 1;
+    showStudyCard();
+  }
+
+  const closeStudyModal = () => {
+    $("studyModal").classList.remove("active");
+    renderWords();
+    updateStats();
+  };
+
+  /* ---------- Word detail ---------- */
+  function openWordDetail(wordKey) {
+    const word = wordByKey.get(wordKey);
+    if (!word) return;
+    renderWordDetail(word);
+    $("detailModal").classList.add("active");
+  }
+
+  function renderWordDetail(word) {
+    const key = LU.keyOf(word);
+    const status = wordStatus[key] || "gray";
+    const engJs = escapeJsString(word.english);
+    const safeKey = escapeJsString(key);
+    const sound = window.Icon ? window.Icon("volume", 20) : "🔊";
+    const tag = (cls, t) =>
+      t && t !== "其他" && t !== "通用"
+        ? `<span class="word-tag ${cls}">${escapeHtml(t)}</span>`
+        : "";
+
+    $("detailContent").innerHTML = `
+      <div class="detail">
+        <div class="session-word-head">
+          <h2 class="detail-word">${escapeHtml(word.english)}</h2>
+          <button class="play-btn session-play-btn" onclick="speak('${engJs}')" aria-label="朗读">${sound}</button>
+        </div>
+        <p class="session-phonetic">${escapeHtml(word.phonetic || "")}</p>
+        <div class="detail-tags">${tag("pos-tag", word.part_of_speech)}${tag("theme-tag", word.theme)}${tag("child-tag", word.category)}</div>
+        <p class="detail-cn">${escapeHtml(word.chinese || "")}</p>
+        ${word.example ? `<div class="session-example-box"><p class="session-example-label">例句</p><p class="session-example-text">${escapeHtml(word.example)}</p></div>` : ""}
+        <div class="detail-status">
+          <span class="detail-status-label">标记为</span>
+          <div class="word-actions detail-actions">
+            <span class="status-badge ${status === "gray" ? "active" : ""}" onclick="setStatusFromDetail('${safeKey}', 'gray')">未学习</span>
+            <span class="status-badge ${status === "green" ? "green" : ""}" onclick="setStatusFromDetail('${safeKey}', 'green')">已掌握</span>
+            <span class="status-badge ${status === "red" ? "red" : ""}" onclick="setStatusFromDetail('${safeKey}', 'red')">难记</span>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function setStatusFromDetail(key, status) {
+    setStatus(key, status);
+    const word = wordByKey.get(key);
+    if (word) renderWordDetail(word);
+  }
+
+  const closeDetailModal = () => $("detailModal").classList.remove("active");
+
+  /* ---------- Streak ---------- */
+  function currentStreak() {
+    let streak = 0;
+    const today = new Date();
+    let i = learningHistory[LU.dayStr(today)] ? 0 : 1;
+    for (; ; i += 1) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      if (learningHistory[LU.dayStr(d)]) streak += 1;
+      else break;
+    }
+    return streak;
   }
 
   /* ---------- Practice (sentence) ---------- */
@@ -1186,6 +1338,23 @@
       document.querySelectorAll(".modal.active").forEach((m) => m.classList.remove("active"));
     }
 
+    // Study flashcards: Space/Enter reveals, 1/2/3 rate
+    if ($("studyModal").classList.contains("active")) {
+      if (!studyRevealed && (e.key === " " || e.key === "Enter")) {
+        e.preventDefault();
+        revealStudy();
+        return;
+      }
+      if (studyRevealed) {
+        const map = { 1: "unknown", 2: "vague", 3: "known" };
+        if (map[e.key]) {
+          e.preventDefault();
+          rateStudy(map[e.key]);
+          return;
+        }
+      }
+    }
+
     // Quiz answer keys (A–D / 1–4) when the quiz is open
     if ($("quizModal").classList.contains("active")) {
       const opts = document.querySelectorAll(".quiz-option");
@@ -1200,6 +1369,7 @@
     if (e.ctrlKey || e.metaKey) {
       const actions = {
         k: () => $("searchBox").focus(),
+        e: startStudy,
         q: startQuiz,
         p: startPractice,
         r: startSmartReview,
@@ -1257,6 +1427,13 @@
     speak,
     toggleBatchMode,
     batchSetStatus,
+    startStudy,
+    revealStudy,
+    rateStudy,
+    closeStudyModal,
+    openWordDetail,
+    setStatusFromDetail,
+    closeDetailModal,
     startQuiz,
     showQuizQuestion,
     checkQuizAnswer,

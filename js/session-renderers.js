@@ -135,11 +135,57 @@
     </div>`;
   }
 
+  function buildStudyCardHtml(word, index, total) {
+    const eng = escapeHtml(word.english);
+    const engJs = escapeJsString(word.english);
+    const sound = window.Icon ? window.Icon("volume", 20) : "🔊";
+    const tag = (cls, t) =>
+      t && t !== "其他" && t !== "通用"
+        ? `<span class="word-tag ${cls}">${escapeHtml(t)}</span>`
+        : "";
+
+    return `<div class="session-card center study">
+      <p class="session-progress">学习 ${index + 1} / ${total}</p>
+      <div class="session-word-head" style="justify-content:center">
+        <h2 class="session-title" style="margin:0">${eng}</h2>
+        <button class="play-btn session-play-btn" onclick="speak('${engJs}')" aria-label="朗读">${sound}</button>
+      </div>
+      <p class="session-phonetic">${escapeHtml(word.phonetic || "")}</p>
+      <div id="studyBack" class="study-back hidden">
+        <div class="study-tags">${tag("pos-tag", word.part_of_speech)}${tag("theme-tag", word.theme)}</div>
+        <p class="study-cn">${escapeHtml(word.chinese || "")}</p>
+        ${word.example ? `<div class="session-example-box"><p class="session-example-text">${escapeHtml(word.example)}</p></div>` : ""}
+      </div>
+      <div class="study-controls">
+        <button class="action-btn btn-primary study-reveal-btn" id="studyRevealBtn" onclick="revealStudy()">显示释义</button>
+        <div id="studyRate" class="study-rate hidden">
+          <button class="action-btn study-rate-unknown" onclick="rateStudy('unknown')"><span class="study-key">1</span>不认识</button>
+          <button class="action-btn study-rate-vague" onclick="rateStudy('vague')"><span class="study-key">2</span>模糊</button>
+          <button class="action-btn study-rate-known" onclick="rateStudy('known')"><span class="study-key">3</span>认识</button>
+        </div>
+        <p class="study-hint">空格显示释义 · 1 / 2 / 3 评分</p>
+      </div>
+    </div>`;
+  }
+
+  function buildStudyCompleteHtml(stats) {
+    return `<div class="session-complete">
+      <h3>本组学习完成</h3>
+      <p class="session-complete-score">认识 ${stats.known} · 模糊 ${stats.vague} · 不认识 ${stats.unknown}</p>
+      <div class="session-actions" style="justify-content:center">
+        <button class="action-btn btn-primary" onclick="startStudy()">再来一组</button>
+        <button class="action-btn" onclick="closeStudyModal()">完成</button>
+      </div>
+    </div>`;
+  }
+
   window.WordSessionRenderers = {
     buildCompletionHtml,
     buildQuizQuestionHtml,
     buildPracticeWordHtml,
     buildListeningWordHtml,
     buildSpellingWordHtml,
+    buildStudyCardHtml,
+    buildStudyCompleteHtml,
   };
 })();

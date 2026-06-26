@@ -307,6 +307,13 @@ body {
     padding: 1px 9px; font-size: 0.82em; font-variant-numeric: tabular-nums;
 }
 
+.today-cta { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.review-cta.secondary { background: var(--surface-2); color: var(--ink); }
+.review-cta.secondary:hover { background: var(--surface-3); }
+.review-cta.secondary .pill { background: var(--accent-soft); color: var(--accent); }
+
+.streak-label { color: var(--ink-faint); font-weight: 500; }
+
 /* ============================================================
    Toolbar — actions + filters
    ============================================================ */
@@ -703,6 +710,38 @@ body {
 
 .session-complete { text-align: center; padding: 30px 16px; }
 .session-complete-score { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600; color: var(--accent); margin: 14px 0 18px; }
+
+/* study flashcards */
+.session-card.study { padding: 8px 2px; }
+.study-back { margin-top: 6px; animation: rise 0.2s var(--ease); }
+.study-tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 6px; }
+.study-cn { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--ink); margin: 4px 0 12px; }
+.study-controls { margin-top: 22px; }
+.study-reveal-btn { min-width: 220px; }
+.study-rate { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.study-rate .action-btn { flex-direction: column; gap: 4px; padding: 12px 8px; font-size: 0.95rem; }
+.study-key {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; border-radius: var(--r-xs);
+    background: var(--surface-3); color: var(--ink-faint);
+    font-size: 0.72rem; font-weight: 600; font-family: var(--font-serif);
+}
+.study-rate-known { background: var(--sage-soft); color: var(--sage); border-color: transparent; }
+.study-rate-known:hover { background: var(--sage); color: #fff; }
+.study-rate-known .study-key { background: rgba(255,255,255,0.25); color: inherit; }
+.study-rate-vague { background: var(--surface-2); }
+.study-rate-unknown { background: var(--ochre-soft); color: var(--ochre); border-color: transparent; }
+.study-rate-unknown:hover { background: var(--ochre); color: #fff; }
+.study-rate-unknown .study-key { background: rgba(255,255,255,0.25); color: inherit; }
+.study-hint { margin-top: 14px; font-size: 0.76rem; color: var(--ink-faint); }
+
+/* word detail */
+.detail-word { font-family: var(--font-serif); font-weight: 500; font-size: 2rem; letter-spacing: -0.01em; color: var(--ink); }
+.detail-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+.detail-cn { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; color: var(--ink); margin: 8px 0 14px; }
+.detail-status { margin-top: 20px; }
+.detail-status-label { display: block; font-size: 0.82rem; color: var(--ink-faint); margin-bottom: 8px; }
+.detail-actions { max-width: 340px; }
 
 /* ============================================================
    Settings
