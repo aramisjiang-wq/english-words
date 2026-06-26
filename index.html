@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="一个专注、优雅的英语单词学习系统：分类浏览、间隔复习、测验/听写/拼写练习与学习分析。">
+    <meta name="description" content="一个专注、克制的英语单词学习工具：分类浏览、间隔复习与多种练习模式。">
     <meta name="color-scheme" content="light dark">
-    <title>英语单词学习系统</title>
+    <title>Lexicon · 英语单词学习</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=2">
     <script>
-        // Apply saved theme before paint to avoid a flash of the wrong theme.
         (function () {
             try {
                 var saved = JSON.parse(localStorage.getItem('theme'));
@@ -22,101 +21,99 @@
     </script>
 </head>
 <body>
-    <div class="app-container">
-        <header class="header">
-            <div class="header-top">
-                <div class="header-brand">
-                    <div class="logo-row">
-                        <div class="logo"><span class="logo-mark">EN</span>英语单词学习</div>
-                        <span class="logo-badge">Focus</span>
-                    </div>
-                    <div class="logo-subtitle">每日专注记忆 · 间隔复习 · 持续精进</div>
-                </div>
-                <nav class="main-nav">
-                    <button class="nav-item active" onclick="switchPage('learn')" data-page="learn">📖 学习</button>
-                    <button class="nav-item" onclick="switchPage('stats')" data-page="stats">📊 统计</button>
-                    <button class="nav-item" onclick="switchPage('settings')" data-page="settings">⚙️ 设置</button>
-                    <span class="nav-spacer"></span>
-                    <button class="theme-toggle" onclick="showAchievementsModal()" title="成就 (Ctrl+A)" aria-label="查看成就">🏆</button>
-                    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="切换主题" aria-label="切换主题">🌙</button>
-                </nav>
-                <div class="stats-grid">
-                    <div class="stat-card total">
-                        <div class="stat-number" id="totalWords">0</div>
-                        <div class="stat-label">总单词</div>
-                    </div>
-                    <div class="stat-card mastered">
-                        <div class="stat-number" id="masteredWords">0</div>
-                        <div class="stat-label">已掌握</div>
-                    </div>
-                    <div class="stat-card difficult">
-                        <div class="stat-number" id="difficultWords">0</div>
-                        <div class="stat-label">难记</div>
-                    </div>
-                    <div class="stat-card learning">
-                        <div class="stat-number" id="learningWords">0</div>
-                        <div class="stat-label">学习中</div>
-                    </div>
-                </div>
-            </header>
+    <div class="app">
+        <header class="topbar">
+            <div class="brand">
+                <span class="brand-name"><em>Lexicon</em></span>
+                <span class="brand-sub">英语单词学习</span>
+            </div>
+            <nav class="nav">
+                <button class="nav-item active" onclick="switchPage('learn')" data-page="learn">单词</button>
+                <button class="nav-item" onclick="switchPage('stats')" data-page="stats">分析</button>
+                <button class="nav-item" onclick="switchPage('settings')" data-page="settings">设置</button>
+            </nav>
+            <span class="topbar-spacer"></span>
+            <div class="topbar-actions">
+                <button class="icon-btn" onclick="showAchievementsModal()" title="成就 (Ctrl+A)" aria-label="成就"><span data-icon="award"></span></button>
+                <button class="icon-btn" id="themeToggle" onclick="toggleTheme()" title="切换主题" aria-label="切换主题"><span data-icon="moon"></span></button>
+            </div>
+        </header>
 
-        <section class="progress-section">
-            <div class="progress-main">
-                <div class="progress-header">
-                    <div class="progress-title">学习进度</div>
-                    <div class="progress-percentage" id="progressPercentage">0%</div>
+        <section class="today">
+            <div class="today-main">
+                <p class="eyebrow">今日学习</p>
+                <h1 class="today-title">持续精进你的<em>词汇</em></h1>
+                <div class="metrics">
+                    <div class="metric"><b id="totalWords">0</b><span>总词汇</span></div>
+                    <div class="metric is-mastered"><b id="masteredWords">0</b><span>已掌握</span></div>
+                    <div class="metric is-difficult"><b id="difficultWords">0</b><span>难记</span></div>
+                    <div class="metric"><b id="learningWords">0</b><span>学习中</span></div>
                 </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar" id="progressBar"></div>
-                    <div class="progress-segments" id="progressSegments"></div>
-                </div>
-                <div class="review-meta">
-                    <span>🧠 今日待复习</span>
-                    <span id="reviewCount" class="review-count">0</span>
-                    <span>个单词</span>
+                <div class="progress-line">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                        <div class="progress-segments" id="progressSegments"></div>
+                    </div>
+                    <span class="progress-percentage" id="progressPercentage">0%</span>
                 </div>
             </div>
-            <div class="goal-ring" id="goalRing">
-                <svg viewBox="0 0 60 60" aria-hidden="true">
-                    <circle class="ring-track" cx="30" cy="30" r="24" fill="none" stroke-width="6"></circle>
-                    <circle class="ring-fill" id="goalRingFill" cx="30" cy="30" r="24" fill="none" stroke-width="6"></circle>
-                </svg>
-                <div class="goal-meta">
-                    <span class="goal-value"><span id="goalCurrent">0</span>/<span id="goalTarget">20</span></span>
-                    <span class="goal-label">今日目标</span>
+            <div class="today-aside">
+                <div class="goal-ring" id="goalRing">
+                    <svg viewBox="0 0 64 64" aria-hidden="true">
+                        <circle class="ring-track" cx="32" cy="32" r="26" fill="none" stroke-width="6"></circle>
+                        <circle class="ring-fill" id="goalRingFill" cx="32" cy="32" r="26" fill="none" stroke-width="6"></circle>
+                    </svg>
+                    <div class="goal-meta">
+                        <span class="goal-value"><span id="goalCurrent">0</span>/<span id="goalTarget">20</span></span>
+                        <span class="goal-label">今日目标</span>
+                    </div>
                 </div>
+                <button class="review-cta" onclick="startSmartReview()" title="快捷键: Ctrl+R">
+                    <span data-icon="review" data-icon-size="18"></span>
+                    开始复习
+                    <span class="pill" id="reviewCount">0</span>
+                </button>
             </div>
         </section>
 
-        <nav class="breadcrumb" id="breadcrumb">
-            <span class="breadcrumb-item active">首页</span>
-        </nav>
+        <div class="toolbar">
+            <button class="action-btn btn-primary" onclick="startQuiz()" title="快捷键: Ctrl+Q"><span data-icon="target" data-icon-size="18"></span>测验</button>
+            <button class="action-btn" onclick="startPractice()" title="快捷键: Ctrl+P"><span data-icon="pen" data-icon-size="18"></span>造句</button>
+            <button class="action-btn" onclick="startListening()" title="快捷键: Ctrl+L"><span data-icon="headphones" data-icon-size="18"></span>听力</button>
+            <button class="action-btn" onclick="startSpelling()" title="快捷键: Ctrl+S"><span data-icon="type" data-icon-size="18"></span>拼写</button>
+            <span class="divider"></span>
+            <div class="searchbar">
+                <span data-icon="search" data-icon-size="18"></span>
+                <input type="text" class="search-box" id="searchBox" placeholder="搜索单词或释义…" title="快捷键: Ctrl+K" autocomplete="off">
+            </div>
+            <span class="spring"></span>
+            <button class="action-btn btn-quiet" onclick="toggleBatchMode()" id="batchModeBtn"><span data-icon="layers" data-icon-size="18"></span>批量选择</button>
+        </div>
 
-        <div class="controls">
-            <input type="text" class="search-box" id="searchBox" placeholder="🔍 搜索单词…" title="快捷键: Ctrl+K" autocomplete="off">
+        <div class="filters-row">
             <select class="filter-select" id="presetFilter" onchange="applyPresetFilter(this.value)">
-                <option value="all">🎯 预设筛选</option>
-                <option value="business-nouns">💼 商业名词</option>
-                <option value="daily-verbs">🏠 日常动词</option>
-                <option value="science-adjectives">🔬 科学形容词</option>
-                <option value="learning-words">📚 学习中</option>
-                <option value="difficult-words">⚠️ 难记单词</option>
-                <option value="unlearned-words">📝 未学习</option>
+                <option value="all">预设筛选</option>
+                <option value="business-nouns">商业名词</option>
+                <option value="daily-verbs">日常动词</option>
+                <option value="science-adjectives">科学形容词</option>
+                <option value="learning-words">学习中</option>
+                <option value="difficult-words">难记单词</option>
+                <option value="unlearned-words">未学习</option>
             </select>
             <select class="filter-select" id="categoryFilter">
-                <option value="all">📁 全部分类</option>
+                <option value="all">全部分类</option>
             </select>
             <select class="filter-select" id="partOfSpeechFilter">
-                <option value="all">📝 全部词性</option>
+                <option value="all">全部词性</option>
             </select>
             <select class="filter-select" id="statusFilter">
-                <option value="all">📊 全部状态</option>
-                <option value="gray">⚪ 未学习</option>
-                <option value="green">🟢 已掌握</option>
-                <option value="red">🔴 难记</option>
+                <option value="all">全部状态</option>
+                <option value="gray">未学习</option>
+                <option value="green">已掌握</option>
+                <option value="red">难记</option>
             </select>
-            <button class="action-btn btn-secondary" onclick="toggleAdvancedFilters()" title="高级筛选">⚙️ 高级</button>
-            <button class="action-btn btn-secondary" onclick="resetFilters()" title="重置筛选">🔄 重置</button>
+            <button class="action-btn btn-quiet" onclick="toggleAdvancedFilters()" title="高级筛选"><span data-icon="filter" data-icon-size="18"></span>高级</button>
+            <button class="action-btn btn-quiet" onclick="resetFilters()" title="重置筛选"><span data-icon="reset" data-icon-size="18"></span>重置</button>
         </div>
 
         <div class="advanced-filters hidden" id="advancedFilters">
@@ -124,46 +121,35 @@
                 <div class="filter-group">
                     <label>父分类</label>
                     <select class="filter-select" id="parentCategoryFilter">
-                        <option value="all">📂 父分类</option>
+                        <option value="all">父分类</option>
                     </select>
                 </div>
                 <div class="filter-group">
                     <label>子分类</label>
                     <select class="filter-select" id="childCategoryFilter">
-                        <option value="all">📁 子分类</option>
+                        <option value="all">子分类</option>
                     </select>
                 </div>
                 <div class="filter-group">
                     <label>主题</label>
                     <select class="filter-select" id="themeFilter">
-                        <option value="all">🎨 全部主题</option>
+                        <option value="all">全部主题</option>
                     </select>
                 </div>
             </div>
         </div>
 
-        <div class="action-groups">
-            <div class="action-group">
-                <div class="action-group-title">学习</div>
-                <button class="action-btn btn-primary" onclick="startQuiz()" title="快捷键: Ctrl+Q">🎯 测验</button>
-                <button class="action-btn btn-success" onclick="startPractice()" title="快捷键: Ctrl+P">✏️ 造句练习</button>
-            </div>
-            <div class="action-group">
-                <div class="action-group-title">复习</div>
-                <button class="action-btn btn-violet" onclick="startSmartReview()" title="快捷键: Ctrl+R">🧠 智能复习</button>
-                <button class="action-btn btn-pink" onclick="startListening()" title="快捷键: Ctrl+L">🎧 听力</button>
-                <button class="action-btn btn-pink" onclick="startSpelling()" title="快捷键: Ctrl+S">🔤 拼写</button>
-            </div>
-        </div>
-
-        <div class="batch-bar">
+        <div class="batch-bar hidden" id="batchBar">
             <span class="batch-bar-title">批量操作</span>
-            <button class="action-btn btn-warning" onclick="toggleBatchMode()" id="batchModeBtn">☑ 批量选择</button>
-            <button class="action-btn btn-success" onclick="batchSetStatus('green')" id="batchMarkMastered" disabled>🟢 批量掌握</button>
-            <button class="action-btn btn-danger" onclick="batchSetStatus('red')" id="batchMarkDifficult" disabled>🔴 批量难记</button>
-            <button class="action-btn btn-secondary" onclick="batchSetStatus('gray')" id="batchMarkUnlearned" disabled>⚪ 批量未学</button>
+            <button class="action-btn btn-solid-sage" onclick="batchSetStatus('green')" id="batchMarkMastered" disabled><span data-icon="check" data-icon-size="16"></span>标记掌握</button>
+            <button class="action-btn" onclick="batchSetStatus('red')" id="batchMarkDifficult" disabled>标记难记</button>
+            <button class="action-btn" onclick="batchSetStatus('gray')" id="batchMarkUnlearned" disabled>标记未学</button>
             <span class="batch-count" id="batchCount"></span>
         </div>
+
+        <nav class="breadcrumb" id="breadcrumb">
+            <span class="breadcrumb-item active">全部单词</span>
+        </nav>
 
         <div class="category-tabs" id="categoryTabs"></div>
 
@@ -173,8 +159,8 @@
     <div class="modal" id="quizModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">🎯 词汇测验</h2>
-                <button class="close-btn" onclick="closeQuizModal()" aria-label="关闭">&times;</button>
+                <h2 class="modal-title">词汇测验</h2>
+                <button class="close-btn" onclick="closeQuizModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
             </div>
             <div id="quizContent"></div>
         </div>
@@ -183,8 +169,8 @@
     <div class="modal" id="practiceModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">✏️ 造句练习</h2>
-                <button class="close-btn" onclick="closePracticeModal()" aria-label="关闭">&times;</button>
+                <h2 class="modal-title">造句练习</h2>
+                <button class="close-btn" onclick="closePracticeModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
             </div>
             <div id="practiceContent"></div>
         </div>
@@ -193,8 +179,8 @@
     <div class="modal" id="listeningModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">🎧 听力练习</h2>
-                <button class="close-btn" onclick="closeListeningModal()" aria-label="关闭">&times;</button>
+                <h2 class="modal-title">听力练习</h2>
+                <button class="close-btn" onclick="closeListeningModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
             </div>
             <div id="listeningContent"></div>
         </div>
@@ -203,8 +189,8 @@
     <div class="modal" id="spellingModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">🔤 拼写练习</h2>
-                <button class="close-btn" onclick="closeSpellingModal()" aria-label="关闭">&times;</button>
+                <h2 class="modal-title">拼写练习</h2>
+                <button class="close-btn" onclick="closeSpellingModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
             </div>
             <div id="spellingContent"></div>
         </div>
@@ -213,8 +199,8 @@
     <div class="modal" id="settingsModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">⚙️ 设置</h2>
-                <button class="close-btn" onclick="closeSettingsModal()" aria-label="关闭">&times;</button>
+                <h2 class="modal-title">设置</h2>
+                <button class="close-btn" onclick="closeSettingsModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
             </div>
             <div id="settingsContent"></div>
         </div>
@@ -223,13 +209,13 @@
     <div class="modal" id="analyticsModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">📊 学习分析</h2>
-                <button class="close-btn" onclick="closeAnalyticsModal()" aria-label="关闭">&times;</button>
+                <h2 class="modal-title">学习分析</h2>
+                <button class="close-btn" onclick="closeAnalyticsModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
             </div>
             <div class="analytics-tabs">
-                <div class="analytics-tab active" onclick="switchAnalyticsTab('heatmap', this)">📅 学习热力图</div>
-                <div class="analytics-tab" onclick="switchAnalyticsTab('trend', this)">📈 掌握趋势</div>
-                <div class="analytics-tab" onclick="switchAnalyticsTab('dot', this)">🔵 全局点图</div>
+                <div class="analytics-tab active" onclick="switchAnalyticsTab('heatmap', this)">学习热力图</div>
+                <div class="analytics-tab" onclick="switchAnalyticsTab('trend', this)">掌握趋势</div>
+                <div class="analytics-tab" onclick="switchAnalyticsTab('dot', this)">全局点图</div>
             </div>
             <div id="analyticsContent"></div>
         </div>
@@ -238,17 +224,18 @@
     <div class="modal" id="achievementsModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">🏆 成就系统</h2>
-                <button class="close-btn" onclick="closeAchievementsModal()" aria-label="关闭">&times;</button>
+                <h2 class="modal-title">成就</h2>
+                <button class="close-btn" onclick="closeAchievementsModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
             </div>
             <div id="achievementsContent" class="achievements-content"></div>
         </div>
     </div>
 
-    <script src="js/filter-render.js"></script>
-    <script src="js/learning-utils.js"></script>
-    <script src="js/session-renderers.js"></script>
-    <script src="js/ui-feedback.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/icons.js?v=2"></script>
+    <script src="js/filter-render.js?v=2"></script>
+    <script src="js/learning-utils.js?v=2"></script>
+    <script src="js/session-renderers.js?v=2"></script>
+    <script src="js/ui-feedback.js?v=2"></script>
+    <script src="js/app.js?v=2"></script>
 </body>
 </html>

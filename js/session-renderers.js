@@ -43,7 +43,7 @@
       <p class="session-progress">问题 ${index + 1} / ${total}</p>
       <div class="session-word-head" style="justify-content:center">
         <h2 class="session-title" style="margin-bottom:6px">${safeWord}</h2>
-        <button class="play-btn session-play-btn" onclick="speak('${safeEnglishJs}')">🔊</button>
+        <button class="play-btn session-play-btn" onclick="speak('${safeEnglishJs}')">${window.Icon ? window.Icon("volume", 18) : "🔊"}</button>
       </div>
       <p class="session-phonetic">${safePhonetic}</p>
       <div class="session-options">
@@ -63,7 +63,7 @@
       <p class="session-progress">练习 ${index + 1}/${total}</p>
       <div class="session-word-head">
         <h2 class="session-title">${safeEnglish}</h2>
-        <button class="play-btn session-play-btn" onclick="speak('${safeEnglishJs}')">🔊</button>
+        <button class="play-btn session-play-btn" onclick="speak('${safeEnglishJs}')">${window.Icon ? window.Icon("volume", 18) : "🔊"}</button>
       </div>
       <p class="session-phonetic">${safePhonetic}</p>
       <div class="session-example-box">
@@ -77,7 +77,7 @@
       <div class="session-actions">
         <button class="action-btn btn-primary" onclick="checkSentence('${safeEnglishJs}')">检查句子</button>
         <button class="action-btn" onclick="showExampleSentence('${safeExampleJs}')">查看例句</button>
-        <button class="action-btn" onclick="speak('${safeEnglishJs}')">🔊 发音</button>
+        <button class="action-btn" onclick="speak('${safeEnglishJs}')">朗读</button>
       </div>
       <div id="sentenceFeedback" class="session-feedback"></div>
     </div>`;
@@ -90,10 +90,10 @@
     return `<div class="session-card">
       <p class="session-progress">练习 ${index + 1}/${total}</p>
       <div class="session-audio-box">
-        <p class="session-audio-label">🎧 点击播放按钮听单词发音</p>
+        <p class="session-audio-label">点击播放，听音输入单词</p>
         <div class="session-word-center">
           <h2 class="session-title session-title-muted">请先听音，再输入答案</h2>
-          <button class="play-btn session-play-btn-lg" onclick="speak('${safeEnglishJs}')">🔊</button>
+          <button class="play-btn session-play-btn-lg" onclick="speak('${safeEnglishJs}')">${window.Icon ? window.Icon("volume", 18) : "🔊"}</button>
         </div>
         <p id="listeningRevealWord" class="session-reveal-word hidden">正确单词：${safeEnglish}</p>
       </div>
@@ -103,7 +103,7 @@
       </div>
       <div class="session-actions">
         <button class="action-btn btn-primary" onclick="checkListeningAnswer('${safeEnglishJs}')">检查答案</button>
-        <button class="action-btn" onclick="speak('${safeEnglishJs}')">🔊 再听一次</button>
+        <button class="action-btn" onclick="speak('${safeEnglishJs}')">再听一次</button>
       </div>
       <div id="listeningFeedback" class="session-feedback"></div>
     </div>`;
@@ -117,10 +117,10 @@
     return `<div class="session-card">
       <p class="session-progress">练习 ${index + 1}/${total}</p>
       <div class="session-audio-box">
-        <p class="session-audio-label">🔤 根据发音拼写单词</p>
+        <p class="session-audio-label">根据发音补全拼写</p>
         <div class="session-word-center">
           <h2 class="session-title session-title-spaced">${safeMasked}</h2>
-          <button class="play-btn session-play-btn-lg" onclick="speak('${safeEnglishJs}')">🔊</button>
+          <button class="play-btn session-play-btn-lg" onclick="speak('${safeEnglishJs}')">${window.Icon ? window.Icon("volume", 18) : "🔊"}</button>
         </div>
       </div>
       <div class="session-input-wrap">
@@ -129,7 +129,7 @@
       </div>
       <div class="session-actions">
         <button class="action-btn btn-primary" onclick="checkSpellingAnswer('${safeEnglishJs}')">检查拼写</button>
-        <button class="action-btn" onclick="speak('${safeEnglishJs}')">🔊 再听一次</button>
+        <button class="action-btn" onclick="speak('${safeEnglishJs}')">再听一次</button>
       </div>
       <div id="spellingFeedback" class="session-feedback"></div>
     </div>`;

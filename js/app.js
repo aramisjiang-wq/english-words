@@ -99,7 +99,7 @@
     } catch (error) {
       console.error("加载单词失败:", error);
       grid.innerHTML =
-        '<div class="empty-state"><div class="empty-icon">⚠️</div>' +
+        '<div class="empty-state">' +
         "<h3>无法加载单词数据</h3>" +
         "<p>请通过本地服务器访问，并确保 data/words_merged.json 存在</p></div>";
     }
@@ -154,7 +154,7 @@
     const el = document.createElement("div");
     el.className = "achievement-toast";
     el.innerHTML =
-      '<div class="achievement-toast-title">🎉 新成就解锁！</div>' +
+      '<div class="achievement-toast-title">新成就解锁</div>' +
       list
         .map(
           (a) =>
@@ -223,11 +223,11 @@
   function populateCategories() {
     const uniq = (field, fallback) => [...new Set(wordsData.map((w) => w[field] || fallback))];
 
-    fillSelect($("parentCategoryFilter"), "📂 父分类", uniq("parent_category", "其他"));
-    fillSelect($("childCategoryFilter"), "📁 子分类", uniq("child_category", "其他"));
-    fillSelect($("categoryFilter"), "📁 全部分类", uniq("category", ""));
-    fillSelect($("partOfSpeechFilter"), "📝 全部词性", uniq("part_of_speech", "其他"));
-    fillSelect($("themeFilter"), "🎨 全部主题", uniq("theme", "其他"));
+    fillSelect($("parentCategoryFilter"), "父分类", uniq("parent_category", "其他"));
+    fillSelect($("childCategoryFilter"), "子分类", uniq("child_category", "其他"));
+    fillSelect($("categoryFilter"), "全部分类", uniq("category", ""));
+    fillSelect($("partOfSpeechFilter"), "全部词性", uniq("part_of_speech", "其他"));
+    fillSelect($("themeFilter"), "全部主题", uniq("theme", "其他"));
 
     const counts = {};
     wordsData.forEach((w) => {
@@ -262,10 +262,10 @@
     const breadcrumb = $("breadcrumb");
     breadcrumb.innerHTML =
       category && category !== "all"
-        ? '<span class="breadcrumb-item" onclick="resetFilters()">首页</span>' +
+        ? '<span class="breadcrumb-item" onclick="resetFilters()">全部单词</span>' +
           '<span class="breadcrumb-separator">›</span>' +
-          `<span class="breadcrumb-item active">${category}</span>`
-        : '<span class="breadcrumb-item active">首页</span>';
+          `<span class="breadcrumb-item active">${escapeHtml(category)}</span>`
+        : '<span class="breadcrumb-item active">全部单词</span>';
   }
 
   const toggleAdvancedFilters = () => $("advancedFilters").classList.toggle("hidden");
@@ -381,17 +381,23 @@
     if (el) el.textContent = selectedWords.size ? `已选 ${selectedWords.size}` : "";
   }
 
+  function setBatchButtonLabel() {
+    const btn = $("batchModeBtn");
+    btn.innerHTML = batchMode
+      ? `${window.Icon("close", 18)}退出批量`
+      : `${window.Icon("layers", 18)}批量选择`;
+    btn.classList.toggle("btn-primary", batchMode);
+    btn.classList.toggle("btn-quiet", !batchMode);
+  }
+
   function toggleBatchMode() {
     batchMode = !batchMode;
-    const btn = $("batchModeBtn");
+    setBatchButtonLabel();
+    $("batchBar").classList.toggle("hidden", !batchMode);
     if (batchMode) {
-      btn.textContent = "✕ 退出批量";
-      btn.classList.replace("btn-warning", "btn-danger");
       setBatchButtonsEnabled(false);
-      UI.info("批量模式已开启，点击单词卡片进行多选");
+      UI.info("点击单词卡片进行多选");
     } else {
-      btn.textContent = "☑ 批量选择";
-      btn.classList.replace("btn-danger", "btn-warning");
       selectedWords.clear();
       setBatchButtonsEnabled(false);
       document.querySelectorAll(".word-card.selected").forEach((c) => c.classList.remove("selected"));
@@ -425,9 +431,8 @@
     saveStatus();
     selectedWords.clear();
     batchMode = false;
-    const btn = $("batchModeBtn");
-    btn.textContent = "☑ 批量选择";
-    btn.classList.replace("btn-danger", "btn-warning");
+    setBatchButtonLabel();
+    $("batchBar").classList.add("hidden");
     setBatchButtonsEnabled(false);
     updateBatchCount();
     renderWords();
@@ -617,23 +622,23 @@
     const feedback = $("sentenceFeedback");
     const sentence = input.value.trim();
     if (!sentence) {
-      showFeedback(feedback, "warning", '<p class="session-feedback-title warning">⚠️ 请先输入句子</p>');
+      showFeedback(feedback, "warning", '<p class="session-feedback-title warning">请先输入句子</p>');
       return;
     }
     if (!sentence.toLowerCase().includes(word.toLowerCase())) {
       showFeedback(
         feedback,
         "error",
-        `<p class="session-feedback-title error">❌ 句子中必须包含单词 “${word}”</p>`
+        `<p class="session-feedback-title error">句子中需要包含单词 “${escapeHtml(word)}”</p>`
       );
       return;
     }
     showFeedback(
       feedback,
       "success",
-      `<p class="session-feedback-title success">✅ 很好！你用 “${word}” 造了句子</p>
+      `<p class="session-feedback-title success">很好，你用 “${escapeHtml(word)}” 造了句子</p>
        <p class="session-feedback-text">你的句子：${escapeHtml(sentence)}</p>
-       <p class="session-feedback-hint">💡 多练习造句可以帮助你更好地掌握单词用法</p>`
+       <p class="session-feedback-hint">多练习造句能帮助你掌握单词用法</p>`
     );
     const target = wordsData.find((w) => w.english === word);
     if (target) recordReviewOutcome(target, true);
@@ -644,9 +649,9 @@
     showFeedback(
       $("sentenceFeedback"),
       "info",
-      `<p class="session-feedback-title info">📝 例句参考：</p>
+      `<p class="session-feedback-title info">例句参考</p>
        <p class="session-feedback-text"><em>${escapeHtml(example)}</em></p>
-       <p class="session-feedback-hint">💡 试着模仿例句的结构来造句</p>`
+       <p class="session-feedback-hint">试着模仿例句的结构来造句</p>`
     );
   }
 
@@ -696,7 +701,7 @@
     const reveal = $("listeningRevealWord");
     const answer = input.value.trim().toLowerCase();
     if (!answer) {
-      showFeedback(feedback, "warning", '<p class="session-feedback-title warning">⚠️ 请先输入答案</p>');
+      showFeedback(feedback, "warning", '<p class="session-feedback-title warning">请先输入答案</p>');
       return;
     }
     reveal?.classList.remove("hidden");
@@ -708,19 +713,19 @@
       showFeedback(
         feedback,
         "success",
-        `<p class="session-feedback-title success">✅ 正确！</p>
+        `<p class="session-feedback-title success">正确</p>
          <p class="session-feedback-text">正确答案：${escapeHtml(correct)}</p>
-         <p class="session-feedback-hint">🎉 你的听力很棒！</p>`
+         <p class="session-feedback-hint">下一个单词即将开始</p>`
       );
       setTimeout(() => showListeningWord(listeningQueue, listeningIndex + 1), 1100);
     } else {
       showFeedback(
         feedback,
         "error",
-        `<p class="session-feedback-title error">❌ 不正确</p>
+        `<p class="session-feedback-title error">再听一次</p>
          <p class="session-feedback-text">你的答案：${escapeHtml(input.value)}</p>
          <p class="session-feedback-hint">正确答案：${escapeHtml(correct)}</p>
-         <p class="session-feedback-hint">💡 多听几次，注意发音细节</p>`
+         <p class="session-feedback-hint">注意发音细节</p>`
       );
     }
   }
@@ -771,7 +776,7 @@
     const feedback = $("spellingFeedback");
     const answer = input.value.trim().toLowerCase();
     if (!answer) {
-      showFeedback(feedback, "warning", '<p class="session-feedback-title warning">⚠️ 请先输入拼写</p>');
+      showFeedback(feedback, "warning", '<p class="session-feedback-title warning">请先输入拼写</p>');
       return;
     }
     const remembered = answer === correct.toLowerCase();
@@ -782,19 +787,19 @@
       showFeedback(
         feedback,
         "success",
-        `<p class="session-feedback-title success">✅ 拼写正确！</p>
+        `<p class="session-feedback-title success">拼写正确</p>
          <p class="session-feedback-text">正确拼写：${escapeHtml(correct)}</p>
-         <p class="session-feedback-hint">🎉 你的拼写很棒！</p>`
+         <p class="session-feedback-hint">下一个单词即将开始</p>`
       );
       setTimeout(() => showSpellingWord(spellingQueue, spellingIndex + 1), 1100);
     } else {
       showFeedback(
         feedback,
         "error",
-        `<p class="session-feedback-title error">❌ 拼写错误</p>
+        `<p class="session-feedback-title error">拼写有误</p>
          <p class="session-feedback-text">你的拼写：${escapeHtml(input.value)}</p>
          <p class="session-feedback-hint">正确拼写：${escapeHtml(correct)}</p>
-         <p class="session-feedback-hint">💡 注意字母顺序和拼写规则</p>`
+         <p class="session-feedback-hint">注意字母顺序与拼写规则</p>`
       );
     }
   }
@@ -819,15 +824,15 @@
     $("settingsContent").innerHTML = `
       <div class="settings-panel">
         <div class="settings-block">
-          <label class="settings-label">🌗 外观主题</label>
+          <label class="settings-label">外观主题</label>
           <div class="settings-row">
-            <button class="action-btn btn-secondary settings-full" onclick="toggleTheme()" id="themeSettingBtn"></button>
+            <button class="action-btn settings-full" onclick="toggleTheme()" id="themeSettingBtn"></button>
           </div>
           <p class="settings-help">浅色 / 深色模式，选择会被记住</p>
         </div>
 
         <div class="settings-block">
-          <label class="settings-label">🎯 每日目标</label>
+          <label class="settings-label">每日目标</label>
           <input type="number" id="goalInput" class="goal-input" min="1" max="500" value="${dailyGoal}">
           <p class="settings-help">设定每天想学习的单词数量</p>
         </div>
@@ -835,13 +840,13 @@
         <div class="settings-divider"></div>
 
         <div class="settings-block">
-          <label class="settings-label">🔊 语音选择</label>
+          <label class="settings-label">发音音色</label>
           <select id="voiceSelect" class="settings-select">${defaultOption}${voiceOptions}</select>
-          <p class="settings-help">选择你喜欢的英语发音音色</p>
+          <p class="settings-help">选择你偏好的英语发音</p>
         </div>
 
         <div class="settings-block">
-          <label class="settings-label">⚡ 语速调节</label>
+          <label class="settings-label">语速</label>
           <div class="settings-row">
             <span class="settings-muted">慢</span>
             <input type="range" id="rateSlider" min="0.5" max="1.5" step="0.1" value="${speechRate}" class="settings-range">
@@ -852,16 +857,16 @@
         </div>
 
         <div class="settings-block">
-          <button class="action-btn btn-primary settings-full" onclick="testVoice()">🔊 点击测试发音效果</button>
+          <button class="action-btn settings-full" onclick="testVoice()">试听发音</button>
         </div>
 
         <div class="settings-actions">
-          <button class="action-btn btn-success" onclick="saveSettings()">💾 保存设置</button>
-          <button class="action-btn btn-secondary" onclick="resetSettings()">🔄 恢复默认</button>
+          <button class="action-btn btn-primary" onclick="saveSettings()">保存设置</button>
+          <button class="action-btn" onclick="resetSettings()">恢复默认</button>
         </div>
 
         <div class="settings-divider"></div>
-        <button class="action-btn btn-danger settings-full" onclick="resetProgress()">🗑 重置全部学习进度</button>
+        <button class="action-btn btn-danger settings-full" onclick="resetProgress()">重置全部学习进度</button>
       </div>`;
 
     updateThemeSettingButton();
@@ -933,8 +938,8 @@
     document.documentElement.setAttribute("data-theme", theme);
     store.set("theme", theme);
     const btn = $("themeToggle");
-    if (btn) {
-      btn.textContent = theme === "dark" ? "☀️" : "🌙";
+    if (btn && window.Icon) {
+      btn.innerHTML = window.Icon(theme === "dark" ? "sun" : "moon");
       btn.setAttribute("aria-label", theme === "dark" ? "切换到浅色模式" : "切换到深色模式");
     }
     updateThemeSettingButton();
@@ -947,9 +952,11 @@
 
   function updateThemeSettingButton() {
     const b = $("themeSettingBtn");
-    if (b) {
+    if (b && window.Icon) {
       const dark = document.documentElement.getAttribute("data-theme") === "dark";
-      b.textContent = dark ? "☀️ 当前：深色模式（点击切换）" : "🌙 当前：浅色模式（点击切换）";
+      b.innerHTML = dark
+        ? `${window.Icon("sun", 18)}当前：深色模式（点击切换）`
+        : `${window.Icon("moon", 18)}当前：浅色模式（点击切换）`;
     }
   }
 

@@ -12,6 +12,7 @@
 - **学习分析**：本月学习热力图、掌握率趋势折线图、全局单词状态点图。
 - **成就系统**：掌握里程碑与连续学习天数等 11 项成就。
 - **每日目标**：进度环实时显示当日已学单词数 / 目标。
+- **克制的设计语言**：纸感（paper & ink）配色、Fraunces 衬线词头、统一描边图标，避免堆砌 emoji 与高饱和色块。
 - **浅色 / 深色主题**：跟随系统并可手动切换，选择会被记住。
 - **本地持久化**：全部进度保存在浏览器 `localStorage`，无需登录与后端。
 
@@ -24,6 +25,7 @@ English Words/
 │   └── styles.css          # 设计系统（设计令牌 / 浅深双主题 / 响应式）
 ├── js/
 │   ├── app.js              # 应用主逻辑（状态、页面、练习、分析）
+│   ├── icons.js            # 内联 SVG 图标集（替代 emoji，统一描边风格）
 │   ├── filter-render.js    # 单词筛选与卡片渲染
 │   ├── learning-utils.js   # 采样、测验生成、SM-2 间隔复习调度
 │   ├── session-renderers.js# 测验/练习/听力/拼写的视图模板
@@ -42,6 +44,7 @@ English Words/
 | --- | --- |
 | `css/styles.css` | 以 CSS 变量定义的设计令牌，统一驱动浅 / 深主题与全部组件样式 |
 | `js/app.js` | 状态管理、数据加载、筛选、练习流程、分析渲染、键盘快捷键 |
+| `js/icons.js` | `Icon` / `hydrateIcons`：内联 SVG 图标集，替换 UI 中的 emoji |
 | `js/learning-utils.js` | `WordLearningUtils`：采样、测验选项、SM-2 调度（`scheduleNext` / `collectDueKeys`） |
 | `js/filter-render.js` | `WordFilterRender`：多维索引、筛选与卡片 HTML 渲染 |
 | `js/session-renderers.js` | `WordSessionRenderers`：各练习模式的纯函数视图模板 |

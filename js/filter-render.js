@@ -128,9 +128,8 @@
     if (filteredWords.length === 0) {
       container.innerHTML =
         '<div class="empty-state">' +
-        '<div class="empty-icon">🔍</div>' +
         "<h3>没有找到匹配的单词</h3>" +
-        "<p>尝试调整搜索条件或分类筛选</p>" +
+        "<p>试着调整搜索词或筛选条件</p>" +
         "</div>";
       return;
     }
@@ -151,25 +150,30 @@
         const safeEnglish = escapeJsString(english);
         const safeWordKey = escapeJsString(wordKey);
 
+        const sound = window.Icon ? window.Icon("volume", 18) : "🔊";
+        const meta = [
+          { cls: "pos-tag", text: partOfSpeech },
+          { cls: "theme-tag", text: theme },
+          { cls: "child-tag", text: childCategory },
+        ]
+          .filter((t) => t.text && t.text !== "其他")
+          .map((t) => `<span class="word-tag ${t.cls}">${escapeHtml(t.text)}</span>`)
+          .join("");
+
         return `
           <div class="word-card ${status} ${isSelected ? "selected" : ""}" data-word="${escapeHtml(english)}" data-key="${escapeHtml(wordKey)}" onclick="${onWordClickName}('${safeWordKey}')">
             <div class="word-english">
               <span class="word-english-text">${escapeHtml(english)}</span>
-              <button class="play-btn" onclick="event.stopPropagation(); ${onSpeakName}('${safeEnglish}')">🔊</button>
+              <button class="play-btn" onclick="event.stopPropagation(); ${onSpeakName}('${safeEnglish}')" aria-label="朗读">${sound}</button>
             </div>
             <div class="word-phonetic">${escapeHtml(phonetic)}</div>
             <div class="word-chinese">${escapeHtml(chinese)}</div>
-            <div class="word-example">${escapeHtml(example)}</div>
-            <div class="word-tags">
-              <span class="word-tag parent-tag">${escapeHtml(parentCategory)}</span>
-              <span class="word-tag child-tag">${escapeHtml(childCategory)}</span>
-              <span class="word-tag pos-tag">${escapeHtml(partOfSpeech)}</span>
-              <span class="word-tag theme-tag">${escapeHtml(theme)}</span>
-            </div>
+            ${example ? `<div class="word-example">${escapeHtml(example)}</div>` : ""}
+            <div class="word-tags">${meta}</div>
             <div class="word-actions">
-              <span class="status-badge ${status}" onclick="event.stopPropagation(); ${onSetStatusName}('${safeWordKey}', 'gray')">未学习</span>
-              <span class="status-badge ${status === "green" ? "green" : "gray"}" onclick="event.stopPropagation(); ${onSetStatusName}('${safeWordKey}', 'green')">已掌握</span>
-              <span class="status-badge ${status === "red" ? "red" : "gray"}" onclick="event.stopPropagation(); ${onSetStatusName}('${safeWordKey}', 'red')">难记</span>
+              <span class="status-badge ${status === "gray" || !status ? "active" : ""}" onclick="event.stopPropagation(); ${onSetStatusName}('${safeWordKey}', 'gray')">未学习</span>
+              <span class="status-badge ${status === "green" ? "green" : ""}" onclick="event.stopPropagation(); ${onSetStatusName}('${safeWordKey}', 'green')">已掌握</span>
+              <span class="status-badge ${status === "red" ? "red" : ""}" onclick="event.stopPropagation(); ${onSetStatusName}('${safeWordKey}', 'red')">难记</span>
             </div>
           </div>
         `;
