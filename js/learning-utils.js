@@ -46,12 +46,14 @@
        { reps, ease, interval, due, lastReviewed, lapses }
      `remembered` is a boolean recall outcome. */
   function newRecord() {
-    return { reps: 0, ease: 2.5, interval: 0, due: dayStr(), lastReviewed: null, lapses: 0 };
+    // skills: count of correct productions per skill
+    //   meaning (认识词义) · spell (拼写) · listen (听写) · use (造句)
+    return { reps: 0, ease: 2.5, interval: 0, due: dayStr(), lastReviewed: null, lapses: 0, skills: {} };
   }
 
   function migrateRecord(old) {
     // Upgrade legacy { reviewDates:[], level } shape.
-    if (old && typeof old.ease === "number") return { ...newRecord(), ...old };
+    if (old && typeof old.ease === "number") return { ...newRecord(), ...old, skills: old.skills || {} };
     const rec = newRecord();
     if (old && Array.isArray(old.reviewDates) && old.reviewDates.length) {
       rec.reps = old.level || old.reviewDates.length;
@@ -86,6 +88,44 @@
   function isDue(record, today = dayStr()) {
     if (!record || !record.due) return false;
     return daysBetween(today, record.due) <= 0;
+  }
+
+  /* ---- Evidence-based proficiency (0–5) ----
+     Distinguishes recognition (认识) from productive use (会用): a word
+     only reaches level 4 once it has been recalled correctly in at least
+     one *productive* skill (spelling / listening / sentence use), not just
+     recognized. Self-marking 已掌握 counts only as recognition. */
+  const PRODUCTIVE_SKILLS = ["spell", "listen", "use"];
+  const PROFICIENCY_LABELS = ["未学习", "眼熟", "认识", "巩固", "会用", "精通"];
+
+  function proficiency(record, status) {
+    const r = record || {};
+    const skills = r.skills || {};
+    const recognized = (skills.meaning || 0) > 0 || status === "green";
+    const productive = PRODUCTIVE_SKILLS.filter((s) => (skills[s] || 0) > 0);
+    const reps = r.reps || 0;
+    const interval = r.interval || 0;
+
+    let level = 0;
+    if (recognized || reps >= 1) level = 1;
+    if (reps >= 2 || (recognized && interval >= 2)) level = 2;
+    if (level >= 2 && interval >= 7) level = 3;
+    if (level >= 2 && productive.length >= 1) level = Math.max(level, 4);
+    if (productive.length >= 2 && interval >= 21) level = 5;
+
+    return { level, label: PROFICIENCY_LABELS[level], recognized, productiveSkills: productive };
+  }
+
+  function countByProficiency(wordsData, reviewData, wordStatus) {
+    const counts = [0, 0, 0, 0, 0, 0];
+    let usable = 0;
+    wordsData.forEach((w) => {
+      const key = keyOf(w);
+      const level = proficiency(reviewData[key], wordStatus[key]).level;
+      counts[level] += 1;
+      if (level >= 4) usable += 1;
+    });
+    return { counts, usable };
   }
 
   function collectDueKeys(reviewData, today = dayStr()) {
@@ -164,6 +204,9 @@
     scheduleNext,
     isDue,
     collectDueKeys,
+    proficiency,
+    countByProficiency,
+    PROFICIENCY_LABELS,
     pickReviewPool,
     buildQuizOptions,
     getMasteredCount,

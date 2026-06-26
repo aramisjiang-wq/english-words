@@ -200,9 +200,14 @@
     updateGoalRing();
   }
 
-  function recordReviewOutcome(word, remembered) {
+  function recordReviewOutcome(word, remembered, skill) {
     const key = LU.keyOf(word);
-    wordReviewData[key] = LU.scheduleNext(LU.migrateRecord(wordReviewData[key]), remembered);
+    const rec = LU.scheduleNext(LU.migrateRecord(wordReviewData[key]), remembered);
+    if (remembered && skill) {
+      rec.skills = rec.skills || {};
+      rec.skills[skill] = (rec.skills[skill] || 0) + 1;
+    }
+    wordReviewData[key] = rec;
     saveReviewData();
     recordLearningActivity(key);
   }
@@ -604,7 +609,7 @@
     const word = quizWords[currentQuizIndex];
     const remembered = selected === correct;
     if (remembered) quizScore += 1;
-    if (word) recordReviewOutcome(word, remembered);
+    if (word) recordReviewOutcome(word, remembered, "meaning");
 
     setTimeout(() => {
       currentQuizIndex += 1;
@@ -697,7 +702,7 @@
       const key = LU.keyOf(word);
       if (rating === "known") {
         wordStatus[key] = "green";
-        recordReviewOutcome(word, true);
+        recordReviewOutcome(word, true, "meaning");
         studyStats.known += 1;
       } else if (rating === "vague") {
         recordReviewOutcome(word, false);
@@ -738,6 +743,25 @@
         ? `<span class="word-tag ${cls}">${escapeHtml(t)}</span>`
         : "";
 
+    const rec = wordReviewData[key] || {};
+    const prof = LU.proficiency(rec, status);
+    const skills = rec.skills || {};
+    const dots = [1, 2, 3, 4, 5]
+      .map((n) => `<span class="prof-dot ${n <= prof.level ? "on" : ""}"></span>`)
+      .join("");
+    const skillChips = [
+      ["meaning", "词义"],
+      ["use", "造句"],
+      ["spell", "拼写"],
+      ["listen", "听写"],
+    ]
+      .map(([k, label]) => `<span class="skill-chip ${(skills[k] || 0) > 0 ? "done" : ""}">${label}</span>`)
+      .join("");
+    const profHint =
+      prof.level >= 4
+        ? "已达「会用」——能在产出场景中正确使用"
+        : "点亮「会用」：在拼写 / 听写 / 造句中至少各答对一次";
+
     $("detailContent").innerHTML = `
       <div class="detail">
         <div class="session-word-head">
@@ -748,6 +772,14 @@
         <div class="detail-tags">${tag("pos-tag", word.part_of_speech)}${tag("theme-tag", word.theme)}${tag("child-tag", word.category)}</div>
         <p class="detail-cn">${escapeHtml(word.chinese || "")}</p>
         ${word.example ? `<div class="session-example-box"><p class="session-example-label">例句</p><p class="session-example-text">${escapeHtml(word.example)}</p></div>` : ""}
+        <div class="detail-prof">
+          <div class="prof-head">
+            <span class="prof-level">熟练度 · ${prof.label}</span>
+            <span class="prof-dots">${dots}</span>
+          </div>
+          <div class="skill-chips">${skillChips}</div>
+          <p class="prof-hint">${profHint}</p>
+        </div>
         <div class="detail-status">
           <span class="detail-status-label">标记为</span>
           <div class="word-actions detail-actions">
@@ -832,7 +864,7 @@
        <p class="session-feedback-hint">多练习造句能帮助你掌握单词用法</p>`
     );
     const target = wordsData.find((w) => w.english === word);
-    if (target) recordReviewOutcome(target, true);
+    if (target) recordReviewOutcome(target, true, "use");
     speak(sentence);
   }
 
@@ -898,7 +930,7 @@
     reveal?.classList.remove("hidden");
     const remembered = answer === correct.toLowerCase();
     const word = wordsData.find((w) => w.english === correct);
-    if (word) recordReviewOutcome(word, remembered);
+    if (word) recordReviewOutcome(word, remembered, "listen");
 
     if (remembered) {
       showFeedback(
@@ -972,7 +1004,7 @@
     }
     const remembered = answer === correct.toLowerCase();
     const word = wordsData.find((w) => w.english === correct);
-    if (word) recordReviewOutcome(word, remembered);
+    if (word) recordReviewOutcome(word, remembered, "spell");
 
     if (remembered) {
       showFeedback(
@@ -1250,16 +1282,56 @@
   /* ---------- Analytics ---------- */
   function showAnalytics() {
     $("analyticsModal").classList.add("active");
-    switchAnalyticsTab("heatmap", document.querySelector(".analytics-tab"));
+    switchAnalyticsTab("prof", document.querySelector(".analytics-tab"));
   }
   const closeAnalyticsModal = () => $("analyticsModal").classList.remove("active");
 
   function switchAnalyticsTab(tab, element) {
     document.querySelectorAll(".analytics-tab").forEach((t) => t.classList.remove("active"));
     element?.classList.add("active");
-    if (tab === "heatmap") renderHeatmap();
+    if (tab === "prof") renderProficiency();
+    else if (tab === "heatmap") renderHeatmap();
     else if (tab === "trend") renderTrendChart();
     else if (tab === "dot") renderDotChart();
+  }
+
+  function renderProficiency() {
+    const content = $("analyticsContent");
+    const total = wordsData.length || 1;
+    const { counts, usable } = LU.countByProficiency(wordsData, wordReviewData, wordStatus);
+    const labels = LU.PROFICIENCY_LABELS;
+    const max = Math.max(...counts, 1);
+    const bars = counts
+      .map(
+        (c, lvl) =>
+          `<div class="prof-bar-row">
+            <span class="prof-bar-label">L${lvl} · ${labels[lvl]}</span>
+            <div class="prof-bar-track"><div class="prof-bar-fill lvl-${lvl}" style="width:${((c / max) * 100).toFixed(1)}%"></div></div>
+            <span class="prof-bar-val">${c}</span>
+          </div>`
+      )
+      .join("");
+
+    content.innerHTML = `
+      <div class="prof-explainer">
+        <h4>学完 5000 词，就能流利说英语了吗？</h4>
+        <p>掌握 5000 高频词，能覆盖日常阅读 / 听力约 <b>95%+</b>，是<b>理解</b>的坚实基础——但这并不等于能<b>流利地说</b>。</p>
+        <p>流利 = 在无提示下快速<b>产出</b>(说 / 写)正确的词 + 搭配 + 语法 + 大量输入输出练习。“认识”一个词，和“会用”一个词是两回事。</p>
+        <p>所以这里把“掌握”定义为<b>基于表现的熟练度</b>，而非点一下按钮：</p>
+        <ul class="prof-criteria">
+          <li><b>眼熟 / 认识</b> — 测验中认出词义(recognition)</li>
+          <li><b>巩固</b> — 间隔复习存活 ≥ 7 天，没有遗忘</li>
+          <li><b>会用</b> — 在<b>拼写 / 听写 / 造句</b>等产出场景中答对(production)</li>
+          <li><b>精通</b> — 多种产出技能 + 间隔 ≥ 21 天</li>
+        </ul>
+      </div>
+      <div class="prof-summary">
+        <div><b>${usable}</b><span>已会用</span></div>
+        <div><b>${Math.round((usable / total) * 100)}%</b><span>会用占比</span></div>
+        <div><b>${wordsData.length}</b><span>总词汇</span></div>
+      </div>
+      <div class="analytics-title-inline">熟练度分布</div>
+      <div class="prof-bars">${bars}</div>`;
   }
 
   function renderHeatmap() {
