@@ -29,7 +29,7 @@
   // Content types share the same grid / filter / study / SRS engine.
   const CONTENT = {
     words: {
-      file: "data/words_merged.json?v=8",
+      file: "data/words_merged.json?v=11",
       totalLabel: "总词汇",
       title: "持续精进你的<em>词汇</em>",
     },
@@ -837,6 +837,10 @@
 
   /* ---------- Practice (sentence) ---------- */
   function startPractice() {
+    if (contentType === "phrases") {
+      UI.info("短语模式下用「学习」和「测验」更合适", { title: "造句" });
+      return;
+    }
     const words = LU.pickReviewPool(wordsData, wordStatus, 5, 3, wordReviewData);
     if (words.length === 0) {
       UI.success("恭喜！所有单词都已掌握！");
@@ -982,6 +986,10 @@
   let spellingIndex = 0;
 
   function startSpelling() {
+    if (contentType === "phrases") {
+      UI.info("短语太长，用「听力」练习更合适", { title: "拼写" });
+      return;
+    }
     const words = LU.pickReviewPool(wordsData, wordStatus, 5, 5, wordReviewData);
     if (words.length === 0) {
       UI.success("恭喜！所有单词都已掌握！");
@@ -1312,6 +1320,13 @@
     if (title) title.innerHTML = c.title;
     const totalLabel = $("totalLabel");
     if (totalLabel) totalLabel.textContent = c.totalLabel;
+    // 造句 / 拼写 don't make sense for whole phrases — hide them there.
+    const isPhrase = contentType === "phrases";
+    $("btnPractice")?.classList.toggle("hidden", isPhrase);
+    $("btnSpelling")?.classList.toggle("hidden", isPhrase);
+    $("presetFilter")?.classList.toggle("hidden", isPhrase);
+    const ph = $("searchBox");
+    if (ph) ph.placeholder = isPhrase ? "搜索短语或释义…" : "搜索单词或释义…";
   }
 
   function switchContent(type) {
