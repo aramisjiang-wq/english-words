@@ -107,6 +107,24 @@
       </div>`;
   }
 
+  function sortWords(list, mode, wordStatus) {
+    if (!mode || mode === "order") return list;
+    const arr = [...list];
+    const statusOf = (w) => wordStatus[w.__key || w.english] || "gray";
+    if (mode === "az") {
+      arr.sort((a, b) => String(a.english).localeCompare(String(b.english)));
+    } else if (mode === "za") {
+      arr.sort((a, b) => String(b.english).localeCompare(String(a.english)));
+    } else if (mode === "difficult") {
+      const rank = { red: 0, gray: 1, green: 2 };
+      arr.sort((a, b) => rank[statusOf(a)] - rank[statusOf(b)]);
+    } else if (mode === "unlearned") {
+      const rank = { gray: 0, red: 1, green: 2 };
+      arr.sort((a, b) => rank[statusOf(a)] - rank[statusOf(b)]);
+    }
+    return arr;
+  }
+
   function renderWords(params) {
     const {
       wordsData,
@@ -120,10 +138,15 @@
       onSetStatusName,
       page = 1,
       pageSize = 60,
+      sortMode = "order",
       onPager,
     } = params;
 
-    const filtered = filterWordList(wordsData, wordStatus, filters, indexes);
+    const filtered = sortWords(
+      filterWordList(wordsData, wordStatus, filters, indexes),
+      sortMode,
+      wordStatus
+    );
 
     if (filtered.length === 0) {
       container.innerHTML =

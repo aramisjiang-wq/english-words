@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=6">
     <script>
         (function () {
             try {
@@ -44,10 +44,10 @@
                 <p class="eyebrow">今日学习 <span id="streakLabel" class="streak-label"></span></p>
                 <h1 class="today-title">持续精进你的<em>词汇</em></h1>
                 <div class="metrics">
-                    <div class="metric"><b id="totalWords">0</b><span>总词汇</span></div>
-                    <div class="metric is-mastered"><b id="masteredWords">0</b><span>已掌握</span></div>
-                    <div class="metric is-difficult"><b id="difficultWords">0</b><span>难记</span></div>
-                    <div class="metric"><b id="learningWords">0</b><span>学习中</span></div>
+                    <div class="metric" onclick="filterByStatus('all')" title="查看全部"><b id="totalWords">0</b><span>总词汇</span></div>
+                    <div class="metric is-mastered" onclick="filterByStatus('green')" title="筛选已掌握"><b id="masteredWords">0</b><span>已掌握</span></div>
+                    <div class="metric is-difficult" onclick="filterByStatus('red')" title="筛选难记"><b id="difficultWords">0</b><span>难记</span></div>
+                    <div class="metric" onclick="filterByStatus('gray')" title="筛选未学习"><b id="learningWords">0</b><span>学习中</span></div>
                 </div>
                 <div class="progress-line">
                     <div class="progress-bar-container">
@@ -117,6 +117,13 @@
                 <option value="gray">未学习</option>
                 <option value="green">已掌握</option>
                 <option value="red">难记</option>
+            </select>
+            <select class="filter-select" id="sortFilter">
+                <option value="order">词库顺序</option>
+                <option value="az">字母 A–Z</option>
+                <option value="za">字母 Z–A</option>
+                <option value="difficult">难记优先</option>
+                <option value="unlearned">未学优先</option>
             </select>
             <button class="action-btn btn-quiet" onclick="resetFilters()" title="重置筛选"><span data-icon="reset" data-icon-size="18"></span>重置</button>
         </div>
@@ -235,11 +242,11 @@
         </div>
     </div>
 
-    <script src="js/icons.js?v=5"></script>
-    <script src="js/filter-render.js?v=5"></script>
-    <script src="js/learning-utils.js?v=5"></script>
-    <script src="js/session-renderers.js?v=5"></script>
-    <script src="js/ui-feedback.js?v=5"></script>
-    <script src="js/app.js?v=5"></script>
+    <script src="js/icons.js?v=6"></script>
+    <script src="js/filter-render.js?v=6"></script>
+    <script src="js/learning-utils.js?v=6"></script>
+    <script src="js/session-renderers.js?v=6"></script>
+    <script src="js/ui-feedback.js?v=6"></script>
+    <script src="js/app.js?v=6"></script>
 </body>
 </html>

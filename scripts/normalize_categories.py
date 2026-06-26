@@ -101,10 +101,10 @@ def normalize(words: list) -> list:
         theme = clean_theme(w)
         category = CATEGORY_RENAME.get(w.get("category"), w.get("category") or "通用")
         out.append({
-            "english": w.get("english", ""),
-            "phonetic": w.get("phonetic", ""),
-            "chinese": w.get("chinese", ""),
-            "example": w.get("example", ""),
+            "english": (w.get("english") or "").strip(),
+            "phonetic": (w.get("phonetic") or "").strip(),
+            "chinese": (w.get("chinese") or "").strip(),
+            "example": (w.get("example") or "").strip(),
             "category": category,
             "part_of_speech": pos,
             "theme": theme,

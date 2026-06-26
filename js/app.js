@@ -86,7 +86,7 @@
     grid.innerHTML =
       '<div class="empty-state"><div class="spinner"></div><h3>正在加载单词…</h3></div>';
     try {
-      const response = await fetch("data/words_merged.json?v=5");
+      const response = await fetch("data/words_merged.json?v=6");
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const rawWords = await response.json();
       wordsData = initializeWordKeys(rawWords);
@@ -322,8 +322,16 @@
       onSetStatusName: "setStatus",
       page: currentPage,
       pageSize: PAGE_SIZE,
+      sortMode: $("sortFilter")?.value || "order",
       onPager: renderPager,
     });
+  }
+
+  function filterByStatus(status) {
+    $("statusFilter").value = status;
+    filterWords();
+    const grid = $("wordGrid");
+    window.scrollTo({ top: grid.getBoundingClientRect().top + window.scrollY - 70, behavior: "smooth" });
   }
 
   function filterWords() {
@@ -1049,6 +1057,17 @@
         </div>
 
         <div class="settings-divider"></div>
+
+        <div class="settings-block">
+          <label class="settings-label">学习进度备份</label>
+          <div class="settings-row">
+            <button class="action-btn settings-full" onclick="exportProgress()">导出进度</button>
+            <button class="action-btn settings-full" onclick="document.getElementById('importFile').click()">导入进度</button>
+            <input type="file" id="importFile" accept="application/json" class="hidden" onchange="importProgress(event)">
+          </div>
+          <p class="settings-help">进度仅存于本浏览器；导出 JSON 备份，换设备或清缓存前可恢复</p>
+        </div>
+
         <button class="action-btn btn-danger settings-full" onclick="resetProgress()">重置全部学习进度</button>
       </div>`;
 
@@ -1114,6 +1133,72 @@
     updateStats();
     closeSettingsModal();
     UI.success("学习进度已重置");
+  }
+
+  function exportProgress() {
+    const payload = {
+      app: "lexicon",
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      wordStatus,
+      wordReviewData,
+      learningHistory,
+      achievements,
+      dailyGoal,
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `lexicon-progress-${LU.dayStr()}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    UI.success("进度已导出");
+  }
+
+  async function importProgress(event) {
+    const file = event.target.files && event.target.files[0];
+    event.target.value = "";
+    if (!file) return;
+    const ok = await UI.confirm("导入将覆盖当前的学习进度，确定继续吗？", {
+      title: "导入进度",
+      confirmText: "导入",
+      danger: true,
+    });
+    if (!ok) return;
+    try {
+      const data = JSON.parse(await file.text());
+      if (data.wordStatus) {
+        wordStatus = data.wordStatus;
+        saveStatus();
+      }
+      if (data.wordReviewData) {
+        wordReviewData = data.wordReviewData;
+        saveReviewData();
+      }
+      if (data.learningHistory) {
+        learningHistory = data.learningHistory;
+        saveLearningHistory();
+      }
+      if (data.achievements) {
+        achievements = data.achievements;
+        saveAchievements();
+      }
+      if (typeof data.dailyGoal === "number") {
+        dailyGoal = data.dailyGoal;
+        store.set("dailyGoal", dailyGoal);
+      }
+      migrateWordStatusIfNeeded();
+      renderWords();
+      updateStats();
+      closeSettingsModal();
+      UI.success("进度已导入");
+    } catch (e) {
+      console.error(e);
+      UI.error("导入失败：文件格式不正确");
+    }
   }
 
   /* ---------- Theme ---------- */
@@ -1410,6 +1495,7 @@
     const debouncedFilter = window.WordFilterRender.debounce(filterWords, 180);
     $("searchBox").addEventListener("input", debouncedFilter);
     FILTER_IDS.forEach((id) => $(id).addEventListener("change", filterWords));
+    $("sortFilter")?.addEventListener("change", filterWords);
 
     document.addEventListener("keydown", onKeyDown);
   }
@@ -1422,6 +1508,9 @@
     selectTheme,
     populateCategories,
     setPage,
+    filterByStatus,
+    exportProgress,
+    importProgress,
     handleWordClick,
     setStatus,
     speak,
