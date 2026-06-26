@@ -36,9 +36,24 @@ PREFIX = {
     "aux": "情态动词", "modal": "情态动词",
 }
 
-# Specific categories whose members are reliably nouns.
+# Specific categories whose members are reliably nouns (days, months,
+# currencies, animals, foods, place names…).
 CATEGORY_POS = {
     "货币词汇": "名词", "动物词汇": "名词", "颜色词汇": "名词",
+    "时间词汇": "名词", "食物烹饪": "名词", "地理词汇": "名词",
+    "自然地理": "名词",
+}
+
+# Semantic sub-groups worth surfacing as their own browsable theme,
+# instead of being hidden inside the broad "通用" bucket.
+SEMANTIC_THEME = {
+    "时间词汇": "时间",
+    "动物词汇": "动物",
+    "颜色和天气": "颜色天气",
+    "货币词汇": "货币",
+    "食物烹饪": "食物",
+    "地理词汇": "地理",
+    "自然地理": "地理",
 }
 
 # Frequency / generic buckets folded into cleaner labels.
@@ -70,6 +85,9 @@ def clean_pos(word: dict) -> str:
 
 
 def clean_theme(word: dict) -> str:
+    cat = word.get("category")
+    if cat in SEMANTIC_THEME:
+        return SEMANTIC_THEME[cat]
     theme = word.get("theme")
     if theme and theme not in ("其他", ""):
         return theme

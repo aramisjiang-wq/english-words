@@ -86,7 +86,7 @@
     grid.innerHTML =
       '<div class="empty-state"><div class="spinner"></div><h3>正在加载单词…</h3></div>';
     try {
-      const response = await fetch("data/words_merged.json?v=3");
+      const response = await fetch("data/words_merged.json?v=5");
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const rawWords = await response.json();
       wordsData = initializeWordKeys(rawWords);
