@@ -63,6 +63,68 @@ CATEGORY_RENAME = {
     "常用动词": "高频动词",
 }
 
+# Categories that are inherently core/high-frequency regardless of the word.
+CORE_CATEGORIES = {"核心动词", "高频动词", "数词", "代词", "介词", "感叹词", "时间"}
+
+# The most frequent English words — these are the must-know core that a
+# learner should meet first (covers the bulk of everyday text). Reliable
+# high-frequency vocabulary; tier 1 ("基础").
+TOP_CORE = {
+    "the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for",
+    "not", "on", "with", "he", "as", "you", "do", "at", "this", "but", "his",
+    "by", "from", "they", "we", "say", "her", "she", "or", "an", "will", "my",
+    "one", "all", "would", "there", "their", "what", "so", "up", "out", "if",
+    "about", "who", "get", "which", "go", "me", "when", "make", "can", "like",
+    "time", "no", "just", "him", "know", "take", "people", "into", "year",
+    "your", "good", "some", "could", "them", "see", "other", "than", "then",
+    "now", "look", "only", "come", "its", "over", "think", "also", "back",
+    "after", "use", "two", "how", "our", "work", "first", "well", "way", "even",
+    "new", "want", "because", "any", "these", "give", "day", "most", "us",
+    "is", "are", "was", "were", "been", "has", "had", "did", "said", "made",
+    "man", "woman", "child", "world", "life", "hand", "part", "eye", "place",
+    "week", "case", "point", "government", "company", "number", "group",
+    "problem", "fact", "water", "money", "month", "right", "study", "book",
+    "word", "side", "kind", "head", "house", "friend", "father", "mother",
+    "home", "room", "area", "story", "night", "family", "city", "country",
+    "school", "student", "name", "find", "tell", "ask", "seem", "feel", "try",
+    "leave", "call", "need", "become", "mean", "keep", "let", "begin", "help",
+    "talk", "turn", "start", "show", "hear", "play", "run", "move", "live",
+    "believe", "hold", "bring", "happen", "write", "sit", "stand", "lose",
+    "pay", "meet", "include", "set", "learn", "change", "lead", "watch",
+    "follow", "stop", "create", "speak", "read", "spend", "grow", "open",
+    "walk", "win", "teach", "buy", "send", "build", "stay", "fall", "cut",
+    "reach", "kill", "remain", "love", "eat", "drink", "sleep", "wait", "sell",
+    "big", "small", "old", "high", "long", "young", "great", "little", "own",
+    "bad", "same", "able", "hot", "cold", "true", "early", "late", "hard",
+    "easy", "important", "different", "free", "full", "happy", "real", "best",
+    "better", "sure", "low", "open", "close", "near", "far", "next", "last",
+    "many", "much", "more", "very", "too", "here", "today", "tomorrow",
+    "yesterday", "always", "never", "often", "again", "still", "down", "off",
+    "where", "why", "yes", "thing", "something", "nothing", "everything",
+    "everyone", "someone", "red", "blue", "green", "white", "black",
+    "morning", "evening", "hour", "minute", "dog", "cat", "car", "door",
+    "table", "phone", "music", "food", "color", "number", "letter", "question",
+    "answer", "true", "false", "left", "color", "please", "thank", "sorry",
+    "hello", "yeah", "okay", "really", "maybe", "around", "between", "under",
+    "before", "during", "without", "through", "while", "until", "since",
+    "both", "few", "each", "every", "another", "such", "enough", "almost",
+    "together", "however", "instead", "perhaps", "actually", "finally",
+}
+
+
+def difficulty_level(english: str) -> int:
+    """1 = 基础 (core/high-frequency), 2 = 进阶, 3 = 高阶 (heuristic)."""
+    w = (english or "").lower().strip()
+    if not w:
+        return 2
+    first = w.split()[0] if " " in w else w
+    if w in TOP_CORE or first in TOP_CORE:
+        return 1
+    n = len(w.replace(" ", "").replace("-", ""))
+    if n <= 5:
+        return 2
+    return 2 if n <= 8 else 3
+
 
 def pos_from_gloss(chinese: str):
     m = re.match(r"\s*([a-zA-Z]{1,5})\.", chinese or "")
@@ -100,6 +162,7 @@ def normalize(words: list) -> list:
         pos = clean_pos(w)
         theme = clean_theme(w)
         category = CATEGORY_RENAME.get(w.get("category"), w.get("category") or "通用")
+        level = 1 if category in CORE_CATEGORIES else difficulty_level(w.get("english"))
         out.append({
             "english": (w.get("english") or "").strip(),
             "phonetic": (w.get("phonetic") or "").strip(),
@@ -110,6 +173,7 @@ def normalize(words: list) -> list:
             "theme": theme,
             "parent_category": theme if theme != "通用" else "基础词汇",
             "child_category": pos,
+            "level": level,
         })
     return out
 
@@ -122,6 +186,8 @@ def main():
     )
 
     print(f"normalized {len(normalized)} words")
+    lv = Counter(w["level"] for w in normalized)
+    print(f"\nlevel: 基础={lv.get(1,0)} 进阶={lv.get(2,0)} 高阶={lv.get(3,0)}")
     for field in ("theme", "part_of_speech"):
         c = Counter(w[field] for w in normalized)
         unknown = c.get("其他", 0)

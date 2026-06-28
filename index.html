@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=13">
+    <link rel="stylesheet" href="css/styles.css?v=14">
     <script>
         (function () {
             try {
@@ -70,9 +70,9 @@
                     </div>
                 </div>
                 <div class="today-cta">
-                    <button class="review-cta" onclick="startStudy()" title="快捷键: Ctrl+E">
+                    <button class="review-cta" onclick="startDailySession()" title="复习 + 新词，快捷键 Ctrl+E">
                         <span data-icon="book" data-icon-size="18"></span>
-                        开始学习
+                        今日学习
                     </button>
                     <button class="review-cta secondary" onclick="startSmartReview()" title="快捷键: Ctrl+R">
                         <span data-icon="review" data-icon-size="18"></span>
@@ -122,6 +122,7 @@
             </select>
             <select class="filter-select" id="sortFilter">
                 <option value="order">词库顺序</option>
+                <option value="freq">高频优先</option>
                 <option value="az">字母 A–Z</option>
                 <option value="za">字母 Z–A</option>
                 <option value="difficult">难记优先</option>
@@ -162,7 +163,7 @@
     <div class="modal" id="studyModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">学习新词</h2>
+                <h2 class="modal-title" id="studyTitle">今日学习</h2>
                 <button class="close-btn" onclick="closeStudyModal()" aria-label="关闭"><span data-icon="close" data-icon-size="18"></span></button>
             </div>
             <div id="studyContent"></div>
@@ -255,11 +256,11 @@
         </div>
     </div>
 
-    <script src="js/icons.js?v=13"></script>
-    <script src="js/filter-render.js?v=13"></script>
-    <script src="js/learning-utils.js?v=13"></script>
-    <script src="js/session-renderers.js?v=13"></script>
-    <script src="js/ui-feedback.js?v=13"></script>
-    <script src="js/app.js?v=13"></script>
+    <script src="js/icons.js?v=14"></script>
+    <script src="js/filter-render.js?v=14"></script>
+    <script src="js/learning-utils.js?v=14"></script>
+    <script src="js/session-renderers.js?v=14"></script>
+    <script src="js/ui-feedback.js?v=14"></script>
+    <script src="js/app.js?v=14"></script>
 </body>
 </html>

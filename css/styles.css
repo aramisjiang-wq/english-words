@@ -552,6 +552,19 @@ body {
 .word-tag::after { content: "·"; margin-left: 5px; color: var(--line-strong); }
 .word-tag:last-child::after { content: ""; margin: 0; }
 .pos-tag { color: var(--accent); }
+.tier-core { color: var(--sage); font-weight: 600; }
+.tier-adv { color: var(--ink-faint); }
+
+.study-phase {
+    display: inline-block;
+    padding: 1px 10px;
+    border-radius: var(--r-pill);
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-right: 8px; vertical-align: 1px;
+}
+.study-phase.review { background: var(--accent-soft); color: var(--accent); }
+.study-phase.new { background: var(--sage-soft); color: var(--sage); }
 
 /* status segmented control */
 .word-actions { display: flex; gap: 0; margin-top: 9px; border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; }

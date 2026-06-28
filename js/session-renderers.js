@@ -135,7 +135,7 @@
     </div>`;
   }
 
-  function buildStudyCardHtml(word, index, total) {
+  function buildStudyCardHtml(word, index, total, phase) {
     const eng = escapeHtml(word.english);
     const engJs = escapeJsString(word.english);
     const sound = window.Icon ? window.Icon("volume", 20) : "🔊";
@@ -143,9 +143,12 @@
       t && t !== "其他" && t !== "通用"
         ? `<span class="word-tag ${cls}">${escapeHtml(t)}</span>`
         : "";
+    const phaseChip = phase
+      ? `<span class="study-phase ${phase}">${phase === "review" ? "复习" : "新词"}</span>`
+      : "";
 
     return `<div class="session-card center study">
-      <p class="session-progress">学习 ${index + 1} / ${total}</p>
+      <p class="session-progress">${phaseChip}学习 ${index + 1} / ${total}</p>
       <div class="session-word-head" style="justify-content:center">
         <h2 class="session-title" style="margin:0">${eng}</h2>
         <button class="play-btn session-play-btn" onclick="speak('${engJs}')" aria-label="朗读">${sound}</button>
@@ -190,12 +193,12 @@
     </div>`;
   }
 
-  function buildStudyCompleteHtml(stats) {
+  function buildStudyCompleteHtml(stats, restart = "startStudy()", title = "本组学习完成") {
     return `<div class="session-complete">
-      <h3>本组学习完成</h3>
+      <h3>${escapeHtml(title)}</h3>
       <p class="session-complete-score">认识 ${stats.known} · 模糊 ${stats.vague} · 不认识 ${stats.unknown}</p>
       <div class="session-actions" style="justify-content:center">
-        <button class="action-btn btn-primary" onclick="startStudy()">再来一组</button>
+        <button class="action-btn btn-primary" onclick="${escapeJsString(restart)}">再来一组</button>
         <button class="action-btn" onclick="closeStudyModal()">完成</button>
       </div>
     </div>`;

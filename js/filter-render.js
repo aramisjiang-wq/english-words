@@ -89,6 +89,13 @@
       .map((t) => `<span class="word-tag ${t.cls}">${escapeHtml(t.text)}</span>`)
       .join("");
 
+    const tier =
+      word.level === 1
+        ? '<span class="word-tag tier-core">高频</span>'
+        : word.level === 3
+          ? '<span class="word-tag tier-adv">高阶</span>'
+          : "";
+
     return `
       <div class="word-card ${status} ${isSelected ? "selected" : ""}" data-word="${escapeHtml(english)}" data-key="${escapeHtml(wordKey)}" onclick="${handlers.click}('${safeWordKey}')">
         <div class="word-english">
@@ -98,7 +105,7 @@
         ${word.phonetic ? `<div class="word-phonetic">${escapeHtml(word.phonetic)}</div>` : ""}
         <div class="word-chinese">${escapeHtml(word.chinese || "")}</div>
         ${word.example ? `<div class="word-example">${escapeHtml(word.example)}</div>` : ""}
-        <div class="word-tags">${meta}</div>
+        <div class="word-tags">${tier}${meta}</div>
         <div class="word-actions">
           <span class="status-badge ${status === "gray" || !status ? "active" : ""}" onclick="event.stopPropagation(); ${handlers.setStatus}('${safeWordKey}', 'gray')">未学习</span>
           <span class="status-badge ${status === "green" ? "green" : ""}" onclick="event.stopPropagation(); ${handlers.setStatus}('${safeWordKey}', 'green')">已掌握</span>
@@ -121,6 +128,8 @@
     } else if (mode === "unlearned") {
       const rank = { gray: 0, red: 1, green: 2 };
       arr.sort((a, b) => rank[statusOf(a)] - rank[statusOf(b)]);
+    } else if (mode === "freq") {
+      arr.sort((a, b) => (a.level || 2) - (b.level || 2));
     }
     return arr;
   }

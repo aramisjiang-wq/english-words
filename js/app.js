@@ -29,7 +29,7 @@
   // Content types share the same grid / filter / study / SRS engine.
   const CONTENT = {
     words: {
-      file: "data/words_merged.json?v=11",
+      file: "data/words_merged.json?v=14",
       totalLabel: "总词汇",
       title: "持续精进你的<em>词汇</em>",
     },
@@ -657,9 +657,16 @@
 
   /* ---------- Study (flashcards, active recall) ---------- */
   let studyQueue = [];
+  let studyPhases = [];
+  let studyMode = "study";
   let studyIndex = 0;
   let studyRevealed = false;
   let studyStats = { known: 0, vague: 0, unknown: 0 };
+
+  const setStudyTitle = (t) => {
+    const el = $("studyTitle");
+    if (el) el.textContent = t;
+  };
 
   // Unlearned words within the current filter scope, in curriculum order.
   function getStudyPool() {
@@ -677,17 +684,48 @@
       }
       return true;
     });
+    // High-frequency words first (level 1), then curriculum order.
+    return pool.sort((a, b) => (a.level || 2) - (b.level || 2));
   }
 
   function startStudy() {
     const pool = getStudyPool();
     if (pool.length === 0) {
-      UI.info("当前范围没有未学习的单词，换个主题或去复习吧", { title: "学习" });
+      UI.info("当前范围没有未学习的内容，换个主题或去复习吧", { title: "学习" });
       return;
     }
     studyQueue = pool.slice(0, 10);
+    studyPhases = [];
+    studyMode = "study";
     studyIndex = 0;
     studyStats = { known: 0, vague: 0, unknown: 0 };
+    setStudyTitle("学习新词");
+    $("studyModal").classList.add("active");
+    showStudyCard();
+  }
+
+  // Guided daily session: due reviews first, then new words (high-freq first).
+  function startDailySession() {
+    const due = getDueReviewWords();
+    const reviewPart = LU.sample(due, Math.min(10, due.length));
+    const todayCount = (learningHistory[LU.dayStr()]?.words || []).length;
+    const goalRemaining = Math.max(0, dailyGoal - todayCount);
+    const newTarget = Math.min(16, Math.max(6, goalRemaining || 10));
+    const usedKeys = new Set(reviewPart.map((w) => LU.keyOf(w)));
+    const newPart = getStudyPool()
+      .filter((w) => !usedKeys.has(LU.keyOf(w)))
+      .slice(0, newTarget);
+    const queue = [...reviewPart, ...newPart];
+    if (queue.length === 0) {
+      UI.success("今天的学习都完成了，明天见！", { title: "今日学习" });
+      return;
+    }
+    studyQueue = queue;
+    studyPhases = [...reviewPart.map(() => "review"), ...newPart.map(() => "new")];
+    studyMode = "daily";
+    studyIndex = 0;
+    studyStats = { known: 0, vague: 0, unknown: 0 };
+    setStudyTitle("今日学习");
     $("studyModal").classList.add("active");
     showStudyCard();
   }
@@ -695,16 +733,23 @@
   function showStudyCard() {
     studyRevealed = false;
     if (studyIndex >= studyQueue.length) {
-      $("studyContent").innerHTML = window.WordSessionRenderers.buildStudyCompleteHtml(studyStats);
+      const daily = studyMode === "daily";
+      $("studyContent").innerHTML = window.WordSessionRenderers.buildStudyCompleteHtml(
+        studyStats,
+        daily ? "startDailySession()" : "startStudy()",
+        daily ? "今日学习完成 🎉" : "本组学习完成"
+      );
       renderWords();
       updateStats();
       return;
     }
     const word = studyQueue[studyIndex];
+    const phase = studyMode === "daily" ? studyPhases[studyIndex] : null;
     $("studyContent").innerHTML = window.WordSessionRenderers.buildStudyCardHtml(
       word,
       studyIndex,
-      studyQueue.length
+      studyQueue.length,
+      phase
     );
     setTimeout(() => speak(word.english), 300);
   }
@@ -1770,7 +1815,7 @@
     if (e.ctrlKey || e.metaKey) {
       const actions = {
         k: () => $("searchBox").focus(),
-        e: startStudy,
+        e: startDailySession,
         q: startQuiz,
         p: startPractice,
         r: startSmartReview,
@@ -1838,6 +1883,7 @@
     toggleBatchMode,
     batchSetStatus,
     startStudy,
+    startDailySession,
     revealStudy,
     rateStudy,
     closeStudyModal,
